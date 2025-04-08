@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Ticket Comparison</title>
+  <link rel="stylesheet" href="../CSS/packagecomparison.css">
+  <script src="../JS/packageComparison.js" defer></script>
+</head>
+
+<body>
+
+  <h2 class="title">Compare Ticket Packages</h2>
+
+  <table class="comparison-table">
+    <tr>
+      <th>Feature</th>
+      <th>Standard</th>
+      <th>Premium</th>
+      <th>VIP</th>
+    </tr>
+    <tr>
+      <td>Seating</td>
+      <td>General</td>
+      <td>Better</td>
+      <td>Best</td>
+    </tr>
+    <tr>
+      <td>Entry</td>
+      <td>Regular</td>
+      <td>Fast</td>
+      <td>All Access</td>
+    </tr>
+    <tr>
+      <td>Backstage</td>
+      <td>No</td>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+
+  <div class="selection">
+    <label for="ticketChoice"><b>Select a Ticket Package:</b></label>
+    <select id="ticketChoice">
+      <option value="">--Choose--</option>
+      <option value="Standard">Standard</option>
+      <option value="Premium">Premium</option>
+      <option value="VIP">VIP</option>
+    </select>
+  </div>
+
+  <div id="result" class="result-box"></div>
+
+</body>
+</html>
