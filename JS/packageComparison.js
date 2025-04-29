@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function ()
       } 
       else 
       {
-        output = "Please select a valid package.";
+        output = "Please select any valid package.";
         result.style.color = "red"; 
       }
   

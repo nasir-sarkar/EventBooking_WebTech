@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+  <meta charset="UTF-8">
   <title>Ticket Comparison</title>
   <link rel="stylesheet" href="../CSS/packagecomparison.css">
   <script src="../JS/packageComparison.js" defer></script>
@@ -38,17 +39,22 @@
     </tr>
   </table>
 
-  <div class="selection">
-    <label for="ticketChoice"><b>Select a Ticket Package:</b></label>
-    <select id="ticketChoice">
-      <option value="">--Choose--</option>
-      <option value="Standard">Standard</option>
-      <option value="Premium">Premium</option>
-      <option value="VIP">VIP</option>
-    </select>
-  </div>
+  <form id="packageForm" action="../PHP/packageComparison.php" method="post">
+    <div class="selection">
+      <label for="ticketChoice"><b>Select a Ticket Package:</b></label>
+      <select name="ticketChoice" id="ticketChoice">
+        <option value="">--Choose--</option>
+        <option value="Standard">Standard</option>
+        <option value="Premium">Premium</option>
+        <option value="VIP">VIP</option>
+      </select>
+    </div>
 
-  <div id="result" class="result-box"></div>
+    <br>
+    <div id="result" style="margin-top: 10px;"></div>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
 
 </body>
 </html>

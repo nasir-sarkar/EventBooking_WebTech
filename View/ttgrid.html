@@ -1,26 +1,47 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Ticket Tiers</title>
   <link rel="stylesheet" href="../CSS/ttgrid.css">
-  <script src="../JS/ttgrid.js" defer></script>
-</head>
+  <!-- <script src="../JS/ttgrid.js" defer></script> -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () 
+    {
+      const form = document.getElementById("ticketForm");
+      const select = document.getElementById("ticketSelect");
 
+      form.addEventListener("submit", function (event) 
+      {
+        const selectedValue = select.value;
+
+        if (selectedValue === "") 
+        {
+          alert("Please select a valid ticket type.");
+          event.preventDefault(); 
+        }
+      });
+    });
+  </script>
+</head>
 <body>
+
   <h2 class="title">Ticket Types</h2>
 
-  <div class="container">
-    <label for="ticketSelect"><b>Select Ticket Type:</b></label><br><br>
-    <select id="ticketSelect" class="dropdown">
-      <option value="">Choose</option>
-      <option value="2500">Standard - ৳2500</option>
-      <option value="4000">Premium - ৳4000</option>
-      <option value="6000">VIP - ৳6000</option>
-    </select>
+  <form id="ticketForm" action="../PHP/ttgrid.php" method="post">
+    <div class="container">
+      <label for="ticketSelect"><b>Select Ticket Type:</b></label><br><br>
+      <select id="ticketSelect" name="ticketSelect" class="dropdown">
+        <option value="">Choose</option>
+        <option value="2500">Standard - ৳2500</option>
+        <option value="4000">Premium - ৳4000</option>
+        <option value="6000">VIP - ৳6000</option>
+      </select>
 
-    <div id="ticketInfo" class="info-box"></div>
-  </div>
+      <br><br>
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+
 </body>
-
 </html>
