@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function ()
       const value = ticketChoice.value;
       let output = "";
   
-      if (value === "Standard") 
+      if (value === "Standard")
       {
         output = `
           <b>Standard Ticket:</b><br>
@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function ()
           - Entry: Regular<br>
           - Backstage: No
         `;
+        result.style.color = "black"; 
       } 
       else if (value === "Premium") 
       {
@@ -25,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function ()
           - Entry: Fast<br>
           - Backstage: No
         `;
+        result.style.color = "black";
       } 
       else if (value === "VIP") 
       {
@@ -34,15 +36,15 @@ document.addEventListener("DOMContentLoaded", function ()
           - Entry: All Access<br>
           - Backstage: Yes
         `;
+        result.style.color = "black";
       } 
       else 
       {
-        output = "";
+        output = "Please select a valid package.";
+        result.style.color = "red"; 
       }
   
       result.innerHTML = output;
-    }
-);
-}
-);
+    });
+  });
   
