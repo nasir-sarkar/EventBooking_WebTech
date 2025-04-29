@@ -8,7 +8,8 @@
 <body>
     <fieldset>
         <legend><b>GENERATE PROMO CODE</b></legend>
-        <form onsubmit="return validate()">
+        <form method="post" action="../PHP/Code_Generator.php" onsubmit="return validate()">
+
             <label for="sponsor">Sponsor Name:</label><br>
             <input type="text" id="sponsor" name="sponsor"><br>
             <p id="sponsorerror"></p>
@@ -21,12 +22,12 @@
             <input type="date" id="validity" name="validity"><br>
             <p id="validityerror"></p>
 
-            <input type="submit" value="Generate Code">
+            <input type="submit" name="submit" value="Generate Code">
+            
         </form>
     </fieldset>
     
     <link rel="stylesheet" href="../CSS/Code_Generator.css">
-    <script src="../JS/Code_Generator.js"></script>
-
+    <!-- <script src="../JS/Code_Generator.js"></script> -->
 </body>
 </html>
