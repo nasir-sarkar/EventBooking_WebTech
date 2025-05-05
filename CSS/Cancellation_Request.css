@@ -29,7 +29,7 @@ fieldset {
 legend {
     font-size: 18px;
     color: blue;
-    text-align: center;
+     text-align: center;
 }
 
 label {
@@ -37,8 +37,7 @@ label {
 }
 
 input[type="text"],
-input[type="number"],
-input[type="date"] {
+textarea {
     width: 100%;
     padding: 8px;
     margin-top: 5px;

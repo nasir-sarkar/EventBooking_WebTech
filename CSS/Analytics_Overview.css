@@ -47,13 +47,10 @@ input[type="date"] {
     border-radius: 4px;
 }
 
-input[type="submit"],
-input[type="button"] {
-    width: 40%;
+input[type="submit"] {
     padding: 10px 20px;
     background-color: blue;
     border: none;
-    text-align: center;
     color: white;
     border-radius: 5px;
     cursor: pointer;

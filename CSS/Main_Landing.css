@@ -32,13 +32,18 @@ legend {
     text-align: center;
 }
 
+#event-booking {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid white;
+}
+
 label {
     font-weight: bold;
 }
 
-input[type="text"],
-input[type="number"],
-input[type="date"] {
+input[type="text"] {
     width: 100%;
     padding: 8px;
     margin-top: 5px;
@@ -49,7 +54,6 @@ input[type="date"] {
 
 input[type="submit"],
 input[type="button"] {
-    width: 40%;
     padding: 10px 20px;
     background-color: blue;
     border: none;
@@ -57,6 +61,22 @@ input[type="button"] {
     color: white;
     border-radius: 5px;
     cursor: pointer;
+}
+
+#continue {
+    width: 100%;
+    background-color: green;
+    margin: 20px auto;
+}
+
+.button {
+    display: flex;
+    text-align: center;
+    gap: 20px;
+}
+
+.button input[type="button"] {
+    width: 200px;
 }
 
 p {

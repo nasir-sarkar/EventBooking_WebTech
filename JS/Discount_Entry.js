@@ -15,5 +15,9 @@ function validate() {
         promoError.innerHTML = "";
     }
 
+    if (isValid) {
+        window.location.href = "Code_Generator.html";
+    }
+
     return isValid;
 }

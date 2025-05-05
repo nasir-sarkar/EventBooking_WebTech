@@ -35,5 +35,9 @@ function validate() {
         validityError.innerHTML = "";
     }
 
+    if (isValid) {
+        window.location.href = "Redemption_Analytics.html";
+    }
+
     return isValid;
 }

@@ -6,6 +6,8 @@
     <title>Discount Entry</title>
 </head>
 <body>
+    <div class="header">Event Booking</div>
+    
     <fieldset>
         <legend><b>DISCOUNT ENTRY</b></legend>
         <form method="post" action="../PHP/Discount_Entry.php" onsubmit="return validate()">
@@ -13,12 +15,13 @@
             <input type="text" id="promo" name="promo"><br>
             <p id="promoerror"></p>
 
-            <input type="submit" value="Apply Code"><br>
+            <input type="button" value="Apply Code" onclick="validate()">
+            <input type="button" value="Back"></a>
             
         </form>
     </fieldset>  
 
     <link rel="stylesheet" href="../CSS/Discount_Entry.css">
-    <!-- <script src="../JS/Discount_Entry.js"></script> --> 
+    <script src="../JS/Discount_Entry.js"></script>
 </body>
 </html>

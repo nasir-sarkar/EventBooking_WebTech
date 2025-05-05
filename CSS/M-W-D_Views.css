@@ -36,8 +36,7 @@ label {
     font-weight: bold;
 }
 
-input[type="text"],
-input[type="number"],
+select,
 input[type="date"] {
     width: 100%;
     padding: 8px;
@@ -45,6 +44,7 @@ input[type="date"] {
     margin-bottom: 10px;
     border: 1px solid black;
     border-radius: 4px;
+    box-sizing: border-box;
 }
 
 input[type="submit"],

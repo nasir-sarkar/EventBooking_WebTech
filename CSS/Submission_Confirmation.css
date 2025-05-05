@@ -32,24 +32,9 @@ legend {
     text-align: center;
 }
 
-label {
-    font-weight: bold;
-}
-
-input[type="text"],
-input[type="number"],
-input[type="date"] {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    border: 1px solid black;
-    border-radius: 4px;
-}
-
 input[type="submit"],
 input[type="button"] {
-    width: 40%;
+    width: 25%;
     padding: 10px 20px;
     background-color: blue;
     border: none;
@@ -57,10 +42,10 @@ input[type="button"] {
     color: white;
     border-radius: 5px;
     cursor: pointer;
+    float: right;
 }
 
 p {
-    margin: 0;
-    color: red;
-    font-size: 14px;
+    font-size: 16px;
+    color: black;
 }

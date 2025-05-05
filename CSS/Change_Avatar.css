@@ -36,15 +36,10 @@ label {
     font-weight: bold;
 }
 
-input[type="text"],
-input[type="number"],
-input[type="date"] {
+input[type="file"] {
     width: 100%;
-    padding: 8px;
     margin-top: 5px;
     margin-bottom: 10px;
-    border: 1px solid black;
-    border-radius: 4px;
 }
 
 input[type="submit"],

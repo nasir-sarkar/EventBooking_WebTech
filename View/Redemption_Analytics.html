@@ -6,6 +6,8 @@
     <title>Redemption Analytics</title>
 </head>
 <body>
+    <div class="header">Event Booking</div>
+    
     <fieldset>
         <legend><b>PROMO CODE ANALYTICS</b></legend>
         <form method="post" action="../PHP/Redemption_Analytics.php" onsubmit="return validate()">
@@ -13,13 +15,14 @@
             <input type="text" id="code" name="code"><br>
             <p id="codeerror"></p>
 
-            <input type="submit" value="View Analytics"><br>
+            <input type="submit" value="View Analytics">
+            <a href="Code_Generator.html"><input type="button" value="Back"></a>
             
         </form>
     </fieldset>
 
     <link rel="stylesheet" href="../CSS/Redemption_Analytics.css">
-    <!-- <script src="../JS/Redemption_Analytics.js"></script> -->
+    <script src="../JS/Redemption_Analytics.js"></script>
     
 </body>
 </html>
