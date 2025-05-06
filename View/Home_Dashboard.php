@@ -29,8 +29,8 @@ if (!isset($_SESSION['status'])) {
         <label><b>Upcoming Events:</b></label><br>
         <p>12</p><br>
 
-        <a href="Analytics_Overview.html"><input type="submit" value="Go to Analytics Overview"></a>
-        <a href="Quick_Actions.html"><input type="submit" value="Go to Quick Actions"></a>
+        <a href="Analytics_Overview.php"><input type="submit" value="Go to Analytics Overview"></a>
+        <a href="Quick_Actions.php"><input type="submit" value="Go to Quick Actions"></a>
 
     </fieldset>
 

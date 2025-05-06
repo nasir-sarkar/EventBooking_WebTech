@@ -31,7 +31,7 @@ if (!isset($_SESSION['status'])) {
             <p>Category: Technology</p>
 
             <input type="submit" value="View Details"><br>
-            <a href="M-W-D_Views.html"><input type="button" value="Back"></a>
+            <a href="M-W-D_Views.php"><input type="button" value="Back"></a>
         </form>
     </fieldset>
 

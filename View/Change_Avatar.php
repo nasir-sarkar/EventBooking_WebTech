@@ -26,7 +26,7 @@ if (!isset($_SESSION['status'])) {
             <p id="avatarerror"></p>
 
             <input type="submit" name="submit" value="Upload Avatar">
-            <a href="View_Profile.html"><input type="button" value="Back"></a>
+            <a href="View_Profile.php"><input type="button" value="Back"></a>
 
         </form>
     </fieldset>

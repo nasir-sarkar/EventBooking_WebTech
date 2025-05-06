@@ -12,7 +12,7 @@ function validate() {
     }
 
     if (isValid) {
-        window.location.href = "Seat_Zoom.html";
+        window.location.href = "Seat_Zoom.php";
     }
 
     return isValid;

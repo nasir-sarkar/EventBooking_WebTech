@@ -36,6 +36,12 @@ legend {
     width: 300px;
     display: block;
     margin: 10px auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.zoomed {
+    transform: scale(1.4);
 }
 
 label {

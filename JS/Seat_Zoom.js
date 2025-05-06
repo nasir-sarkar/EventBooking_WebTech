@@ -17,3 +17,12 @@ function validate() {
 
     return isValid;
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const seatImage = document.getElementById("seatImage");
+
+    seatImage.addEventListener("click", function () {
+        seatImage.classList.toggle("zoomed");
+    });
+});
+

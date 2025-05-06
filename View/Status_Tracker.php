@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['status'])) {
+    header('location: login.php');
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +24,7 @@
             <p id="trackIderror"></p>
 
             <input type="submit" value="Track Status">
-            <a href="Cancellation_Request.html"><input type="button" value="Back"></a>
+            <a href="Cancellation_Request.php"><input type="button" value="Back"></a>
 
             <br><br><p><b>Status:</b> [Pending / Approved / Rejected]</p>
         </form>

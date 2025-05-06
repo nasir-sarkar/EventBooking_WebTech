@@ -43,7 +43,7 @@ function validate() {
     }
 
     if (isValid) {
-        window.location.href = "Submission_Confirmation.html";
+        window.location.href = "Submission_Confirmation.php";
     }
 
     return isValid;

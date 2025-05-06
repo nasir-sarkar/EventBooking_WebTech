@@ -16,7 +16,7 @@ function validate() {
     }
 
     if (isValid) {
-        window.location.href = "Code_Generator.html";
+        window.location.href = "Code_Generator.php";
     }
 
     return isValid;

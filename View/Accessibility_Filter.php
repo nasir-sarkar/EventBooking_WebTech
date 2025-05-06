@@ -29,7 +29,7 @@ if (!isset($_SESSION['status'])) {
             <p id="accesserror"></p>
 
             <input type="submit" value="Book Now">
-            <a href="Seat_Zoom.html"><input type="button" value="Back"></a>
+            <a href="Seat_Zoom.php"><input type="button" value="Back"></a>
         </form>
     </fieldset>
 

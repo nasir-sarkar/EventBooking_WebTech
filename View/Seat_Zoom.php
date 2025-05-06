@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['status'])) {
+    header('location: login.php');
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +32,7 @@
             <p id="selecterror"></p>
 
             <input type="button" value="Go Next" onclick="validate()">
-            <a href="Interactive_Vanue_Map.html"><input type="button" value="Back"></a>
+            <a href="Interactive_Vanue_Map.php"><input type="button" value="Back"></a>
         </form>
     </fieldset>
 

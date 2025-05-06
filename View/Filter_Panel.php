@@ -39,7 +39,7 @@ if (!isset($_SESSION['status'])) {
             <p id="dateerror2"></p>
 
             <input type="submit" value="Apply Filters">
-            <a href="Event_Cards.html"><input type="button" value="Back"></a>
+            <a href="Event_Cards.php"><input type="button" value="Back"></a>
         </form>
     </fieldset>
 

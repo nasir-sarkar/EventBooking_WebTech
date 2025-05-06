@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['status'])) {
+    header('location: login.php');
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +20,7 @@
         <legend><b>SUBMISSION CONFIRMATION</b></legend>
         <p>Thank you for contacting us. Your inquiry has been received.</p>
         <p>A confirmation email has been sent to your address.</p>
-        <a href="Contact_Form.html"><input type="button" value="Back"></a>
+        <a href="Contact_Form.php"><input type="button" value="Back"></a>
     </fieldset>
     
     <link rel="stylesheet" href="../CSS/Submission_Confirmation.css">

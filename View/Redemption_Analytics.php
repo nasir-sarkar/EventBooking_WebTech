@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['status'])) {
+    header('location: login.php');
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +24,7 @@
             <p id="codeerror"></p>
 
             <input type="submit" value="View Analytics">
-            <a href="Code_Generator.html"><input type="button" value="Back"></a>
+            <a href="Code_Generator.php"><input type="button" value="Back"></a>
             
         </form>
     </fieldset>

@@ -24,7 +24,7 @@ if (!isset($_SESSION['status'])) {
             <p id="emailerror"></p>
 
             <input type="submit" value="Generate Invoice">
-            <a href="Saved_Cards.html"><input type="button" value="Back"></a> 
+            <a href="Saved_Cards.php"><input type="button" value="Back"></a> 
 
             <br><br><p><b>Note:</b> Your e-ticket will be sent instantly after payment.</p>        
         </form>

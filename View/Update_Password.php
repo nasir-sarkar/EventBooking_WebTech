@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['status'])) {
+    header('location: login.php');
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +33,7 @@
             <p id="confirmerror"></p>
 
             <input type="submit" name="submit" value="Update Password">
-            <a href="View_Profile.html"><input type="button" value="Back"></a>
+            <a href="View_Profile.php"><input type="button" value="Back"></a>
 
         </form>
     </fieldset>

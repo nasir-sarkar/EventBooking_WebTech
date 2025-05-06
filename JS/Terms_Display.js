@@ -16,7 +16,7 @@ function validate() {
 
     if (isValid) 
     {
-        window.location.href = "Cancellation_Request.html";
+        window.location.href = "Cancellation_Request.php";
     }
 
     return isValid;

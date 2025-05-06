@@ -24,7 +24,7 @@ function validate() {
     }
 
     if (isValid) {
-        window.location.href = "Event_Cards.html";
+        window.location.href = "Event_Cards.php";
     }
 
     return isValid;

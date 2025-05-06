@@ -29,8 +29,8 @@ if (!isset($_SESSION['status'])) {
             <p><b>Email:</b> <?php echo $_SESSION['email']; ?></p>
             <p><b>Phone:</b> <?php echo $_SESSION['phone']; ?></p>
 
-            <a href="Edit_Profile.html"><input type="button" value="Edit Profile"></a>
-            <a href="Update_Password.html"><input type="button" value="Update Password"></a>
+            <a href="Edit_Profile.php"><input type="button" value="Edit Profile"></a>
+            <a href="Update_Password.php"><input type="button" value="Update Password"></a>
             <a href="logout.php"><input type="button" value="Logout"></a>
             
         </form>

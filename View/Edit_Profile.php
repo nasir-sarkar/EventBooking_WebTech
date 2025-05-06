@@ -32,7 +32,7 @@ if (!isset($_SESSION['status'])) {
             <p id="phoneerror"></p>
 
             <input type="submit" name="submit" value="Save Changes" onclick="validate()">
-            <a href="View_Profile.html"><input type="button" value="Back"></a>
+            <a href="View_Profile.php"><input type="button" value="Back"></a>
         </form>
     </fieldset>
 

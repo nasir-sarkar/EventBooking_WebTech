@@ -28,7 +28,7 @@ if (!isset($_SESSION['status'])) {
         <label><b>Total Events Held:</b></label><br>
         <p>50</p>
 
-        <a href="Home_Dashboard.html"><input type="submit" value="Back to Home Dashboard"></a>
+        <a href="Home_Dashboard.php"><input type="submit" value="Back to Home Dashboard"></a>
 
     </fieldset>
 

@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['status'])) {
+    header('location: login.php');
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +28,7 @@
         <label><b>View Reports:</b></label><br>
         <p>Check performance and trends for your events.</p><br>
 
-        <a href="Home_Dashboard.html"><input type="submit" value="Back to Home Dashboard"></a>
+        <a href="Home_Dashboard.php"><input type="submit" value="Back to Home Dashboard"></a>
 
     </fieldset>
 
