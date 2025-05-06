@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Dashboard</title>
+  <link rel="stylesheet" href="../CSS/regdashboard.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Attendee List</h1>
+
+    <input type="text" id="searchInput" placeholder="Search Attendee..." onkeyup="searchAttendees()">
+
+    <table id="attendeeTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Ticket Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Alice</td><td>alice@example.com</td><td>VIP</td></tr>
+        <tr><td>Bob</td><td>bob@example.com</td><td>General</td></tr>
+        <tr><td>Charlie</td><td>charlie@example.com</td><td>Student</td></tr>
+      </tbody>
+    </table>
+
+    <button onclick="exportCSV()">Export CSV</button>
+  </div>
+
+  <script src="../JS/regdashboard.js"></script>
+</body>
+</html>

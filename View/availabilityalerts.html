@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Availability Alerts</title>
+  <link rel="stylesheet" href="../CSS/availabilityalerts.css">
+</head>
+<body>
+
+  <h2>Join Waitlist</h2>
+  <input type="text" id="name" placeholder="Your Name">
+  <input type="email" id="email" placeholder="Your Email">
+  <button onclick="addToWaitlist(document.getElementById('name').value, document.getElementById('email').value)">Join Waitlist</button>
+
+  <h2>Check for Available Spots</h2>
+  <button onclick="notifyNext()">Simulate Spot Opening</button>
+  <p id="message"></p>
+
+  <script src="../JS/availabilityalerts.js"></script>
+</body>
+</html>

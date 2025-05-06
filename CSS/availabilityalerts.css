@@ -1,0 +1,16 @@
+/* availability-alert.css */
+body {
+    font-family: Arial;
+    padding: 20px;
+    background: #fff5f5;
+    text-align: center;
+  }
+  
+  button {
+    padding: 12px 24px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    font-size: 16px;
+  }
+  

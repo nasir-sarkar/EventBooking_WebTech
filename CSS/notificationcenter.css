@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #293c54;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #96a9bc;
+}
+
+#bell img {
+    width: 24px;
+    height: 24px;
+}
+
+#unread-count {
+    width: 32px;
+    height: 32px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 3px 8px;
+    display: inline-block;
+    position: relative;
+    top: -10px;
+    left: 5px;
+}
+
+a {
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+    background-color: #007BFF;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.notification {
+    background-color: #ffffff;
+    border-left: 6px solid #007BFF;
+    margin: 15px auto;
+    padding: 15px;
+    width: 80%;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}

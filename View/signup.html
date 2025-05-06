@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Signup</title>
+  <link rel="stylesheet" href="../CSS/signup.css">
+  <script src="../JS/signup.js" defer></script>
+</head>
+<body>
+
+  <div class="wrapper">
+    <h1>Signup </h1>
+    <p id="error-message" ></p>
+    <form onsubmit="return validate()" action="javascript:void(0);">
+       <div>
+        <label for="username">
+            <img src="person.png" height="24" width="24" alt="person icon">
+        </label>
+        <input type="text" name="username" id="username" placeholder="Username">
+        <p id="usererror"></p>
+       </div> 
+       <div>
+        <label for="email">
+            <span>
+                @         
+            </span>
+        </label>
+        <input type="email" name="email" id="email" placeholder="Email">
+        <p id="emailerror"></p>
+       </div> 
+       <div>
+        <label for="password">
+            <img src="lock.png" height="24" width="24" alt="lock icon">
+        </label>
+        <input type="password" name="password" id="password" placeholder="Password">
+        <p id="passerror"></p>
+       </div> 
+       <div>
+        <label for="repeatpassword">
+            <img src="lock.png" height="24" width="24" alt="lock icon">
+        </label>
+        <input type="password" name="repeatpassword" id="repeatpassword" placeholder="Repeat password">
+        <p id="repeatpasserror"></p>
+       </div> 
+       <button type="submit">Signup</button>
+       <p id="validerror"></p>
+    </form>
+    <p>Already have an Account?<a href="login.html">Login</a></p>
+  </div>
+
+  
+</body>
+</html>

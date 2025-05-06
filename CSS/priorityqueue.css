@@ -1,0 +1,14 @@
+/* priority-queue.css */
+body {
+    font-family: Arial;
+    padding: 20px;
+    background: #e8f5e9;
+    text-align: center;
+  }
+  
+  ol {
+    text-align: left;
+    max-width: 400px;
+    margin: auto;
+  }
+  

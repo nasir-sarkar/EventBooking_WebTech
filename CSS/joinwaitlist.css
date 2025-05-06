@@ -1,0 +1,13 @@
+/* join-waitlist.css */
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #6c85d0;
+  text-align: center;
+}
+
+input, button {
+  padding: 10px;
+  margin: 10px;
+  font-size: 16px;
+}
