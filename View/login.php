@@ -10,7 +10,8 @@
   <div class="wrapper">
     <h1>Login</h1>
     <p id="error-message" ></p>
-    <form onsubmit="return validate()" action="javascript:void(0);">
+    <form onsubmit="return validate()" method="post" action="loginCheck.php">
+
        <div>
         <label for="email-input">
             <span>
@@ -28,6 +29,7 @@
         <p id="pass-error"></p>
        </div> 
        <button type="submit">Login</button>
+       <a href="signup.php"><input type="button" value="Signup"></a>
        <p id="valid-error"></p>
     </form>
 
@@ -35,6 +37,5 @@
 
   </div>
 
-  
 </body>
 </html>

@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['status'])) {
+    header('location: login.php');
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,13 +25,13 @@
                 <a href="Change_Avatar.html"><input type="button" class="avatar" value="Change Avatar"></a>
             </div>
 
-            <p><b>Name:</b> Nasir Sarkar</p>
-            <p><b>Email:</b> nasir@gmail.com</p>
-            <p><b>Phone:</b> 01808080808</p>
+            <p><b>Name:</b> <?php echo $_SESSION['name']; ?></p>
+            <p><b>Email:</b> <?php echo $_SESSION['email']; ?></p>
+            <p><b>Phone:</b> <?php echo $_SESSION['phone']; ?></p>
 
             <a href="Edit_Profile.html"><input type="button" value="Edit Profile"></a>
             <a href="Update_Password.html"><input type="button" value="Update Password"></a>
-            <input type="button" value="Back">
+            <a href="logout.php"><input type="button" value="Logout"></a>
             
         </form>
     </fieldset>
