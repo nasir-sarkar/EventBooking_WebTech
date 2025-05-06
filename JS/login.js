@@ -8,26 +8,22 @@ function validate() {
 
     let isValid = true;
 
-    // Clear previous messages
     emailError.innerHTML = "";
     passError.innerHTML = "";
     validError.innerHTML = "";
 
-    // Validate email
     if (email === "") {
         emailError.innerHTML = "Email is required";
         emailError.style.color = "red";
         isValid = false;
     }
 
-    // Validate password
     if (password === "") {
         passError.innerHTML = "Password is required";
         passError.style.color = "red";
         isValid = false;
     }
 
-    // Optional: check if email and password are the same (not recommended)
     if (isValid && email === password) {
         validError.innerHTML = "Email and password should not be the same";
         validError.style.color = "orange";
