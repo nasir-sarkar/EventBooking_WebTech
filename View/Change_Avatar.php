@@ -6,7 +6,6 @@ if (!isset($_SESSION['status'])) {
 }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +18,7 @@ if (!isset($_SESSION['status'])) {
     
     <fieldset>
         <legend><b>CHANGE AVATAR</b></legend>
-        <form onsubmit="return validate()">
+        <form method="post" action="Upload.php" enctype="multipart/form-data" onsubmit="return validate()">
 
             <label for="avatar">Select Image:</label><br>
             <input type="file" id="avatar" name="avatar" accept="image/*"><br>

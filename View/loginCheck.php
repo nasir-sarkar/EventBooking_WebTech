@@ -12,6 +12,9 @@
             $_SESSION['email'] = $email;
             $_SESSION['name'] = "Nasir Sarkar";
             $_SESSION['phone'] = "01808080808";
+
+            setcookie('status', 'true', time() + 1800, '/');
+
             header('location: View_Profile.php');
         } else {
             echo "invalid user!";

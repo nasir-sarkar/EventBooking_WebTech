@@ -1,9 +1,17 @@
 <?php
-session_start();
-if (!isset($_SESSION['status'])) {
-    header('location: login.php');
-    exit;
-}
+    session_start();
+
+    if (!isset($_SESSION['status']) && isset($_COOKIE['status'])) {
+        $_SESSION['status'] = true;
+        $_SESSION['email'] = "nasir@gmail.com";
+        $_SESSION['name'] = "Nasir Sarkar";
+        $_SESSION['phone'] = "01808080808";
+    }
+
+    if (!isset($_SESSION['status'])) {
+        header('location: login.php');
+        exit;
+    }
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +30,7 @@ if (!isset($_SESSION['status'])) {
 
             <div class="avatar-container">
                 <img id="avatar" src="../Image/default-avatar.jpg" alt="Profile Picture" width="100">
-                <a href="Change_Avatar.html"><input type="button" class="avatar" value="Change Avatar"></a>
+                <a href="Change_Avatar.php"><input type="button" class="avatar" value="Change Avatar"></a>
             </div>
 
             <p><b>Name:</b> <?php echo $_SESSION['name']; ?></p>
