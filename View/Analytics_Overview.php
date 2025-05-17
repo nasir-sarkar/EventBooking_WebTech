@@ -1,0 +1,38 @@
+<?php
+session_start();
+if (!isset($_SESSION['status'])) {
+    header('location: login.php');
+    exit;
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Overview</title>
+</head>
+<body>
+    <div class="header">Event Booking</div>
+    
+    <fieldset>
+        <legend><b>ANALYTICS OVERVIEW</b></legend>
+
+        <label><b>Bookings in Last 30 Days:</b></label><br>
+        <p>50</p>
+
+        <label><b>Average Revenue per Event:</b></label><br>
+        <p>4500TK</p>
+
+        <label><b>Total Events Held:</b></label><br>
+        <p>50</p>
+
+        <a href="Home_Dashboard.php"><input type="submit" value="Back to Home Dashboard"></a>
+
+    </fieldset>
+
+    <link rel="stylesheet" href="../CSS/Analytics_Overview.css">
+    <script src="../JS/Analytics_Overview.js"></script>
+</body>
+</html>

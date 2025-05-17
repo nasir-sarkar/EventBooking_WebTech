@@ -12,8 +12,17 @@ function validate() {
     }
 
     if (isValid) {
-        window.location.href = "Accessibility_Filter.html";
+        window.location.href = "Accessibility_Filter.php";
     }
 
     return isValid;
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const seatImage = document.getElementById("seatImage");
+
+    seatImage.addEventListener("click", function () {
+        seatImage.classList.toggle("zoomed");
+    });
+});
+

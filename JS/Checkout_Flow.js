@@ -22,7 +22,7 @@ function validate() {
     }
 
     if (isValid) {
-        window.location.href = "Saved_Cards.html";
+        window.location.href = "Saved_Cards.php";
     }
 
     return isValid;

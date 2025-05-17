@@ -1,0 +1,48 @@
+<?php
+session_start();
+if (!isset($_SESSION['status'])) {
+    header('location: login.php');
+    exit;
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+</head>
+<body>
+    <div class="header">Event Booking</div>
+    
+    <fieldset>
+        <legend><b>CONTACT US</b></legend>
+        <form onsubmit="return validate()">
+
+            <label for="name">Full Name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <p id="nameerror"></p>
+
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email"><br>
+            <p id="emailerror"></p>
+
+            <label for="message">Message:</label><br>
+            <input type="text" id="message" name="message"><br>
+            <p id="messageerror"></p>
+
+            <label for="captcha">What is 3 + 4?</label><br>
+            <input type="text" id="captcha" name="captcha"><br>
+            <p id="captchaerror"></p>
+
+            <input type="button" name="submit" value="Submit Inquiry" onclick="validate()">
+            <input type="button" value="Back">
+            
+        </form>
+    </fieldset>
+    
+    <link rel="stylesheet" href="../CSS/Contact_Form.css">
+    <script src="../JS/Contact_Form.js"></script>
+</body>
+</html>

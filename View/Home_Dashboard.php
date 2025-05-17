@@ -1,0 +1,40 @@
+<?php
+session_start();
+if (!isset($_SESSION['status'])) {
+    header('location: login.php');
+    exit;
+}
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Dashboard</title>
+</head>
+<body>
+    <div class="header">Event Booking</div>
+    
+    <fieldset>
+        <legend><b>HOME DASHBOARD</b></legend>
+
+        <label><b>Total Bookings:</b></label><br>
+        <p>320</p>
+
+        <label><b>Total Revenue:</b></label><br>
+        <p>12,500TK</p>
+
+        <label><b>Upcoming Events:</b></label><br>
+        <p>12</p><br>
+
+        <a href="Analytics_Overview.php"><input type="submit" value="Go to Analytics Overview"></a>
+        <a href="Quick_Actions.php"><input type="submit" value="Go to Quick Actions"></a>
+
+    </fieldset>
+
+    <link rel="stylesheet" href="../CSS/Home_Dashboard.css">
+    <script src="../JS/Home_Dashboard.js"></script>
+</body>
+</html>

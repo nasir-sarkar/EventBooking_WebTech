@@ -1,0 +1,42 @@
+<?php
+session_start();
+if (!isset($_SESSION['status'])) {
+    header('location: login.php');
+    exit;
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seat Zoom</title>
+</head>
+<body>
+    <div class="header">Event Booking</div>
+    
+    <fieldset>
+        <legend><b>SEAT ZOOM</b></legend>
+        <form onsubmit="return validate()">
+
+            <img src="../Image/seat.jpg" id="seatImage"><br><br>
+
+            <label for="seat">Select Seat:</label><br>
+            <select id="seat" name="seat">
+                <option value="">Select Seat</option>
+                <option value="A1">A1 - 500 Taka</option>
+                <option value="A2">A2 - 500 Taka</option>
+                <option value="A3">A3 - 800 Taka (Near Stage)</option>
+            </select><br>
+            <p id="selecterror"></p>
+
+            <input type="button" value="Go Next" onclick="validate()">
+            <a href="Interactive_Vanue_Map.php"><input type="button" value="Back"></a>
+        </form>
+    </fieldset>
+
+    <link rel="stylesheet" href="../CSS/Seat_Zoom.css">
+    <script src="../JS/Seat_Zoom.js"></script>
+</body>
+</html>

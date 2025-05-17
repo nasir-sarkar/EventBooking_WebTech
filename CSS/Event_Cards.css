@@ -6,7 +6,7 @@ body {
 }
 
 .header {
-    width: 420px;
+    width: 620px;
     padding: 10px;
     background-color: blue;
     color: white;
@@ -18,13 +18,13 @@ body {
     margin-bottom: 20px;
 }
 
-
 fieldset {
-    width: 400px;
+    width: 600px;
     padding: 20px;
     border: 2px solid blue;
     border-radius: 10px;
     background-color: white;
+    margin-bottom: 20px;
 }
 
 legend {
@@ -32,6 +32,84 @@ legend {
     color: blue;
     text-align: center;
 }
+
+label {
+    font-weight: bold;
+}
+
+select,
+input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    width: 40%;
+    padding: 10px 20px;
+    background-color: blue;
+    border: none;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: darkblue;
+}
+
+/* Buttons without special classes default to blue */
+input[type="button"]:not(.green-button):not(.blue-button) {
+    width: 40%;
+    padding: 10px 20px;
+    background-color: blue;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Green button style for "View Details" and "Seat Selection" */
+.green-button {
+    padding: 10px 20px;
+    background-color: green;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+.green-button:hover {
+    background-color: darkgreen;
+}
+
+/* Blue button for Back and others */
+.blue-button {
+    width: 40%;
+    padding: 10px 20px;
+    background-color: blue;
+    border: none;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+
+.blue-button:hover {
+    background-color: darkblue;
+}
+
 
 h3 {
     margin-bottom: 5px;
@@ -43,41 +121,11 @@ p {
     font-size: 14px;
 }
 
-input[type="submit"] {
-    padding: 10px 20px;
-    background-color: blue;
-    border: none;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-input[type="button"] {
-    width: 40%;
-    padding: 10px 20px;
-    background-color: blue;
-    border: none;
-    text-align: center;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    float: right;
-}
-
-#filter {
-    width: 40%;
-    padding: 5px;
-    background-color: black;
-    border: none;
-    text-align: center;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    display: block;
-    margin-left: auto;
-}
-
-
-input[type="submit"]:hover {
-    background-color: blue;
+p#viewerror,
+p#categoryerror,
+p#dateerror1,
+p#dateerror2 {
+    color: red;
+    font-size: 14px;
+    margin: 0;
 }

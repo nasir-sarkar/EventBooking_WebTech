@@ -6,7 +6,7 @@ body {
 }
 
 .header {
-    width: 420px;
+    width: 620px;
     padding: 10px;
     background-color: blue;
     color: white;
@@ -19,7 +19,7 @@ body {
 }
 
 fieldset {
-    width: 400px;
+    width: 600px;
     padding: 20px;
     border: 2px solid blue;
     border-radius: 10px;
@@ -43,22 +43,34 @@ input[type="text"] {
     margin-bottom: 10px;
     border: 1px solid black;
     border-radius: 4px;
+    box-sizing: border-box;
 }
 
-input[type="submit"],
-input[type="button"] {
-    width: 40%;
-    padding: 10px 20px;
+.blue-button {
+    width: 24%;
+    padding: 10px 10px;
     background-color: blue;
     border: none;
     text-align: center;
     color: white;
     border-radius: 5px;
     cursor: pointer;
-}
+}  
 
 p {
     margin: 0;
     color: red;
     font-size: 14px;
 }
+
+.wide-button {
+    width: 540%;
+    padding: 10px 20px;
+    background-color: green;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+}
+
