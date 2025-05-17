@@ -32,7 +32,7 @@ if (!isset($_SESSION['status'])) {
             <p id="selecterror"></p>
 
             <input type="button" value="View Seats" onclick="validate()">
-            <input type="button" value="Back">
+            <a href="Event_Cards.php"><input type="button" value="Back"></a><br>
         </form>
     </fieldset>
 

@@ -22,7 +22,7 @@ function validate() {
     }
 
     if (isValid) {
-        window.location.href = "Status_Tracker.php";
+        window.location.href = "Abc.php";
     }
 
     return isValid;

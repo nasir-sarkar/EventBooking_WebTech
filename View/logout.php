@@ -2,7 +2,6 @@
     session_start();
 
     $_SESSION = array();
-
     session_destroy();
 
     if (ini_get("session.use_cookies")) {

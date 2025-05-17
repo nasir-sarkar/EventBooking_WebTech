@@ -12,7 +12,7 @@ function validate() {
     }
 
     if (isValid) {
-        window.location.href = "Accessibility_Filter.html";
+        window.location.href = "Accessibility_Filter.php";
     }
 
     return isValid;

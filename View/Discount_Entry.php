@@ -23,11 +23,17 @@ if (!isset($_SESSION['status'])) {
             <input type="text" id="promo" name="promo"><br>
             <p id="promoerror"></p>
 
-            <input type="button" value="Apply Code" onclick="validate()">
-            <input type="button" value="Back"></a>
+            <input type="button" class="blue-button" value="Apply" onclick="validate()">
+            <a href="Code_Generator.php"><input type="button" class="blue-button" value="Generate"></a>
+            <a href="redemption_Analytics.php"><input type="button" class="blue-button" value="Track"></a>
+            <a href="Accessibility_Filter.php"><input type="button" class="blue-button" value="Back"></a>
             
         </form>
     </fieldset>  
+
+    <form action="Checkout_Flow.php" style="margin-top: 10px;">
+    <button type="submit" class="wide-button">Skip</button>
+    </form>  
 
     <link rel="stylesheet" href="../CSS/Discount_Entry.css">
     <script src="../JS/Discount_Entry.js"></script>

@@ -34,7 +34,7 @@ if (!isset($_SESSION['status'])) {
                 <p id="dateerror"></p>
     
                 <input type="button" value="Browse Events" onclick="validate()">
-                <input type="button" value="Back">
+                <a href="View_Profile.php"><input type="button" value="Back"></a>
 
             </form>
         </fieldset>

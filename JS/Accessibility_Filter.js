@@ -11,5 +11,9 @@ function validate() {
         accessError.innerHTML = "";
     }
 
+    if (isValid) {
+        window.location.href = "Discount_Entry.php";
+    }
+
     return isValid;
 }

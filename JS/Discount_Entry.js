@@ -16,7 +16,7 @@ function validate() {
     }
 
     if (isValid) {
-        window.location.href = "Code_Generator.php";
+        window.location.href = "Checkout_Flow.php";
     }
 
     return isValid;

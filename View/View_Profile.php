@@ -1,14 +1,6 @@
 <?php
     session_start();
-
-    if (!isset($_SESSION['status']) && isset($_COOKIE['status'])) {
-        $_SESSION['status'] = true;
-        $_SESSION['email'] = "nasir@gmail.com";
-        $_SESSION['name'] = "Nasir Sarkar";
-        $_SESSION['phone'] = "01808080808";
-    }
-
-    if (!isset($_SESSION['status'])) {
+    if (!isset($_SESSION['status']) || !isset($_COOKIE['status'])) {
         header('location: login.php');
         exit;
     }
@@ -23,26 +15,34 @@
 </head>
 <body>
     <div class="header">Event Booking</div>
-    
-    <fieldset>    
-        <legend><b>VIEW PROFILE</b></legend>
-        <form>
 
-            <div class="avatar-container">
+    <div class="fieldsets-container">
+        <fieldset class="profile">    
+            <legend><b>VIEW PROFILE</b></legend>
+            <form>
+                <div class="avatar-container">
                 <img id="avatar" src="../Image/default-avatar.jpg" alt="Profile Picture" width="100">
                 <a href="Change_Avatar.php"><input type="button" class="avatar" value="Change Avatar"></a>
-            </div>
+                </div>
 
-            <p><b>Name:</b> <?php echo $_SESSION['name']; ?></p>
-            <p><b>Email:</b> <?php echo $_SESSION['email']; ?></p>
-            <p><b>Phone:</b> <?php echo $_SESSION['phone']; ?></p>
+                <p><b>Name:</b> Nasir Sarkar</p>
+                <p><b>Email:</b> nasir@gmail.com</p>
+                <p><b>Phone:</b> 0181818181</p>
 
-            <a href="Edit_Profile.php"><input type="button" value="Edit Profile"></a>
-            <a href="Update_Password.php"><input type="button" value="Update Password"></a>
-            <a href="logout.php"><input type="button" value="Logout"></a>
-            
-        </form>
-    </fieldset>
+                <a href="Edit_Profile.php"><input type="button" class="left" value="Edit Profile"></a>
+                <a href="Update_Password.php"><input type="button" class="left" value="Update Password"></a>
+            </form>
+        </fieldset>
+
+        <fieldset class="menu">    
+            <legend><b>MENU</b></legend>
+            <form>
+                <a href="Event_Cards.php"> <input type="button" class="right" value="See Events"></a><br><br>
+                <a href="Terms_Display.php"><input type="button" class="right" value="Refund"></a><br><br>
+                <a href="logout.php"><input type="button" class="right" value="Logout"></a>
+            </form>
+        </fieldset>
+    </div>
 
     <link rel="stylesheet" href="../CSS/View_Profile.css">
 </body>

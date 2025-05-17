@@ -36,7 +36,7 @@ function validate() {
     }
 
     if (isValid) {
-        window.location.href = "Redemption_Analytics.php";
+        window.location.href = "Abc.php";
     }
 
     return isValid;

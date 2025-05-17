@@ -2,10 +2,11 @@ body {
     font-family: Arial, sans-serif;
     background-color: white;
     margin: 20px;
+    place-items: center;
 }
 
 .header {
-    width: 420px;
+    width: 620px;
     padding: 10px;
     background-color: blue;
     color: white;
@@ -18,7 +19,7 @@ body {
 }
 
 fieldset {
-    width: 400px;
+    width: 600px;
     padding: 20px;
     border: 2px solid blue;
     border-radius: 10px;

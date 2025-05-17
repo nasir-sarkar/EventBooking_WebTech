@@ -13,19 +13,19 @@
     <form onsubmit="return validate()" method="post" action="loginCheck.php">
 
        <div>
-        <label for="email-input">
+        <label for="email">
             <span>
                 @         
             </span>
         </label>
-        <input type="email" name="email" id="email" placeholder="Email">
+        <input type="email" name="email" id="email" placeholder="Email" autocomplete="email">
         <p id="email-error"></p>
        </div> 
        <div>
-        <label for="password-input">
+        <label for="password">
             <img src="lock.png" height="24" width="24" alt="lock icon">
         </label>
-        <input type="password" name="password" id="password" placeholder="Password">
+        <input type="password" name="password" id="password" placeholder="Password" autocomplete="current-password">
         <p id="pass-error"></p>
        </div> 
        <button type="submit">Login</button>

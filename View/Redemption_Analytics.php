@@ -24,7 +24,7 @@ if (!isset($_SESSION['status'])) {
             <p id="codeerror"></p>
 
             <input type="submit" value="View Analytics">
-            <a href="Code_Generator.php"><input type="button" value="Back"></a>
+            <a href="Discount_Entry.php"><input type="button" value="Back"></a>
             
         </form>
     </fieldset>

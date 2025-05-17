@@ -28,7 +28,7 @@ if (!isset($_SESSION['status'])) {
             </select><br><br>
             <p id="accesserror"></p>
 
-            <input type="submit" value="Book Now">
+            <input type="button" value="Proceed to Pay"  onclick="validate()">
             <a href="Seat_Zoom.php"><input type="button" value="Back"></a>
         </form>
     </fieldset>

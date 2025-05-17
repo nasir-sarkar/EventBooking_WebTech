@@ -33,7 +33,7 @@ if (!isset($_SESSION['status'])) {
             <p id="validityerror"></p>
 
             <input type="button" value="Generate Code" onclick="validate()">
-            <a href="Discount_Entry.html"><input type="button" value="Back"></a>
+            <a href="Discount_Entry.php"><input type="button" value="Back"></a><br>
             
         </form>
     </fieldset>

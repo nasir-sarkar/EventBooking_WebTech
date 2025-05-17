@@ -36,7 +36,7 @@ if (!isset($_SESSION['status'])) {
             <input type="checkbox" id="split" name="split"> Enable Split Payment<br><br>
 
             <input type="button" value="Proceed to Pay"  onclick="validate()">
-            <input type="button" value="Back">
+            <a href="Accessibility_Filter.php"><input type="button" value="Back"></a><br>
         </form>
     </fieldset>
 
