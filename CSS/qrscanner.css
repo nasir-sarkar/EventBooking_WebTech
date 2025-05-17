@@ -74,3 +74,23 @@ video {
     border: 1px solid #b2b2b2 !important;
     border-radius: 0.25em;
 }
+
+.nav-buttons {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.nav-buttons button {
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.nav-buttons button:hover {
+  background-color: #555;
+}

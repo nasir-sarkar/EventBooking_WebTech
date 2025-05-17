@@ -39,3 +39,13 @@ body
     color: #2d572c;
 }
   
+.nav-buttons {
+  text-align: center;
+  margin-top: 30px;
+}
+.nav-buttons button {
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}

@@ -8,4 +8,25 @@ body {
     max-width: 100%;
     height: auto;
   }
+
+  .nav-buttons {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.nav-buttons button {
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #004d40;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.nav-buttons button:hover {
+  background-color: #00695c;
+}
+
   
