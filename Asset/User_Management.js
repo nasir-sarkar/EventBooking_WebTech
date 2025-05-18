@@ -1,4 +1,4 @@
-function validateUserFilter() {
+function validate() {
     let filter = document.getElementById("filter").value;
     let error = document.getElementById("filtererror");
 

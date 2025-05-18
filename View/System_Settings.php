@@ -18,7 +18,7 @@ if (!isset($_SESSION['status'])) {
 
     <fieldset>
         <legend><b>SYSTEM SETTINGS</b></legend>
-        <form onsubmit="return validateSettingsForm()">
+         <form method="post" action="../Asset/System_Settings_.php" onsubmit="return validate()">
             <label for="setting">Select Setting:</label><br>
             <select id="setting" name="setting">
                 <option value="">Select Option</option>
@@ -31,12 +31,12 @@ if (!isset($_SESSION['status'])) {
             <input type="password" id="adminpass" name="adminpass"><br>
             <p id="adminpasserror"></p>
 
-            <input type="button" value="Apply Settings" onclick="validateSettingsForm()">
+            <input type="button" value="Apply Settings" onclick="validate()">
             <a href="Admin_Panel.php"><input type="button" value="Back"></a>
         </form>
     </fieldset>
 
-    <link rel="stylesheet" href="../CSS/System_Settings.css">
-    <script src="../JS/System_Settings.js"></script>
+    <link rel="stylesheet" href="../Asset/System_Settings.css">
+    <script src="../Asset/System_Settings.js"></script>
 </body>
 </html>

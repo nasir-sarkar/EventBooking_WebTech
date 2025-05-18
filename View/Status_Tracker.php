@@ -18,7 +18,7 @@ if (!isset($_SESSION['status'])) {
     
     <fieldset>
         <legend><b>REQUEST STATUS TRACKER</b></legend>
-        <form onsubmit="return validate()">
+         <form method="post" action="../Asset/Status_Tracker_.php" onsubmit="return validate()">
             <label for="trackId">Enter Request ID:</label><br>
             <input type="text" id="trackId" name="trackId"><br>
             <p id="trackIderror"></p>
@@ -30,7 +30,7 @@ if (!isset($_SESSION['status'])) {
         </form>
     </fieldset>
 
-    <link rel="stylesheet" href="../CSS/Status_Tracker.css">
-    <script src="../JS/Status_Tracker.js"></script>
+    <link rel="stylesheet" href="../Asset/Status_Tracker.css">
+    <script src="../Asset/Status_Tracker.js"></script>
 </body>
 </html>

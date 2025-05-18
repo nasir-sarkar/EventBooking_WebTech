@@ -29,7 +29,7 @@ function validate() {
     }
 
     if (isValid) {
-        window.location.href = "Acces.html";
+        window.location.href = "Abc.html";
     }
 
     return isValid;

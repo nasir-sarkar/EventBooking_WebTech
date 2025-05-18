@@ -18,7 +18,7 @@ if (!isset($_SESSION['status'])) {
     
     <fieldset>
         <legend><b>DISCOUNT ENTRY</b></legend>
-        <form method="post" action="../PHP/Discount_Entry.php" onsubmit="return validate()">
+        <form method="post" action="../Asset/Discount_Entry_.php" onsubmit="return validate()">
             <label for="promo">Enter Promo Code:</label><br>
             <input type="text" id="promo" name="promo"><br>
             <p id="promoerror"></p>
@@ -35,7 +35,7 @@ if (!isset($_SESSION['status'])) {
     <button type="submit" class="wide-button">Skip</button>
     </form>  
 
-    <link rel="stylesheet" href="../CSS/Discount_Entry.css">
-    <script src="../JS/Discount_Entry.js"></script>
+    <link rel="stylesheet" href="../Asset/Discount_Entry.css">
+    <script src="../Asset/Discount_Entry.js"></script>
 </body>
 </html>

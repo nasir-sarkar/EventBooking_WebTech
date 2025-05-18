@@ -39,11 +39,11 @@
             <form>
                 <a href="Event_Cards.php"> <input type="button" class="right" value="See Events"></a><br><br>
                 <a href="Terms_Display.php"><input type="button" class="right" value="Refund"></a><br><br>
-                <a href="logout.php"><input type="button" class="right" value="Logout"></a>
+                <a href="../Controller/logout.php"><input type="button" class="right" value="Logout"></a>
             </form>
         </fieldset>
     </div>
 
-    <link rel="stylesheet" href="../CSS/View_Profile.css">
+    <link rel="stylesheet" href="../Asset/View_Profile.css">
 </body>
 </html>

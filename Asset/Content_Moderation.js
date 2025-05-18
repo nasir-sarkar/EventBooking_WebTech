@@ -1,4 +1,4 @@
-function validateCreateEvent() {
+function validate() {
     let name = document.getElementById("ename").value.trim();
     let date = document.getElementById("edate").value;
     let cat = document.getElementById("ecat").value;

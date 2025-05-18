@@ -18,7 +18,8 @@ if (!isset($_SESSION['status'])) {
     
     <fieldset>
         <legend><b>CHECKOUT FLOW</b></legend>
-        <form onsubmit="return validate()">
+         <form method="post" action="../Asset/Checkout_Flow_.php" onsubmit="return validate()">
+
             <label for="name">Full Name:</label><br>
             <input type="text" id="name" name="name"><br>
             <p id="nameerror"></p>
@@ -35,12 +36,12 @@ if (!isset($_SESSION['status'])) {
             <label for="split">Split Payment:</label><br>
             <input type="checkbox" id="split" name="split"> Enable Split Payment<br><br>
 
-            <input type="button" value="Proceed to Pay"  onclick="validate()">
+            <input type="submit" name="submit" value="Proceed to Pay" onclick="validate()">
             <a href="Accessibility_Filter.php"><input type="button" value="Back"></a><br>
         </form>
     </fieldset>
 
-    <link rel="stylesheet" href="../CSS/Checkout_Flow.css">
-    <script src="../JS/Checkout_Flow.js"></script>
+    <link rel="stylesheet" href="../Asset/Checkout_Flow.css">
+    <script src="../Asset/Checkout_Flow.js"></script>
 </body>
 </html>

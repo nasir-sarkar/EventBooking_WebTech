@@ -18,7 +18,7 @@ if (!isset($_SESSION['status'])) {
     
     <fieldset>
         <legend><b>EDIT PROFILE</b></legend>
-        <form onsubmit="return validate()">
+         <form method="post" action="../Asset/Edit_Profile_.php" onsubmit="return validate()">
             <label for="name">Name:</label><br>
             <input type="text" id="name" name="name"><br>
             <p id="nameerror"></p>
@@ -36,7 +36,7 @@ if (!isset($_SESSION['status'])) {
         </form>
     </fieldset>
 
-    <link rel="stylesheet" href="../CSS/Edit_Profile.css">
-    <script src="../JS/Edit_Profile.js"></script>
+    <link rel="stylesheet" href="../Asset/Edit_Profile.css">
+    <script src="../Asset/Edit_Profile.js"></script>
 </body>
 </html>

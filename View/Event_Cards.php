@@ -16,10 +16,10 @@ if (!isset($_SESSION['status'])) {
 <body>
     <div class="header">Event Booking</div>
 
-    <!-- Filter Fieldset -->
+    
     <fieldset>
         <legend><b>FILTER EVENTS</b></legend>
-        <form onsubmit="return validateFilters()">
+        <form method="post" action="../Asset/Event_Cards_.php" onsubmit="return validate()">
             <label for="view">Select View:</label><br>
             <select id="view" name="view">
                 <option value="">Select View</option>
@@ -50,7 +50,7 @@ if (!isset($_SESSION['status'])) {
         </form>
     </fieldset>
 
-    <!-- Event Cards Fieldset -->
+    
     <fieldset>
         <legend><b>EVENT CARDS</b></legend>
         <form>
@@ -71,7 +71,7 @@ if (!isset($_SESSION['status'])) {
         </form>
     </fieldset>
 
-    <link rel="stylesheet" href="../CSS/Event_Cards.css">
-    <script src="../JS/Event_Cards.js"></script>
+    <link rel="stylesheet" href="../Asset/Event_Cards.css">
+    <script src="../Asset/Event_Cards.js"></script>
 </body>
 </html>

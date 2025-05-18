@@ -18,7 +18,7 @@ if (!isset($_SESSION['status'])) {
     
     <fieldset>
         <legend><b>TERMS DISPLAY</b></legend>
-        <form onsubmit="return validate()">
+         <form method="post" action="../Asset/Terms_Display_.php" onsubmit="return validate()">
             <a href="Cancellation_Request.php"><input type="button" class="green" value="Cancellation Request"></a>
             <a href="Status_Tracker.php"><input type="button" class="green" value="Status Tracker"></a><br><br>
 
@@ -38,7 +38,7 @@ if (!isset($_SESSION['status'])) {
         </form>
     </fieldset>
 
-    <link rel="stylesheet" href="../CSS/Terms_Display.css">
-    <script src="../JS/Terms_Display.js"></script>
+    <link rel="stylesheet" href="../Asset/Terms_Display.css">
+    <script src="../Asset/Terms_Display.js"></script>
 </body>
 </html>

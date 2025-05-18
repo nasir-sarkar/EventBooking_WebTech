@@ -18,7 +18,7 @@ if (!isset($_SESSION['status'])) {
     
     <fieldset>
         <legend><b>GENERATE PROMO CODE</b></legend>
-        <form method="post" onsubmit="return validate()">
+        <form method="post" action="../Asset/Code_Generator_.php" onsubmit="return validate()">
 
             <label for="sponsor">Sponsor Name:</label><br>
             <input type="text" id="sponsor" name="sponsor"><br>
@@ -32,13 +32,13 @@ if (!isset($_SESSION['status'])) {
             <input type="date" id="validity" name="validity"><br>
             <p id="validityerror"></p>
 
-            <input type="button" value="Generate Code" onclick="validate()">
+            <input type="submit" name="submit" value="Generate Code" onclick="validate()">
             <a href="Discount_Entry.php"><input type="button" value="Back"></a><br>
             
         </form>
     </fieldset>
     
-    <link rel="stylesheet" href="../CSS/Code_Generator.css">
-    <script src="../JS/Code_Generator.js"></script>
+    <link rel="stylesheet" href="../Asset/Code_Generator.css">
+    <script src="../Asset/Code_Generator.js"></script>
 </body>
 </html>

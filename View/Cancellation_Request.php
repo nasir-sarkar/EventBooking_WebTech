@@ -18,7 +18,7 @@ if (!isset($_SESSION['status'])) {
     
     <fieldset>
         <legend><b>CANCELLATION REQUEST</b></legend>
-        <form onsubmit="return validate()">
+         <form method="post" action="../Asset/Cancellation_Request_.php" onsubmit="return validate()">
             <label for="bookingId">Booking ID:</label><br>
             <input type="text" id="bookingId" name="bookingId"><br>
             <p id="bookingIderror"></p>
@@ -27,12 +27,12 @@ if (!isset($_SESSION['status'])) {
             <textarea id="reason" name="reason" rows="4" cols="30"></textarea><br>
             <p id="reasonerror"></p>
 
-            <input type="button" value="Submit Request" onclick="validate()">
+            <input type="submit" name="submit" value="Submit Request" onclick="validate()">
             <a href="Terms_Display.php"><input type="button" value="Back"></a>
         </form>
     </fieldset>
 
-    <link rel="stylesheet" href="../CSS/Cancellation_Request.css">
-    <script src="../JS/Cancellation_Request.js"></script>
+    <link rel="stylesheet" href="../Asset/Cancellation_Request.css">
+    <script src="../Asset/Cancellation_Request.js"></script>
 </body>
 </html>

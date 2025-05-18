@@ -18,7 +18,7 @@ if (!isset($_SESSION['status'])) {
     
     <fieldset>
         <legend><b>CHANGE AVATAR</b></legend>
-        <form method="post" action="Upload.php" enctype="multipart/form-data" onsubmit="return validate()">
+        <form method="post" action="../Controller/Upload.php" enctype="multipart/form-data" onsubmit="return validate()">
 
             <label for="avatar">Select Image:</label><br>
             <input type="file" id="avatar" name="avatar" accept="image/*"><br>
@@ -30,7 +30,7 @@ if (!isset($_SESSION['status'])) {
         </form>
     </fieldset>
 
-    <link rel="stylesheet" href="../CSS/Change_Avatar.css">
-    <script src="../JS/Change_Avatar.js"></script>
+    <link rel="stylesheet" href="../Asset/Change_Avatar.css">
+    <script src="../Asset/Change_Avatar.js"></script>
 </body>
 </html>

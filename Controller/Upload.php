@@ -2,7 +2,7 @@
 
 if (isset($_POST['submit'])) {
 
-    $uploadDir = "upload/";
+    $uploadDir = "../View/upload/";
     if (!is_dir($uploadDir)) {
         mkdir($uploadDir, 0777, true);
     }

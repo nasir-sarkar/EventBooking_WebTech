@@ -18,7 +18,7 @@ if (!isset($_SESSION['status'])) {
     
     <fieldset>
         <legend><b>PROMO CODE ANALYTICS</b></legend>
-        <form method="post" action="../PHP/Redemption_Analytics.php" onsubmit="return validate()">
+        <form method="post" action="../Asset/Redemption_Analytics_.php" onsubmit="return validate()">
             <label for="code">Enter Code to Track:</label><br>
             <input type="text" id="code" name="code"><br>
             <p id="codeerror"></p>
@@ -29,8 +29,8 @@ if (!isset($_SESSION['status'])) {
         </form>
     </fieldset>
 
-    <link rel="stylesheet" href="../CSS/Redemption_Analytics.css">
-    <script src="../JS/Redemption_Analytics.js"></script>
+    <link rel="stylesheet" href="../Asset/Redemption_Analytics.css">
+    <script src="../Asset/Redemption_Analytics.js"></script>
     
 </body>
 </html>

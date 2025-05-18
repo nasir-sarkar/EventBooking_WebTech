@@ -1,4 +1,4 @@
-function validateFilters() {
+function validate() {
     let view = document.getElementById("view").value;
     let category = document.getElementById("category").value;
     let dateFrom = document.getElementById("dateFrom").value;

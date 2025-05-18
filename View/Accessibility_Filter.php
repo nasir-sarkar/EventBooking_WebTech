@@ -18,7 +18,7 @@ if (!isset($_SESSION['status'])) {
     
     <fieldset>
         <legend><b>ACCESSIBILITY FILTER</b></legend>
-        <form onsubmit="return validate()">
+         <form method="post" action="../Asset/Accessibility_Filter_.php" onsubmit="return validate()">
             <label for="access">Select Accessibility Option:</label><br>
             <select id="access" name="access">
                 <option value="">Select Accessibility</option>
@@ -28,12 +28,12 @@ if (!isset($_SESSION['status'])) {
             </select><br><br>
             <p id="accesserror"></p>
 
-            <input type="button" value="Proceed to Pay"  onclick="validate()">
+            <input type="submit" name="submit" value="Proceed to Pay"  onclick="validate()">
             <a href="Seat_Zoom.php"><input type="button" value="Back"></a>
         </form>
     </fieldset>
 
-    <link rel="stylesheet" href="../CSS/Accessibility_Filter.css">
-    <script src="../JS/Accessibility_Filter.js"></script>
+    <link rel="stylesheet" href="../Asset/Accessibility_Filter.css">
+    <script src="../Asset/Accessibility_Filter.js"></script>
 </body>
 </html>

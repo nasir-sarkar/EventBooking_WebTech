@@ -31,6 +31,6 @@ if (!isset($_SESSION['status'])) {
         </form>
     </fieldset>
 
-    <link rel="stylesheet" href="../CSS/Saved_Cards.css">
+    <link rel="stylesheet" href="../Asset/Saved_Cards.css">
 </body>
 </html>

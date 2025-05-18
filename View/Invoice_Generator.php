@@ -18,19 +18,19 @@ if (!isset($_SESSION['status'])) {
 
     <fieldset>
         <legend><b>INVOICE GENERATOR</b></legend>
-        <form onsubmit="return validate()">
+         <form method="post" action="../Asset/Invoice_Generator_.php" onsubmit="return validate()">
             <label for="email">Enter Email for Invoice:</label><br>
             <input type="email" id="email" name="email"><br>
             <p id="emailerror"></p>
 
-            <input type="submit" value="Generate Invoice">
+            <input type="submit" name="submit" value="Generate Invoice">
             <a href="Saved_Cards.php"><input type="button" value="Back"></a> 
 
             <br><br><p><b>Note:</b> Your e-ticket will be sent instantly after payment.</p>        
         </form>
     </fieldset>
 
-    <link rel="stylesheet" href="../CSS/Invoice_Generator.css">
-    <script src="../JS/Invoice_Generator.js"></script>
+    <link rel="stylesheet" href="../Asset/Invoice_Generator.css">
+    <script src="../Asset/Invoice_Generator.js"></script>
 </body>
 </html>

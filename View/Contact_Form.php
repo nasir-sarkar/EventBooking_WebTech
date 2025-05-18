@@ -11,14 +11,14 @@ if (!isset($_SESSION['status'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>Contact From</title>
 </head>
 <body>
     <div class="header">Event Booking</div>
     
     <fieldset>
-        <legend><b>CONTACT US</b></legend>
-        <form onsubmit="return validate()">
+        <legend><b>CONTACT FROM</b></legend>
+         <form method="post" action="../Asset/Contact_Form_.php" onsubmit="return validate()">
 
             <label for="name">Full Name:</label><br>
             <input type="text" id="name" name="name"><br>
@@ -36,13 +36,13 @@ if (!isset($_SESSION['status'])) {
             <input type="text" id="captcha" name="captcha"><br>
             <p id="captchaerror"></p>
 
-            <input type="button" name="submit" value="Submit Inquiry" onclick="validate()">
+            <input type="submit" name="submit" value="Submit Inquiry" onclick="validate()">
             <input type="button" value="Back">
             
         </form>
     </fieldset>
     
-    <link rel="stylesheet" href="../CSS/Contact_Form.css">
-    <script src="../JS/Contact_Form.js"></script>
+    <link rel="stylesheet" href="../Asset/Contact_Form.css">
+    <script src="../Asset/Contact_Form.js"></script>
 </body>
 </html>

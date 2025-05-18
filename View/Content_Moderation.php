@@ -19,7 +19,7 @@ if (!isset($_SESSION['status'])) {
   
     <fieldset>
         <legend><b>CREATE EVENT</b></legend>
-        <form onsubmit="return validateCreateEvent()">
+         <form method="post" action="../Asset/Content_Moderation_.php" onsubmit="return validate()">
             <label for="ename">Event Name:</label><br>
             <input type="text" id="ename" name="ename"><br>
             <p id="enameerror"></p>
@@ -37,7 +37,7 @@ if (!isset($_SESSION['status'])) {
             </select><br>
             <p id="ecaterror"></p>
 
-            <input type="button" value="Create Event" onclick="validateCreateEvent()">
+            <input type="submit" name="submit" value="Create Event" onclick="validate()">
         </form>
     </fieldset>
 
@@ -58,7 +58,7 @@ if (!isset($_SESSION['status'])) {
     </fieldset>
 
     
-    <link rel="stylesheet" href="../CSS/Content_Moderation.css">
-    <script src="../JS/Content_Moderation.js"></script>
+    <link rel="stylesheet" href="../Asset/Content_Moderation.css">
+    <script src="../Asset/Content_Moderation.js"></script>
 </body>
 </html>

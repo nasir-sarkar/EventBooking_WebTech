@@ -18,9 +18,9 @@ if (!isset($_SESSION['status'])) {
     
     <fieldset>
         <legend><b>SEAT ZOOM</b></legend>
-        <form onsubmit="return validate()">
+         <form method="post" action="../Asset/Seat_Zoom_.php" onsubmit="return validate()">
 
-            <img src="../Image/seat.jpg" id="seatImage"><br><br>
+            <img src="seat.jpg" id="seatImage"><br><br>
 
             <label for="seat">Select Seat:</label><br>
             <select id="seat" name="seat">
@@ -31,12 +31,12 @@ if (!isset($_SESSION['status'])) {
             </select><br>
             <p id="selecterror"></p>
 
-            <input type="button" value="Go Next" onclick="validate()">
+            <input type="submit" name="submit" value="Go Next" onclick="validate()">
             <a href="Interactive_Vanue_Map.php"><input type="button" value="Back"></a>
         </form>
     </fieldset>
 
-    <link rel="stylesheet" href="../CSS/Seat_Zoom.css">
-    <script src="../JS/Seat_Zoom.js"></script>
+    <link rel="stylesheet" href="../Asset/Seat_Zoom.css">
+    <script src="../Asset/Seat_Zoom.js"></script>
 </body>
 </html>

@@ -23,6 +23,6 @@ if (!isset($_SESSION['status'])) {
         <a href="Contact_Form.php"><input type="button" value="Back"></a>
     </fieldset>
     
-    <link rel="stylesheet" href="../CSS/Submission_Confirmation.css">
+    <link rel="stylesheet" href="../Asset/Submission_Confirmation.css">
 </body>
 </html>

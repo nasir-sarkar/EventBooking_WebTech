@@ -18,9 +18,9 @@ if (!isset($_SESSION['status'])) {
     
     <fieldset>
         <legend><b>INTERACTIVE VENUE MAP</b></legend>
-        <form onsubmit="return validate()">
+         <form method="post" action="../Asset/Interactive_Venue_Map_.php" onsubmit="return validate()">
 
-            <img src="../Image/event_map.jpg" id="venueImage">
+            <img src="event_map.jpg" id="venueImage">
 
             <label for="section">Select Section:</label><br>
             <select id="section" name="section">
@@ -31,12 +31,12 @@ if (!isset($_SESSION['status'])) {
             </select><br><br>
             <p id="selecterror"></p>
 
-            <input type="button" value="View Seats" onclick="validate()">
+            <input type="submit" name="submit" value="View Seats" onclick="validate()">
             <a href="Event_Cards.php"><input type="button" value="Back"></a><br>
         </form>
     </fieldset>
 
-    <link rel="stylesheet" href="../CSS/Interactive_Venue_Map.css">
-    <script src="../JS/Interactive_Venue_Map.js"></script>
+    <link rel="stylesheet" href="../Asset/Interactive_Venue_Map.css">
+    <script src="../Asset/Interactive_Venue_Map.js"></script>
 </body>
 </html>

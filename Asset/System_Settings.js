@@ -1,4 +1,4 @@
-function validateSettingsForm() {
+function validate() {
     let setting = document.getElementById("setting").value;
     let adminpass = document.getElementById("adminpass").value;
     let settingError = document.getElementById("settingerror");
@@ -22,7 +22,7 @@ function validateSettingsForm() {
     }
 
     if (isValid) {
-        window.location.href = "Settings_Confirmation.php";
+        window.location.href = "Abc.php";
     }
 
     return isValid;

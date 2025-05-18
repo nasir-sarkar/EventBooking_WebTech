@@ -18,7 +18,7 @@ if (!isset($_SESSION['status'])) {
 
     <fieldset>
         <legend><b>USER MANAGEMENT</b></legend>
-        <form onsubmit="return validateUserFilter()">
+         <form method="post" action="../Asset/User_Management_.php" onsubmit="return validate()">
             <label for="filter">Filter By Role:</label><br>
             <select id="filter" name="filter">
                 <option value="">Select Role</option>
@@ -27,7 +27,7 @@ if (!isset($_SESSION['status'])) {
             </select><br>
             <p id="filtererror"></p>
 
-            <input type="button" value="Apply Filter" onclick="validateUserFilter()">
+            <input type="button" value="Apply Filter" onclick="validate()">
             <input type="button" value="Sort A-Z" onclick="alert('Sorted A-Z')">
             <input type="button" value="Bulk Delete" onclick="alert('Bulk delete initiated!')">
             <input type="button" value="Add User" onclick="alert('Add user functionality!')">
@@ -43,7 +43,7 @@ if (!isset($_SESSION['status'])) {
         <a href="Admin_Panel.php"><input type="button" class="blue" value="Back"></a>
     </fieldset>
 
-    <link rel="stylesheet" href="../CSS/User_Management.css">
-    <script src="../JS/User_Management.js"></script>
+    <link rel="stylesheet" href="../Asset/User_Management.css">
+    <script src="../Asset/User_Management.js"></script>
 </body>
 </html>

@@ -14,6 +14,6 @@
 
     setcookie('status', '', time() - 3600, '/');
 
-    header('location: login.php');
+    header('location: ../View/login.php');
     exit;
 ?>
