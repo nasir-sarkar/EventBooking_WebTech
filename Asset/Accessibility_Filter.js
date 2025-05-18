@@ -12,7 +12,7 @@ function validate() {
     }
 
     if (isValid) {
-        window.location.href = "Discount_Entry.php";
+        window.location.href = "ttgrid.html";
     }
 
     return isValid;

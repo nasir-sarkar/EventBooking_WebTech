@@ -59,14 +59,16 @@ if (!isset($_SESSION['status'])) {
             <p>Category: Entertainment</p>
             <a href="Interactive_Vanue_Map.php"><input type="button" class="green-button" value="View Details"></a>
             <a href="regdashboard.html"><input type="button" class="green-button" value="Registration"></a>
-            <a href="Interactive_Vanue_Map.php"><input type="button" class="green-button" value="Book"></a>
+             <a href="joinwaitlist.html"><input type="button" class="green-button" value="Join Wait List"></a>
+            <a href="Seat_Zoom.php"><input type="button" class="green-button" value="Book"></a>
 
             <h3>Event: Tech Conference</h3>
             <p>Date: 20-04-2025</p>
             <p>Category: Technology</p>
             <a href="Interactive_Vanue_Map.php"><input type="button" class="green-button" value="View Details"></a>
             <a href="regdashboard.html"><input type="button" class="green-button" value="Registration"></a>
-            <a href="Interactive_Vanue_Map.php"><input type="button" class="green-button" value="Book"></a>
+            <a href="joinwaitlist.html"><input type="button" class="green-button" value="Join Wait List"></a>
+            <a href="Seat_Zoom.php"><input type="button" class="green-button" value="Book"></a>
 
             <br><br><br>
             <a href="View_Profile.php"><input type="button" class="blue-button" value="Back"></a>

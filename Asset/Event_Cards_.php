@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     }
 
     if (!$hasError) {
-        header("Location: ../View/Abc.php");
+        header("Location: ../View/Seat_Selection");
         exit;
     }
 } 

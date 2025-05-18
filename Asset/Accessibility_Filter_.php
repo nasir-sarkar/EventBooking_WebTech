@@ -13,7 +13,7 @@ if (isset($_POST['submit'])) {
     }
 
     if (!$hasError) {
-        header("Location: ../View/Discount_Entry.php");
+        header("Location: ../View/ttgrid.html");
         exit;
     }
 } 
