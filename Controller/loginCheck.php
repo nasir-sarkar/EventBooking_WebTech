@@ -15,7 +15,7 @@
 
             setcookie('status', 'true', time() + 1800, '/');
 
-            header('location: ../View/Admin_Panel.php');
+            header('location: ../View/View_Profile.php');
         } else {
             echo "invalid user!";
         }
