@@ -31,7 +31,7 @@ if (!isset($_SESSION['status'])) {
             </select><br><br>
             <p id="selecterror"></p>
 
-            <input type="submit" name="submit" value="View Seats" onclick="validate()">
+            <input type="submit" name="submit" value="Parking Map" onclick="validate()">
             <a href="Event_Cards.php"><input type="button" value="Back"></a><br>
         </form>
     </fieldset>

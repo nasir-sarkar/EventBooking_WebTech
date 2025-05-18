@@ -12,7 +12,7 @@ function validate() {
     }
 
     if (isValid) {
-        window.location.href = "Seat_Zoom.php";
+        window.location.href = "parkingmap.html";
     }
 
     return isValid;

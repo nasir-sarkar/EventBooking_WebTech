@@ -21,7 +21,7 @@
             <legend><b>VIEW PROFILE</b></legend>
             <form>
                 <div class="avatar-container">
-                <img id="avatar" src="../Image/default-avatar.jpg" alt="Profile Picture" width="100">
+                <img id="avatar" src="default-avatar.jpg" alt="Profile Picture" width="100">
                 <a href="Change_Avatar.php"><input type="button" class="avatar" value="Change Avatar"></a>
                 </div>
 
