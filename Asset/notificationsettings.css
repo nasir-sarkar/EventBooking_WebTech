@@ -1,37 +1,68 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    padding: 20px;
-    text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: white;
+  margin: 20px;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
 }
 
 h1 {
-    color: #003366;
+  width: 620px;
+  background-color: blue;
+  color: white;
+  padding: 10px 0;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-div {
-    margin: 10px 0;
+form {
+  width: 600px;
+  padding: 20px;
+  border: 2px solid blue;
+  border-radius: 10px;
+  background-color: white;
+}
+
+label {
+  font-weight: bold;
+  font-size: 16px;
 }
 
 input[type="checkbox"] {
-    margin-left: 10px;
+  margin-right: 10px;
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  width: 40%;
+  padding: 10px 20px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 20px;
 }
 
 button:hover {
-    background-color: #0056b3;
+  background-color: darkblue;
 }
 
-#preferences-result {
-    margin-top: 20px;
-    font-size: 16px;
-    color: #003366;
+a {
+  display: inline-block;
+  margin-top: 20px;
+  color: white;
+  background-color: blue;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  background-color: darkblue;
 }

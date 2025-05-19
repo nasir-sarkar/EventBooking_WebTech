@@ -1,3 +1,12 @@
+<?php
+session_start();
+if (!isset($_SESSION['status'])) {
+    header('location: login.php');
+    exit;
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,8 +34,8 @@
     <script src="../Asset/qrscanner.js"></script>
 
     <div class="nav-buttons">
-  <button onclick="window.location.href='attendeelookup.html'">Go to Attendee Lookup</button>
-  <button onclick="window.location.href='badgeprinter.html'">Go to Badge Printer</button>
+  <button onclick="window.location.href='attendeelookup.php'">Go to Attendee Lookup</button>
+  <button onclick="window.location.href='badgeprinter.php'">Go to Badge Printer</button>
 </div>
 
 </body>

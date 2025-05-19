@@ -1,10 +1,18 @@
+<?php
+session_start();
+if (!isset($_SESSION['status'])) {
+    header('location: login.php');
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notification Center</title>
-    <link rel="stylesheet" href="../CSS/notificationcenter.css">
+    <link rel="stylesheet" href="../Asset/notificationcenter.css">
 </head>
 <body>
 
@@ -27,8 +35,8 @@
 
     <button onclick="clearNotifications()">Clear All</button>
     <br><br>
-    <a href="notificationsettings.html">Go to Notification Settings</a>
+    <a href="notificationsettings.php">Go to Notification Settings</a>
 
-    <script src="../JS/notificationcenter.js"></script>
+    <script src="../Asset/notificationcenter.js"></script>
 </body>
 </html>

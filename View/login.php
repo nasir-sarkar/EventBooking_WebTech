@@ -2,8 +2,8 @@
 <html>
 <head>
   <title>Login</title>
-  <link rel="stylesheet" href="../CSS/login.css">
-  <script src="../JS/login.js" defer></script>
+  <link rel="stylesheet" href="../Asset/login.css">
+  <script src="../Asset/login.js" defer></script>
 </head>
 <body>
 
@@ -33,7 +33,7 @@
        <p id="valid-error"></p>
     </form>
 
-    <p><a href="../View/forgotpassword.html">Forgot Password?</a></p>
+    <p><a href="../View/forgotpassword.php">Forgot Password?</a></p>
 
   </div>
 

@@ -1,8 +1,16 @@
+<?php
+session_start();
+if (!isset($_SESSION['status'])) {
+    header('location: login.php');
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
   <title>Badge Printer</title>
-  <link rel="stylesheet" href="../CSS/badgeprinter.css">
+  <link rel="stylesheet" href="../Asset/badgeprinter.css">
 </head>
 <body>
 
@@ -18,8 +26,8 @@
   <script src="../JS/badgeprinter.js"></script>
 
   <div class="nav-buttons">
-  <button onclick="window.location.href='qrscanner.html'">Go to QR Scanner</button>
-  <button onclick="window.location.href='attendeelookup.html'">Go to Attendee Lookup</button>
+  <button onclick="window.location.href='qrscanner.php'">Go to QR Scanner</button>
+  <button onclick="window.location.href='attendeelookup.php'">Go to Attendee Lookup</button>
 </div>
 
 </body>

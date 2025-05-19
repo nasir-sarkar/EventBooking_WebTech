@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['status'])) {
+    header('location: login.php');
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +14,7 @@
 </head>
 
 <div class="nav-buttons">
-  <button onclick="window.location.href='publictransportguide.html'">Go to Public Transport Guide</button>
+  <button onclick="window.location.href='publictransportguide.php'">Go to Public Transport Guide</button>
 </div>
 
 

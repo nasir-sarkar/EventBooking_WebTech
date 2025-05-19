@@ -1,36 +1,50 @@
-body 
-{
+body {
   font-family: Arial, sans-serif;
   padding: 20px;
   background-color: #e6f0ff;
   text-align: center;
+  margin: 0;
 }
 
-#search-bar 
-{
+h1 {
+  color: #1a237e;
+  margin-bottom: 30px;
+}
+
+#search-bar {
   padding: 10px;
   width: 60%;
   font-size: 16px;
   margin-bottom: 20px;
+  border: 1px solid #999;
+  border-radius: 5px;
 }
 
-#filters 
-{
+#filters {
   margin-bottom: 20px;
 }
 
-#results 
-{
+#filters label {
+  margin: 0 10px;
+  font-size: 14px;
+  display: inline-block;
+}
+
+#results {
   margin-top: 20px;
 }
 
-.item 
-{
+.item {
   background-color: white;
   border: 1px solid #aaa;
-  padding: 10px;
+  padding: 12px 15px;
   margin: 10px auto;
   width: 60%;
   text-align: left;
-  display: block;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.item:hover {
+  background-color: #f0f8ff;
 }

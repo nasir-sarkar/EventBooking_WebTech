@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['status'])) {
+    header('location: login.php');
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,8 +26,8 @@
   <script src="../Asset/priorityqueue.js"></script>
 
   <div class="nav-buttons">
-  <button onclick="window.location.href='joinwaitlist.html'">Go to Join Waitlist</button>
-  <button onclick="window.location.href='availabilityalerts.html'">Go to Availability Alerts</button>
+  <button onclick="window.location.href='joinwaitlist.php'">Go to Join Waitlist</button>
+  <button onclick="window.location.href='availabilityalerts.php'">Go to Availability Alerts</button>
 </div>
 
 </body>

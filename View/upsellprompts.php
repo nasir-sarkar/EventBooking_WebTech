@@ -1,3 +1,12 @@
+<?php
+session_start();
+if (!isset($_SESSION['status'])) {
+    header('location: login.php');
+    exit;
+}
+?>
+
+
 <!DOCTYPE html>
 <html>
 
@@ -17,8 +26,8 @@
     <p id="message"></p>
 
     <div class="nav-buttons">
-  <button onclick="window.location.href='ttgrid.html'">Go to Ticket Tier Grid</button>
-  <button onclick="window.location.href='packageComparison.html'">Go to Package Comparison</button>
+  <button onclick="window.location.href='ttgrid.php'">Go to Ticket Tier Grid</button>
+  <button onclick="window.location.href='packageComparison.php'">Go to Package Comparison</button>
 </div>
 
 

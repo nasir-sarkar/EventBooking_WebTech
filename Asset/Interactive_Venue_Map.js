@@ -12,7 +12,7 @@ function validate() {
     }
 
     if (isValid) {
-        window.location.href = "parkingmap.html";
+        window.location.href = "parkingmap.php";
     }
 
     return isValid;

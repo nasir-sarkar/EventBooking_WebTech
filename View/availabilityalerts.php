@@ -1,8 +1,16 @@
+<?php
+session_start();
+if (!isset($_SESSION['status'])) {
+    header('location: login.php');
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
   <title>Availability Alerts</title>
-  <link rel="stylesheet" href="../CSS/availabilityalerts.css">
+  <link rel="stylesheet" href="../Asset/availabilityalerts.css">
 </head>
 <body>
 
@@ -18,8 +26,8 @@
   <script src="../JS/availabilityalerts.js"></script>
 
   <div class="nav-buttons">
-  <button onclick="window.location.href='joinwaitlist.html'">Go to Join Waitlist</button>
-  <button onclick="window.location.href='priorityqueue.html'">Go to Priority Queue</button>
+  <button onclick="window.location.href='joinwaitlist.php'">Go to Join Waitlist</button>
+  <button onclick="window.location.href='priorityqueue.php'">Go to Priority Queue</button>
 </div>
 
 </body>

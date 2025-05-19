@@ -1,9 +1,18 @@
+<?php
+session_start();
+if (!isset($_SESSION['status'])) {
+    header('location: login.php');
+    exit;
+}
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
   <title>Email Verification</title>
-  <link rel="stylesheet" href="../CSS/emailverification.css">
-  <script src="../JS/emailverification.js" defer></script>
+  <link rel="stylesheet" href="../Asset/emailverification.css">
+  <script src="../Asset/emailverification.js" defer></script>
 </head>
 <body>
   <div class="container">

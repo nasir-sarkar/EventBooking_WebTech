@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['status'])) {
+    header('location: login.php');
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,8 +51,8 @@
       <a href="Discount_Entry.php"><input type="button" value="Submit"></a>
 
       <div class="nav-buttons">
-  <button onclick="window.location.href='upsellprompts.html'">Go to Upsell Prompt</button>
-  <button onclick="window.location.href='packagecomparison.html'">Go to Package Comparison</button>
+  <button onclick="window.location.href='upsellprompts.php'">Go to Upsell Prompt</button>
+  <button onclick="window.location.href='packagecomparison.php'">Go to Package Comparison</button>
 </div>
 
 

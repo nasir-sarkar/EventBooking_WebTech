@@ -10,7 +10,7 @@ if (!isset($_SESSION['status'])) {
 <html>
 <head>
   <title>Join Waitlist</title>
-  <link rel="stylesheet" href="../CSS/joinwaitlist.css">
+  <link rel="stylesheet" href="../Asset/joinwaitlist.css">
 </head>
 <body>
 
@@ -25,8 +25,8 @@ if (!isset($_SESSION['status'])) {
   <script src="../JS/joinwaitlist.js"></script>
 
   <div class="nav-buttons">
-  <button onclick="window.location.href='availabilityalerts.html'">Go to Availability Alerts</button>
-  <button onclick="window.location.href='priorityqueue.html'">Go to Priority Queue</button>
+  <button onclick="window.location.href='availabilityalerts.php'">Go to Availability Alerts</button>
+  <button onclick="window.location.href='priorityqueue.php'">Go to Priority Queue</button>
 </div>
 
 </body>

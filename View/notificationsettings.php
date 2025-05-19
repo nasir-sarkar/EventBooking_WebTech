@@ -1,8 +1,16 @@
+<?php
+session_start();
+if (!isset($_SESSION['status'])) {
+    header('location: login.php');
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
   <title>Notification Settings</title>
-  <link rel="stylesheet" href="../CSS/notificationsettings.css">
+  <link rel="stylesheet" href="../Asset/notificationsettings.css">
 </head>
 <body>
 
@@ -21,8 +29,8 @@
   </form>
 
   <br>
-  <a href="notificationcenter.html">Back to Notification Center</a>
+  <a href="notificationcenter.php">Back to Notification Center</a>
 
-  <script src="../JS/notificationsettings.js"></script>
+  <script src="../Asset/notificationsettings.js"></script>
 </body>
 </html>

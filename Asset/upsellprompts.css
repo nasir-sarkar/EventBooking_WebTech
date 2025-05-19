@@ -1,51 +1,75 @@
-body 
-{
-    font-family: sans-serif;
-    background-color: #f0fff4;
-    padding: 40px;
-    text-align: center;
-}
-  
-.upsell-box 
-{
-    background-color: #e6f9ec;
-    padding: 30px;
-    max-width: 600px;
-    margin: auto;
-    border: 2px solid #4caf50;
-    border-radius: 12px;
-}
-  
-#upgradeBtn 
-{
-    background-color: #122013;
-    color: white;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-}
-  
-#upgradeBtn:hover 
-{
-    background-color: #1a3b20;
-}
-  
-#message 
-{
-    margin-top: 15px;
-    font-weight: bold;
-    color: #2d572c;
-}
-  
-.nav-buttons {
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e6f0ff;   
+  padding: 40px 20px;
   text-align: center;
-  margin-top: 30px;
+  color: #0b2a66;              
 }
-.nav-buttons button {
-  padding: 10px 20px;
-  margin: 5px;
-  font-size: 14px;
+
+.upsell-box {
+  background-color: #d6e1ff;  
+  max-width: 600px;
+  margin: auto;
+  padding: 30px 40px;
+  border: 2px solid #3a5fcc;  
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(58, 95, 204, 0.25); 
+}
+
+h2 {
+  margin-bottom: 15px;
+  color: #1e3a8a;           
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.1rem;
+  margin: 12px 0;
+  line-height: 1.5;
+  color: #2a3f90;             
+}
+
+#upgradeBtn {
+  background-color: #0b1a4d;  
+  color: white;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+#upgradeBtn:hover {
+  background-color: #132a78;  
+}
+
+#message {
+  margin-top: 20px;
+  font-weight: 700;
+  color: #1f3b99;             
+  min-height: 1.2em;          
+}
+
+.nav-buttons {
+  margin-top: 35px;
+}
+
+.nav-buttons button {
+  background-color: #3a5fcc;  
+  border: none;
+  color: white;
+  padding: 10px 22px;
+  margin: 5px 8px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.nav-buttons button:hover {
+  background-color: #2d47a0;  
 }

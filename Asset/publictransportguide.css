@@ -1,56 +1,101 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #6f7db7;
-    padding: 20px;
-  }
-  
-  h2 {
+    background-color: #ffffff;
+    margin: 20px;
     text-align: center;
-  }
-  
-  .transport-option {
-    background-color: #24598f;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 5px;
-  }
-  
-  .status {
+    color: #333;
+}
+
+.header {
+    width: 620px;
+    padding: 12px;
+    background-color: #1e3a8a; /* deep blue */
+    color: white;
+    font-size: 22px;
     font-weight: bold;
-  }
-  
-  .hotel-booking {
-    background-color: #80bfe7;
+    text-align: center;
+    border-radius: 12px;
+    margin: 0 auto 25px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h2 {
+    font-size: 24px;
+    color: #1e3a8a;
+    margin-bottom: 20px;
+}
+
+.transport-option {
+    background-color: #eef4ff; /* light blue background */
+    border: 2px solid #1e3a8a;
     padding: 15px;
-    margin-top: 20px;
-    border-radius: 5px;
-  }
-  
-  .hotel-booking ul {
+    margin: 15px auto;
+    border-radius: 10px;
+    width: 500px;
+    text-align: left;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.transport-option h3 {
+    color: #1a2e6c;
+}
+
+.status {
+    font-weight: bold;
+    color: #28a745; /* green for availability */
+}
+
+.hotel-booking {
+    background-color: #eef4ff;
+    border: 2px solid #1e3a8a;
+    padding: 15px;
+    margin: 30px auto 10px;
+    border-radius: 10px;
+    width: 500px;
+    text-align: left;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.hotel-booking h3 {
+    color: #1a2e6c;
+}
+
+.hotel-booking ul {
     list-style-type: none;
-    padding: 0;
-  }
-  
-  .hotel-booking li {
+    padding-left: 0;
+}
+
+.hotel-booking li {
     margin: 5px 0;
-  }
-  
-  .nav-buttons {
-  text-align: center;
-  margin-top: 30px;
+}
+
+.hotel-booking a {
+    color: #1e3a8a;
+    text-decoration: none;
+}
+
+.hotel-booking a:hover {
+    text-decoration: underline;
+    color: #0f2557;
+}
+
+.nav-buttons {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .nav-buttons button {
-  padding: 10px 20px;
-  margin: 5px;
-  font-size: 14px;
-  cursor: pointer;
-  background-color: #004d40;
-  color: white;
-  border: none;
-  border-radius: 5px;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .nav-buttons button:hover {
-  background-color: #00695c;
+    background-color: #2745a0;
 }

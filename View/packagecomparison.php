@@ -1,11 +1,19 @@
+<?php
+session_start();
+if (!isset($_SESSION['status'])) {
+    header('location: login.php');
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <title>Ticket Comparison</title>
-  <link rel="stylesheet" href="../CSS/packagecomparison.css">
-  <script src="../JS/packageComparison.js" defer></script>
+  <link rel="stylesheet" href="../Asset/packagecomparison.css">
+  <script src="../Asset/packageComparison.js" defer></script>
 </head>
 
 <body>
@@ -50,8 +58,8 @@
       </select>
 
       <div class="nav-buttons">
-  <button onclick="window.location.href='ttgrid.html'">Go to Ticket Tier Grid</button>
-  <button onclick="window.location.href='upsell.html'">Go to Upsell Prompt</button>
+  <button onclick="window.location.href='ttgrid.php'">Go to Ticket Tier Grid</button>
+  <button onclick="window.location.href='upsellprompts.php'">Go to Upsell Prompt</button>
 </div>
 
 

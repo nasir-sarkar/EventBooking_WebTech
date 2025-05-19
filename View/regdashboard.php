@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['status'])) {
+    header('location: login.php');
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,8 +40,8 @@
   <script src="../Asset/regdashboard.js"></script>
 
   <div class="nav-buttons">
-  <button onclick="window.location.href='namebadge.html'">Go to Name Badge Generator</button>
-  <button onclick="window.location.href='dietaryneeds.html'">Go to Dietary Requirements</button>
+  <button onclick="window.location.href='namebadge.php'">Go to Name Badge Generator</button>
+  <button onclick="window.location.href='dietaryneeds.php'">Go to Dietary Requirements</button>
 </div>
 
 
