@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     }
 
     if (!$hasError) {
-        header("Location: ../View/Cancellation_Request.php");
+        header("Location: ../View/Abc.php");
         exit;
     }
 } 

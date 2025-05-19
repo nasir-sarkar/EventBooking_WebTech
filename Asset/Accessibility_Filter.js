@@ -12,7 +12,7 @@ function validate() {
     }
 
     if (isValid) {
-        window.location.href = "ttgrid.html";
+        window.location.href = "ttgrid.php";
     }
 
     return isValid;

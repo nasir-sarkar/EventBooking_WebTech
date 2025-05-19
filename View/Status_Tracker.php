@@ -24,7 +24,7 @@ if (!isset($_SESSION['status'])) {
             <p id="trackIderror"></p>
 
             <input type="submit" value="Track Status">
-            <a href="Cancellation_Request.php"><input type="button" value="Back"></a>
+            <a href="Terms_Display.php"><input type="button" value="Back"></a>
 
             <br><br><p><b>Status:</b> [Pending / Approved / Rejected]</p>
         </form>
