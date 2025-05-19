@@ -12,52 +12,35 @@ if (!isset($_SESSION['status'])) {
   <meta charset="UTF-8">
   <title>Ticket Tiers</title>
   <link rel="stylesheet" href="../Asset/ttgrid.css">
-  <!-- <script src="../JS/ttgrid.js" defer></script> -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () 
-    {
-      const form = document.getElementById("ticketForm");
-      const select = document.getElementById("ticketSelect");
-
-      form.addEventListener("submit", function (event) 
-      {
-        const selectedValue = select.value;
-
-        if (selectedValue === "") 
-        {
-          alert("Please select a valid ticket type.");
-          event.preventDefault(); 
-        }
-      });
-    });
-  </script>
 </head>
-
 <body>
 
-  <h2 class="title">Ticket Types</h2>
+  <h1>Ticket Types</h1>
 
-  <form id="ticketForm" action="../PHP/ttgrid.php" method="post">
-    <div class="container">
-      <label for="ticketSelect"><b>Select Ticket Type:</b></label><br><br>
-      <select id="ticketSelect" name="ticketSelect" class="dropdown">
-        <option value="">Choose</option>
-        <option value="2500">Standard - ৳2500</option>
-        <option value="4000">Premium - ৳4000</option>
-        <option value="6000">VIP - ৳6000</option>
-      </select>
+  <h2>Search and Filter Ticket Types</h2>
 
-      <br><br>
-      <a href="Discount_Entry.php"><input type="button" value="Submit"></a>
+  <div class="search-panel">
+    <input type="text" id="searchInput" placeholder="Search ticket types..." onkeyup="filterTicketResults()">
+  </div>
 
-      <div class="nav-buttons">
-  <button onclick="window.location.href='upsellprompts.php'">Go to Upsell Prompt</button>
-  <button onclick="window.location.href='packagecomparison.php'">Go to Package Comparison</button>
-</div>
+  <div class="filter-panel">
+    <label><input type="checkbox" class="ticket-category" value="Standard" onchange="filterTicketResults()"> Standard</label>
+    <label><input type="checkbox" class="ticket-category" value="Premium" onchange="filterTicketResults()"> Premium</label>
+    <label><input type="checkbox" class="ticket-category" value="VIP" onchange="filterTicketResults()"> VIP</label>
+  </div>
 
+  <ul id="resultsList" class="results-list">
+    <li data-type="Standard">Standard - ৳2500</li>
+    <li data-type="Premium">Premium - ৳4000</li>
+    <li data-type="VIP">VIP - ৳6000</li>
+  </ul>
 
-    </div>
-  </form>
+  <div class="nav-buttons">
+    <button onclick="window.location.href='upsellprompts.php'">Go to Upsell Prompt</button>
+    <button onclick="window.location.href='packagecomparison.php'">Go to Package Comparison</button>
+  </div>
+
+  <script src="../Asset/ttgrid.js"></script>
 
 </body>
 </html>

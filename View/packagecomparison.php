@@ -58,8 +58,8 @@ if (!isset($_SESSION['status'])) {
       </select>
 
       <div class="nav-buttons">
-  <button onclick="window.location.href='ttgrid.php'">Go to Ticket Tier Grid</button>
-  <button onclick="window.location.href='upsellprompts.php'">Go to Upsell Prompt</button>
+  <button> <a href="ttgrid.php">Go to Ticket Tier Grid</a></button>
+  <button> <a href="upsellprompts.php">Go to Upsell Prompt</a></button>
 </div>
 
 

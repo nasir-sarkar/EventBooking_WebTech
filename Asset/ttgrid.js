@@ -1,22 +1,27 @@
-document.addEventListener("DOMContentLoaded", function () 
-{
-  const select = document.getElementById("ticketSelect");
-  const info = document.getElementById("ticketInfo");
+function filterTicketResults() {
+  const input = document.getElementById('searchInput').value.toLowerCase();
+  const checkboxes = document.querySelectorAll('.ticket-category');
+  const selectedCategories = [];
 
-  select.addEventListener("change", function () 
-  {
-    const price = select.value;
-
-    if (price) 
-    {
-      let ticketType = select.options[select.selectedIndex].text.split("-")[0].trim();
-      info.innerHTML = `You selected <b>${ticketType}</b> ticket worth ${price}.`;
-      info.style.color = "green";
-    } 
-    else 
-    {
-      info.innerHTML = "Please select a valid ticket type.";
-      info.style.color = "red";
+  checkboxes.forEach(checkbox => {
+    if (checkbox.checked) {
+      selectedCategories.push(checkbox.value);
     }
   });
-});
+
+  const items = document.querySelectorAll('#resultsList li');
+
+  items.forEach(item => {
+    const title = item.textContent.toLowerCase();
+    const type = item.getAttribute('data-type');
+
+    const matchesSearch = title.includes(input);
+    const matchesCategory = selectedCategories.length === 0 || selectedCategories.includes(type);
+
+    if (matchesSearch && matchesCategory) {
+      item.style.display = '';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+}
