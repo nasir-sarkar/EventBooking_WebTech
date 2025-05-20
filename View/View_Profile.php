@@ -25,9 +25,9 @@
                 <a href="Change_Avatar.php"><input type="button" class="avatar" value="Change Avatar"></a>
                 </div>
 
-                <p><b>Name:</b> Nasir Sarkar</p>
-                <p><b>Email:</b> nasir@gmail.com</p>
-                <p><b>Phone:</b> 0181818181</p>
+                <p><b>Name:</b> <?php echo $_SESSION['name']; ?></p>
+                <p><b>Email:</b> <?php echo $_SESSION['email']; ?></p>
+                <p><b>Phone:</b> <?php echo $_SESSION['phone']; ?></p>
 
                 <a href="Edit_Profile.php"><input type="button" class="left" value="Edit Profile"></a>
                 <a href="Update_Password.php"><input type="button" class="left" value="Update Password"></a>
