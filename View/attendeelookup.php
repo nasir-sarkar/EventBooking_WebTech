@@ -24,7 +24,7 @@ if (!isset($_SESSION['status'])) {
   <script src="../JS/attendeelookup.js"></script>
 
   <div class="nav-buttons">
-  <button onclick="window.location.href='qrscanner.php'">Go to QR Scanner</button>
+  <!-- <button onclick="window.location.href='qrscanner.php'">Go to QR Scanner</button> -->
   <button onclick="window.location.href='badgeprinter.php'">Go to Badge Printer</button>
 </div>
 
