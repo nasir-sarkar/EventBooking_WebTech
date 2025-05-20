@@ -47,7 +47,7 @@ input[type="password"] {
     box-sizing: border-box;
 }
 
-input[type="button"] {
+input[type="button"],input[type="submit"] {
     width: 40%;
     padding: 10px 20px;
     background-color: blue;

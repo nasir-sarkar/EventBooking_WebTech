@@ -31,7 +31,7 @@
             <input type="password" id="adminpass" name="adminpass"><br>
             <p id="adminpasserror"></p>
 
-            <input type="button" value="Apply Settings" onclick="validate()">
+            <input type="submit" name="submit" value="Apply Settings">
             <a href="Admin_Panel.php"><input type="button" value="Back"></a>
         </form>
     </fieldset>

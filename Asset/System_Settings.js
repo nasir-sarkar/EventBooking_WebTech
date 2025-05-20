@@ -21,9 +21,5 @@ function validate() {
         passError.innerHTML = "";
     }
 
-    if (isValid) {
-        window.location.href = "Abc.php";
-    }
-
     return isValid;
 }

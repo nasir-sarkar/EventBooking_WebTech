@@ -16,10 +16,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
         echo "Setting applied successfully!<br>";
     }
 
-    if (!$hasError) {
-        header("Location: ../View/System_Settings.php");
-        exit;
-    }
 } 
 else {
     echo "Invalid request! Please submit form!";

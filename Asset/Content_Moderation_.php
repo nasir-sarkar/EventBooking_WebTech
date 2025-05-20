@@ -17,10 +17,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
         echo "Please select a category!<br>";
         $hasError = true;
     }
-
-    if (!$hasError) {
-        header("Location: ../View/Abc.php");
-        exit;
+    else {
+        echo "Applied Successfully!<br>";
     }
     
 } else {
