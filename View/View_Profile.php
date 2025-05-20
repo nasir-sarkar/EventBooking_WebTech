@@ -39,7 +39,7 @@
             <form>
                 <a href="Event_Cards.php"> <input type="button" class="right" value="See Events"></a><br><br>
                 <a href="Terms_Display.php"><input type="button" class="right" value="Refund"></a><br><br>
-                <a href="qrscanner.html"><input type="button" class="right" value="QR SCanner"></a><br><br>
+                <!-- <a href="qrscanner.html"><input type="button" class="right" value="QR SCanner"></a><br><br> -->
                 <a href="../Controller/logout.php"><input type="button" class="right" value="Logout"></a>
             </form>
         </fieldset>
