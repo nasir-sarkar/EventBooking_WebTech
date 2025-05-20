@@ -26,7 +26,7 @@
             <input type="button" class="blue-button" value="Apply" onclick="validate()">
             <a href="Code_Generator.php"><input type="button" class="blue-button" value="Generate"></a>
             <a href="redemption_Analytics.php"><input type="button" class="blue-button" value="Track"></a>
-            <a href="Accessibility_Filter.php"><input type="button" class="blue-button" value="Back"></a>
+            <a href="ttgrid.php"><input type="button" class="blue-button" value="Back"></a>
             
         </form>
     </fieldset>  
