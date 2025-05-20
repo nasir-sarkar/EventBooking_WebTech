@@ -23,7 +23,7 @@ if (!isset($_SESSION['status'])) {
             <input type="text" id="trackId" name="trackId"><br>
             <p id="trackIderror"></p>
 
-            <input type="submit" value="Track Status">
+            <input type="submit" name="submit" value="Track Status">
             <a href="Terms_Display.php"><input type="button" value="Back"></a>
 
             <br><br><p><b>Status:</b> [Pending / Approved / Rejected]</p>

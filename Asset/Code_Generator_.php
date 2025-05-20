@@ -21,11 +21,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
         echo "Please select a valid date!<br>";
         $hasError = true;
     }
-
-    if (!$hasError) {
-        header("Location: ../View/Abc.php");
-        exit;
+    else {
+        echo "Code generated successfully! Code: 12345<br>";
     }
+
 
 } else {
     echo "Invalid request! Please submit form!";

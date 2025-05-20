@@ -1,9 +1,9 @@
 <?php
-session_start();
-if (!isset($_SESSION['status'])) {
-    header('location: login.php');
-    exit;
-}
+    session_start();
+    if (!isset($_SESSION['status']) || !isset($_COOKIE['status'])) {
+        header('location: login.php');
+        exit;
+    }
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +27,7 @@ if (!isset($_SESSION['status'])) {
             <textarea id="reason" name="reason" rows="4" cols="30"></textarea><br>
             <p id="reasonerror"></p>
 
-            <input type="submit" name="submit" value="Submit Request" onclick="validate()">
+            <input type="submit" name="submit" value="Submit Request">
             <a href="Terms_Display.php"><input type="button" value="Back"></a>
         </form>
     </fieldset>

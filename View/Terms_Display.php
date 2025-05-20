@@ -1,9 +1,9 @@
 <?php
-session_start();
-if (!isset($_SESSION['status'])) {
-    header('location: login.php');
-    exit;
-}
+    session_start();
+    if (!isset($_SESSION['status']) || !isset($_COOKIE['status'])) {
+        header('location: login.php');
+        exit;
+    }
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +32,7 @@ if (!isset($_SESSION['status'])) {
             <input type="date" id="eventDate" name="eventDate"><br>
             <p id="eventDateError"></p>
 
-            <input type="button" class="blue" value="Check Eligibility" onclick="validate()">
+            <input type="submit" name="submit" class="blue" value="Check Eligibility">
             <a href="View_Profile.php"><input type="button" class="blue" value="Back"></a>
 
         </form>

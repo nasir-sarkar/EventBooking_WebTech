@@ -35,9 +35,5 @@ function validate() {
         validityError.innerHTML = "";
     }
 
-    if (isValid) {
-        window.location.href = "Abc.php";
-    }
-
     return isValid;
 }

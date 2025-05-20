@@ -10,11 +10,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     else {
         echo "Event date submitted. Proceed to Cancellation Request.<br>";
     }
-
-    if (!$hasError) {
-        header("Location: ../View/Abc.php");
-        exit;
-    }
 } 
 else {
     echo "Invalid request! Please submit form!";

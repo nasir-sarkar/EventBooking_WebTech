@@ -1,9 +1,9 @@
 <?php
-session_start();
-if (!isset($_SESSION['status'])) {
-    header('location: login.php');
-    exit;
-}
+    session_start();
+    if (!isset($_SESSION['status']) || !isset($_COOKIE['status'])) {
+        header('location: login.php');
+        exit;
+    }
 ?>
 
 <!DOCTYPE html>

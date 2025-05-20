@@ -23,7 +23,7 @@ if (!isset($_SESSION['status'])) {
             <input type="text" id="code" name="code"><br>
             <p id="codeerror"></p>
 
-            <input type="submit" value="View Analytics">
+            <input type="submit" name="submit" value="View Analytics">
             <a href="Discount_Entry.php"><input type="button" value="Back"></a>
             
         </form>

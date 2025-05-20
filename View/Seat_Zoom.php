@@ -25,9 +25,9 @@ if (!isset($_SESSION['status'])) {
             <label for="seat">Select Seat:</label><br>
             <select id="seat" name="seat">
                 <option value="">Select Seat</option>
-                <option value="A1">A1 - 500 Taka</option>
-                <option value="A2">A2 - 500 Taka</option>
-                <option value="A3">A3 - 800 Taka (Near Stage)</option>
+                <option value="A1">A1 - Left</option>
+                <option value="A2">A2 - Middle</option>
+                <option value="A3">A3 - Right</option>
             </select><br>
             <p id="selecterror"></p>
 

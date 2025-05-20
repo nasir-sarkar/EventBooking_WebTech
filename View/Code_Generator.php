@@ -1,9 +1,9 @@
 <?php
-session_start();
-if (!isset($_SESSION['status'])) {
-    header('location: login.php');
-    exit;
-}
+    session_start();
+    if (!isset($_SESSION['status']) || !isset($_COOKIE['status'])) {
+        header('location: login.php');
+        exit;
+    }
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +32,7 @@ if (!isset($_SESSION['status'])) {
             <input type="date" id="validity" name="validity"><br>
             <p id="validityerror"></p>
 
-            <input type="submit" name="submit" value="Generate Code" onclick="validate()">
+            <input type="submit" name="submit" value="Generate Code">
             <a href="Discount_Entry.php"><input type="button" value="Back"></a><br>
             
         </form>

@@ -1,9 +1,9 @@
 <?php
-session_start();
-if (!isset($_SESSION['status'])) {
-    header('location: login.php');
-    exit;
-}
+    session_start();
+    if (!isset($_SESSION['status']) || !isset($_COOKIE['status'])) {
+        header('location: login.php');
+        exit;
+    }
 ?>
 
 <!DOCTYPE html>
@@ -46,7 +46,7 @@ if (!isset($_SESSION['status'])) {
             <input type="date" id="dateTo" name="dateTo"><br>
             <p id="dateerror2"></p>
 
-            <input type="submit" value="Apply Filters">
+            <input type="submit" name="submit" value="Apply Filters">
         </form>
     </fieldset>
 

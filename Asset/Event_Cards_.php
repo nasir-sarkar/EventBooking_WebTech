@@ -26,10 +26,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
         echo "Filters applied successfully!<br>";
     }
 
-    if (!$hasError) {
-        header("Location: ../View/Seat_Selection");
-        exit;
-    }
 } 
 else {
     echo "Invalid request! Please submit form!";

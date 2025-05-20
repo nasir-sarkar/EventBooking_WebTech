@@ -25,10 +25,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
         echo "Testimonial submitted successfully!<br>";
     }
 
-    if (!$hasError) {
-        header("Location: ../View/Abc.php");
-        exit;
-    }
 }
 else {
     echo "Invalid request! Please submit form!";

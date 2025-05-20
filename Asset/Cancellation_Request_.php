@@ -14,11 +14,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
         $hasError = true;
     }
 
-    if (!$hasError) {
-        echo "Cancellation request submitted successfully.<br>";
-        header("Location: ../View/Abc.php");
-        exit;
+    else {
+        echo "Submitted successfully!<br>";
     }
+
 } else {
     echo "Invalid request! Please submit form.";
 }
