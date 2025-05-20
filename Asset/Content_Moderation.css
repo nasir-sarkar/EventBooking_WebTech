@@ -60,7 +60,7 @@ input[type="date"], input[type="text"] {
     box-sizing: border-box;
 }
 
-input[type="button"] {
+input[type="button"], input[type="submit"] {
     width: 20%;
     padding: 10px 10px;
     background-color: blue;
