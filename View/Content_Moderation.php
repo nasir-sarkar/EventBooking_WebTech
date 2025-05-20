@@ -44,8 +44,8 @@
  
     <fieldset>
         <legend><b>EVENT LIST</b></legend>
-        <p><b>1. Party Night</b> - 2025-06-01 | Category: Music <input type="button" value="Delete" onclick="alert('Event Deleted')"></p>
-        <p><b>2. Tech Conference</b> - 2025-06-15 | Category: Tech <input type="button" value="Delete" onclick="alert('Event Deleted')"></p>
+        <p><b>1. Party Night</b> - 01-06-2025 | Category: Music <input type="button" value="Delete" onclick="alert('Event Deleted')"></p>
+        <p><b>2. Tech Conference</b> - 15-06-2025 | Category: Tech <input type="button" value="Delete" onclick="alert('Event Deleted')"></p>
     </fieldset>
 
    
