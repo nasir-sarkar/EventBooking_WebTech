@@ -1,29 +1,25 @@
 function searchAttendees() {
-    let input = document.getElementById("searchInput").value.toLowerCase();
-    let rows = document.querySelectorAll("#attendeeTable tbody tr");
-  
-    rows.forEach(row => {
-      let text = row.innerText.toLowerCase();
-      row.style.display = text.includes(input) ? "" : "none";
-    });
+  let input = document.getElementById("searchInput").value.toLowerCase();
+  let rows = document.querySelectorAll("#attendeeTable tbody tr");
+
+  for (let i = 0; i < rows.length; i++) {
+    let text = rows[i].innerText.toLowerCase();
+    rows[i].style.display = text.includes(input) ? "" : "none";
   }
-  
-  function exportCSV() {
-    let rows = document.querySelectorAll("table tr");
-    let csv = [];
-  
-    rows.forEach(row => {
-      let cols = row.querySelectorAll("td, th");
-      let data = Array.from(cols).map(col => col.innerText);
-      csv.push(data.join(","));
-    });
-  
-    let csvContent = "data:text/csv;charset=utf-8," + csv.join("\n");
-    let link = document.createElement("a");
-    link.setAttribute("href", csvContent);
-    link.setAttribute("download", "attendees.csv");
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+}
+
+function exportCSV() {
+  let rows = document.querySelectorAll("table tr");
+  let csv = "";
+
+  for (let i = 0; i < rows.length; i++) {
+    let cols = rows[i].querySelectorAll("td, th");
+    let line = [];
+    for (let j = 0; j < cols.length; j++) {
+      line.push(cols[j].innerText);
+    }
+    csv += line.join(",") + "\n";
   }
-  
+
+  window.open("data:text/csv," + csv);
+}

@@ -1,27 +1,27 @@
 function filterTicketResults() {
-  const input = document.getElementById('searchInput').value.toLowerCase();
-  const checkboxes = document.querySelectorAll('.ticket-category');
-  const selectedCategories = [];
+  var input = document.getElementById('searchInput').value.toLowerCase();
+  var checkboxes = document.getElementsByClassName('ticket-category');
+  var selectedCategories = [];
 
-  checkboxes.forEach(checkbox => {
-    if (checkbox.checked) {
-      selectedCategories.push(checkbox.value);
+  for (var i = 0; i < checkboxes.length; i++) {
+    if (checkboxes[i].checked) {
+      selectedCategories.push(checkboxes[i].value);
     }
-  });
+  }
 
-  const items = document.querySelectorAll('#resultsList li');
+  var items = document.getElementById('resultsList').getElementsByTagName('li');
 
-  items.forEach(item => {
-    const title = item.textContent.toLowerCase();
-    const type = item.getAttribute('data-type');
+  for (var i = 0; i < items.length; i++) {
+    var title = items[i].textContent.toLowerCase();
+    var type = items[i].getAttribute('data-type');
 
-    const matchesSearch = title.includes(input);
-    const matchesCategory = selectedCategories.length === 0 || selectedCategories.includes(type);
+    var matchesSearch = title.indexOf(input) !== -1;
+    var matchesCategory = (selectedCategories.length === 0 || selectedCategories.indexOf(type) !== -1);
 
     if (matchesSearch && matchesCategory) {
-      item.style.display = '';
+      items[i].style.display = '';
     } else {
-      item.style.display = 'none';
+      items[i].style.display = 'none';
     }
-  });
+  }
 }

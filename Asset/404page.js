@@ -4,7 +4,7 @@ window.onload = function()
   
     if (!eventExists) 
     {
-      window.location.href = '404.html';
+      window.location.href = '../View/404page.php';
     }
 };
   

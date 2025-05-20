@@ -4,7 +4,7 @@ window.onload = function()
   
     if (serverError) 
     {
-      window.location.href = '500.html';
+      window.location.href = '../View/500page.php';
     }
   };
   
