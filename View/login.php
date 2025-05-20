@@ -29,7 +29,7 @@
         <p id="pass-error"></p>
        </div> 
        <button type="submit">Login</button>
-       <a href="signup.php"><input type="button" value="Signup"></a>
+       <a href="signup.html"><input type="button" value="Signup"></a>
        <p id="valid-error"></p>
     </form>
 
