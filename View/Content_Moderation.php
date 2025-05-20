@@ -51,8 +51,8 @@
    
     <fieldset>
         <legend><b>REFUND REQUESTS</b></legend>
-        <p><b>1. John Doe</b> - Event: Tech Conference <input type="button" value="Approve" onclick="alert('Refund Approved')"> <input type="button" value="Reject" onclick="alert('Refund Rejected')"></p>
-        <p><b>2. Jane Smith</b> - Event: Party Night <input type="button" value="Approve" onclick="alert('Refund Approved')"> <input type="button" value="Reject" onclick="alert('Refund Rejected')"></p>
+        <p><b>1. Nafiz </b> - Event: Tech Conference <input type="button" value="Approve" onclick="alert('Refund Approved')"> <input type="button" value="Reject" onclick="alert('Refund Rejected')"></p>
+        <p><b>2. Jakir </b> - Event: Party Night <input type="button" value="Approve" onclick="alert('Refund Approved')"> <input type="button" value="Reject" onclick="alert('Refund Rejected')"></p>
     
     <a href="Admin_Panel.php"><input type="button" class="blue" value="Back"></a>
     </fieldset>
