@@ -36,7 +36,7 @@ if (!isset($_SESSION['status'])) {
   </ul>
 
   <div class="nav-buttons">
-    <a href="Discount_Entry.php"><input type="button" value="Submit"></a>
+    <button onclick="window.location.href='Discount_Entry.php'">Submit</button>
     <button onclick="window.location.href='upsellprompts.php'">Go to Upsell Prompt</button>
     <button onclick="window.location.href='packagecomparison.php'">Go to Package Comparison</button>
   </div>
