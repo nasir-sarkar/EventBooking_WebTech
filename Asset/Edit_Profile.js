@@ -28,9 +28,5 @@ function validate() {
         phoneError.innerHTML = "";
     }
 
-    if (isValid) {
-        window.location.href = "Abc.html";
-    }
-
     return isValid;
 }

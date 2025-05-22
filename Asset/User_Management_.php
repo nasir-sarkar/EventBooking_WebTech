@@ -8,12 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
         $hasError = true;
     } 
     else {
-        echo "Filter applied for $filter<br>";
-    }
-
-    if (!$hasError) {
-        header("Location: ../View/Abc.php");
-        exit;
+        echo "Filter applied Successfully! <br>";
     }
 } 
 else {

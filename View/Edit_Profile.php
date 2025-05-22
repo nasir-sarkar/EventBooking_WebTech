@@ -31,7 +31,7 @@
             <input type="text" id="phone" name="phone"><br>
             <p id="phoneerror"></p>
 
-            <input type="submit" name="submit" value="Save Changes" onclick="validate()">
+            <input type="submit" name="submit" value="Save Changes">
             <a href="View_Profile.php"><input type="button" value="Back"></a>
         </form>
     </fieldset>

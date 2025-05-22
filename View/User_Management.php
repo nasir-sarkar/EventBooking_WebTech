@@ -27,7 +27,7 @@
             </select><br>
             <p id="filtererror"></p>
 
-            <input type="button" value="Apply Filter" onclick="validate()">
+            <input type="submit" name="submit" value="Apply Filter">
             <input type="button" value="Sort A-Z" onclick="alert('Sorted A-Z')">
             <input type="button" value="Bulk Delete" onclick="alert('Bulk delete initiated!')">
             <input type="button" value="Add User" onclick="alert('Add user functionality!')">

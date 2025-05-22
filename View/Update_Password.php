@@ -38,7 +38,7 @@
         </form>
     </fieldset>
 
-    <link rel="stylesheet" href="../CSS/Update_Password.css">
-    <script src="../JS/Update_Password.js"></script>
+    <link rel="stylesheet" href="../Asset/Update_Password.css">
+    <script src="../Asset/Update_Password.js"></script>
 </body>
 </html>
