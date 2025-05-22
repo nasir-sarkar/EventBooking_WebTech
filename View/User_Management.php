@@ -36,9 +36,9 @@
 
     <fieldset>
         <legend><b>USER LIST</b></legend>
-        <p><b>1. John Doe</b> - Admin <input type="button" value="Delete" onclick="alert('User Deleted')"></p>
-        <p><b>2. Jane Smith</b> - User <input type="button" value="Delete" onclick="alert('User Deleted')"></p>
-        <p><b>3. Alice Lee</b> - User <input type="button" value="Delete" onclick="alert('User Deleted')"></p><br><br>
+        <p><b>1. Nafiz Ahmed</b> - Admin <input type="button" value="Delete" onclick="alert('User Deleted')"></p>
+        <p><b>2. Mr. Zakir </b> - User <input type="button" value="Delete" onclick="alert('User Deleted')"></p>
+        <p><b>3. Hasan Ali</b> - User <input type="button" value="Delete" onclick="alert('User Deleted')"></p><br><br>
 
         <a href="Admin_Panel.php"><input type="button" class="blue" value="Back"></a>
     </fieldset>
