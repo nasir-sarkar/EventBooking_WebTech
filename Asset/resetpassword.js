@@ -22,6 +22,6 @@ function resetPassword()
     else 
     {
         passError.innerHTML = "";
-        alert("Password reset successful.");
+        alert("Password reset successful!");
     }
 }
