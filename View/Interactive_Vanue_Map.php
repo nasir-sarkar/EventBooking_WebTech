@@ -28,6 +28,10 @@
                 <option value="a">Section A</option>
                 <option value="b">Section B</option>
                 <option value="c">Section C</option>
+                <option value="d">Section D</option>
+                <option value="e">Section E</option>
+                <option value="f">Section F</option>
+                <option value="g">Section G</option>
             </select><br><br>
             <p id="selecterror"></p>
 
