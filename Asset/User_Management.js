@@ -8,7 +8,6 @@ function validate() {
         return false;
     } else {
         error.innerHTML = "";
-        alert("Filter applied for " + filter);
         return true;
     }
 }

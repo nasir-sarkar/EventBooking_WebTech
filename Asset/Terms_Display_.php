@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
         $hasError = true;
     } 
     else {
-        echo "Event date submitted. Proceed to Cancellation Request.<br>";
+        echo "Successful!<br>";
     }
 } 
 else {
