@@ -21,12 +21,12 @@ if (!isset($_SESSION['status'])) {
 
   <p id="lookupResult"></p>
 
-  <script src="../JS/attendeelookup.js"></script>
+  <script src="../Asset/attendeelookup.js"></script>
 
-  <div class="nav-buttons">
-  <!-- <button onclick="window.location.href='qrscanner.php'">Go to QR Scanner</button> -->
+  <!-- <div class="nav-buttons">
   <button onclick="window.location.href='badgeprinter.php'">Go to Badge Printer</button>
-</div>
+</div> -->
+<a href="joinwaitlist.php"><input type="button" value="Back"></a>
 
 </body>
 </html>

@@ -16,8 +16,7 @@ if (!isset($_SESSION['status'])) {
 </head>
 <body>
   <div class="error-container">
-    <h1>404 - Event Not Found</h1>
-    <p>Oops! We couldn't find the event you're looking for. Please check your search or try again later.</p>
+    <h1>404 - Page Not Found</h1>
     <a href="/">Go back to the previous page</a>
   </div>
 </body>

@@ -14,11 +14,6 @@ if (!isset($_SESSION['status'])) {
   <link rel="stylesheet" href="../Asset/publictransportguide.css">
 </head>
 
-<div class="nav-buttons">
-  <button onclick="window.location.href='parkingmap.php'">Go to Parking Map</button>
-</div>
-
-
 <body>
   <h2>Public Transport Guide</h2>
   <div class="transport-option">
@@ -43,6 +38,10 @@ if (!isset($_SESSION['status'])) {
       <li><a href="https://hotel2.example.com" target="_blank">Hotel Two</a></li>
       <li><a href="https://hotel3.example.com" target="_blank">Hotel Three</a></li>
     </ul>
+  </div>
+
+  <div class="nav-buttons">
+    <a href="parkingmap.php"><input type="button" value="Back"></a>
   </div>
 </body>
 </html>

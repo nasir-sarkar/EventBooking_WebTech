@@ -28,7 +28,7 @@
             </select><br><br>
             <p id="accesserror"></p>
 
-            <input type="submit" name="submit" value="Proceed to Pay"  onclick="validate()">
+            <input type="submit" name="submit" value="Next"  onclick="validate()">
             <a href="Seat_Zoom.php"><input type="button" value="Back"></a>
         </form>
     </fieldset>

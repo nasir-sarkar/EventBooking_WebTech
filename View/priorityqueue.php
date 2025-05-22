@@ -26,9 +26,9 @@ if (!isset($_SESSION['status'])) {
   <script src="../Asset/priorityqueue.js"></script>
 
   <div class="nav-buttons">
-  <button onclick="window.location.href='joinwaitlist.php'">Go to Join Waitlist</button>
-  <button onclick="window.location.href='availabilityalerts.php'">Go to Availability Alerts</button>
-</div>
+  <!-- <button onclick="window.location.href='availabilityalerts.php'">Go to Availability Alerts</button> -->
+  <a href="joinwaitlist.php"><input type="button" value="Back"></a>
+  </div>
 
 </body>
 </html>

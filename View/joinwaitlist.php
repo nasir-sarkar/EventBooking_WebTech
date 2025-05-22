@@ -7,27 +7,37 @@ if (!isset($_SESSION['status'])) {
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>Join Waitlist</title>
   <link rel="stylesheet" href="../Asset/joinwaitlist.css">
 </head>
 <body>
 
-  <h2>Join the Event Waitlist</h2>
+  <h2 id="head">Join the Event Waitlist</h2>
 
-  <form id="waitlist-form">
-    <input type="text" id="name" placeholder="Your Name" required>
-    <input type="email" id="email" placeholder="Your Email" required>
+  <form id="waitlist-form" onsubmit="return validate()">
+   <input type="text" id="name" placeholder="Your Name" onkeyup="changeText()">
+    <p id="name-error"></p>
+
+    <input type="email" id="email" placeholder="Your Email">
+    <p id="email-error"></p>
+
     <button type="submit">Join Waitlist</button>
+    <p id="valid-error"></p>
   </form>
 
-  <script src="../JS/joinwaitlist.js"></script>
+  <div class="nav-buttons">
+    <button onclick="window.location.href='availabilityalerts.php'">Go to Availability Alerts</button>
+    <button onclick="window.location.href='priorityqueue.php'">Go to Priority Queue</button>
+    <button onclick="window.location.href='attendeelookup.php'">Go to Attendee Lookup</button>
+  </div>
 
   <div class="nav-buttons">
-  <button onclick="window.location.href='availabilityalerts.php'">Go to Availability Alerts</button>
-  <button onclick="window.location.href='priorityqueue.php'">Go to Priority Queue</button>
-</div>
+    <a href="Event_Cards.php"><input type="button" value="Back"></a>
+  </div>
+
+  <script src="../Asset/joinwaitlist.js"></script>
 
 </body>
 </html>

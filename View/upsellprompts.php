@@ -25,11 +25,14 @@ if (!isset($_SESSION['status'])) {
     <button id="upgradeBtn">Upgrade to VIP</button>
     <p id="message"></p>
 
-    <div class="nav-buttons">
-  <button onclick="window.location.href='ttgrid.php'">Go to Ticket Tier Grid</button>
-  <button onclick="window.location.href='packageComparison.php'">Go to Package Comparison</button>
-</div>
+    <!-- <div class="nav-buttons"> -->
+    <!-- <button onclick="window.location.href='ttgrid.php'">Go to Ticket Tier Grid</button> -->
+    <!-- <button onclick="window.location.href='packageComparison.php'">Go to Package Comparison</button> -->
+    <!-- </div> -->
 
+  <div class="nav-buttons">
+    <a href="ttgrid.php"><input type="button" value="Back"></a>
+  </div>
 
   </div>
 

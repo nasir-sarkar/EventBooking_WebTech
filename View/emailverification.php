@@ -23,6 +23,9 @@ if (!isset($_SESSION['status'])) {
       <p id="verify-error"></p>
       <button type="submit">Verify</button>
     </form>
+
+    <br><br>
+    <a href="View_Profile.php"><input type="button" value="Back"></a>
   </div>
 </body>
 </html>

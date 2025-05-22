@@ -18,7 +18,7 @@ if (!isset($_SESSION['status'])) {
 
 <body>
 
-  <h2 class="title">Compare Ticket Packages</h2>
+  <h2 class="title">Available Ticket Packages</h2>
 
   <table class="comparison-table">
     <tr>
@@ -57,10 +57,10 @@ if (!isset($_SESSION['status'])) {
         <option value="VIP">VIP</option>
       </select>
 
-      <div class="nav-buttons">
+      <!-- <div class="nav-buttons">
   <button> <a href="ttgrid.php">Go to Ticket Tier Grid</a></button>
   <button> <a href="upsellprompts.php">Go to Upsell Prompt</a></button>
-</div>
+</div> -->
 
 
     </div>
@@ -68,7 +68,10 @@ if (!isset($_SESSION['status'])) {
     <br>
     <div id="result" style="margin-top: 10px;"></div>
     <br>
-    <input type="submit" value="Submit">
+    <a href="View_Profile.php"><input type="button" value="Submit"></a>
+    <br><br>
+  
+    <a href="ttgrid.php"><input type="button" value="Back"></a>
   </form>
 
 </body>

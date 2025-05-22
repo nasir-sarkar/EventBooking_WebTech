@@ -17,7 +17,7 @@ if (!isset($_SESSION['status'])) {
 
   <h1>Ticket Types</h1>
 
-  <h2>Search and Filter Ticket Types</h2>
+  <!-- <h2>Search and Filter Ticket Types</h2> -->
 
   <div class="search-panel">
     <input type="text" id="searchInput" placeholder="Search ticket types..." onkeyup="filterTicketResults()">
@@ -39,6 +39,10 @@ if (!isset($_SESSION['status'])) {
     <button onclick="window.location.href='Discount_Entry.php'">Submit</button>
     <button onclick="window.location.href='upsellprompts.php'">Go to Upsell Prompt</button>
     <button onclick="window.location.href='packagecomparison.php'">Go to Package Comparison</button>
+  </div>
+
+  <div>
+    <a href="Accessibility_Filter.php"><input type="button" value="Back"></a>
   </div>
 
   <script src="../Asset/ttgrid.js"></script>

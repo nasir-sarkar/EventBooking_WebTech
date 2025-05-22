@@ -14,21 +14,18 @@ if (!isset($_SESSION['status'])) {
 </head>
 <body>
 
-  <h2>Join Waitlist</h2>
-  <input type="text" id="name" placeholder="Your Name">
-  <input type="email" id="email" placeholder="Your Email">
-  <button onclick="addToWaitlist(document.getElementById('name').value, document.getElementById('email').value)">Join Waitlist</button>
+  <h2>Availability Alerts</h2>
+  <p>Click the button to simulate a spot opening. The next person on the waitlist will be notified.</p>
 
-  <h2>Check for Available Spots</h2>
   <button onclick="notifyNext()">Simulate Spot Opening</button>
   <p id="message"></p>
 
-  <script src="../JS/availabilityalerts.js"></script>
-
   <div class="nav-buttons">
-  <button onclick="window.location.href='joinwaitlist.php'">Go to Join Waitlist</button>
-  <button onclick="window.location.href='priorityqueue.php'">Go to Priority Queue</button>
-</div>
+    <button onclick="window.location.href='priorityqueue.php'">Go to Priority Queue</button>
+    <a href="joinwaitlist.php"><input type="button" value="Back"></a>
+    
+  </div>
 
+  <script src="../Asset/availabilityalerts.js"></script>
 </body>
 </html>

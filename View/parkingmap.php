@@ -26,5 +26,9 @@ if (!isset($_SESSION['status'])) {
     <area shape="rect" coords="290,172,333,250" alt="Zone B" href="#zoneB">
     <area shape="circle" coords="337,300,44" alt="Zone C" href="#zoneC">
   </map>
+
+  <div class="nav-buttons">
+  <a href="Interactive_Vanue_Map.php"><input type="button" value="Back"></a>
+  </div>
 </body>
 </html>

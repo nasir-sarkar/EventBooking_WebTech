@@ -18,7 +18,7 @@ html
 body 
 {
     min-height: 100vh;
-    background-image: url(/Project/View/signupimage.jpg);
+    background-image: url(/EventBooking_WebTech/View/signupimage.jpg);
     background-size: cover;
     background-position: right;
     overflow: hidden;

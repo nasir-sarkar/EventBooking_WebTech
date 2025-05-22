@@ -33,7 +33,7 @@
        <p id="valid-error"></p>
     </form>
 
-    <p><a href="../View/forgotpassword.php">Forgot Password?</a></p>
+    <p><a href="forgotpassword.html">Forgot Password?</a></p>
 
   </div>
 

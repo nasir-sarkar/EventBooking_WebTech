@@ -1,4 +1,9 @@
-let waitlist = [];
+// Simulated shared waitlist (in-memory only, not shared across pages in reality)
+let waitlist = [
+  { name: "Alice", email: "alice@example.com" },
+  { name: "Bob", email: "bob@example.com" },
+  { name: "Charlie", email: "charlie@example.com" }
+];
 
 function notifyNext() {
   const msg = document.getElementById('message');
@@ -8,14 +13,5 @@ function notifyNext() {
     msg.innerHTML = `Spot opened! Notified ${user.name} (${user.email})`;
   } else {
     msg.innerHTML = "Waitlist is empty.";
-  }
-}
-
-function addToWaitlist(name, email) {
-  if (name && email) {
-    waitlist.push({ name: name, email: email });
-    alert('Added to waitlist!');
-  } else {
-    alert('Please enter both name and email.');
   }
 }

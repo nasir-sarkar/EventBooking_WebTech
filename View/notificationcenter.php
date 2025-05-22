@@ -36,6 +36,8 @@ if (!isset($_SESSION['status'])) {
     <button onclick="clearNotifications()">Clear All</button>
     <br><br>
     <a href="notificationsettings.php">Go to Notification Settings</a>
+      <br><br>
+    <a href="View_Profile.php">Back</a>
 
     <script src="../Asset/notificationcenter.js"></script>
 </body>

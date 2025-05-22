@@ -29,10 +29,9 @@ if (!isset($_SESSION['status'])) {
 
 <script src="../JS/dietaryneeds.js"></script>
 
-<div class="nav-buttons">
-  <button onclick="window.location.href='regdashboard.php'">Go to Attendee List</button>
-  <button onclick="window.location.href='namebadge.php'">Go to Name Badge Generator</button>
-</div>
+  <div class="nav-buttons">
+  <a href="namebadge.php"><input type="button" value="Back"></a>
+  </div>
 
 
 </body>

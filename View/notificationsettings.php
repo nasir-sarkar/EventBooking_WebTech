@@ -29,7 +29,7 @@ if (!isset($_SESSION['status'])) {
   </form>
 
   <br>
-  <a href="notificationcenter.php">Back to Notification Center</a>
+  <a href="notificationcenter.php">Back</a>
 
   <script src="../Asset/notificationsettings.js"></script>
 </body>
