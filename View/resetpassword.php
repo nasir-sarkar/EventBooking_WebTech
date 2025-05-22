@@ -29,6 +29,8 @@ if (!isset($_SESSION['status'])) {
     <button onclick="resetPassword()">Reset Password</button>
   </form>
 
+  <a href="          "><input type="button" value="Back"></a>
+
   <script src="../Asset/resetpassword.js"></script>
 </body>
 </html>
