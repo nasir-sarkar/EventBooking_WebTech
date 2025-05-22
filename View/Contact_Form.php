@@ -37,7 +37,7 @@
             <p id="captchaerror"></p>
 
             <input type="submit" name="submit" value="Submit Inquiry" onclick="validate()">
-            <input type="button" value="Back">
+            <a href="View_Profile.php"><input type="button" value="Back"></a>
             
         </form>
     </fieldset>
