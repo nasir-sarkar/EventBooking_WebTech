@@ -1,13 +1,9 @@
 function validate() {
-    let view = document.getElementById("view").value;
-    let category = document.getElementById("category").value;
-    let dateFrom = document.getElementById("dateFrom").value;
-    let dateTo = document.getElementById("dateTo").value;
+    let view = document.getElementById("view").value.trim();
+    let category = document.getElementById("category").value.trim();
 
     let viewError = document.getElementById("viewerror");
     let categoryError = document.getElementById("categoryerror");
-    let dateError1 = document.getElementById("dateerror1");
-    let dateError2 = document.getElementById("dateerror2");
 
     let valid = true;
 
@@ -27,20 +23,8 @@ function validate() {
         categoryError.innerHTML = "";
     }
 
-    if (dateFrom === "") {
-        dateError1.innerHTML = "Please select a starting date!";
-        dateError1.style.color = "red";
-        valid = false;
-    } else {
-        dateError1.innerHTML = "";
-    }
-
-    if (dateTo === "") {
-        dateError2.innerHTML = "Please select an end date!";
-        dateError2.style.color = "red";
-        valid = false;
-    } else {
-        dateError2.innerHTML = "";
+    if (valid) {
+        window.location.href = "../Controller/filterEvents.php";
     }
 
     return valid;

@@ -37,7 +37,7 @@
             <input type="checkbox" id="split" name="split"> Enable Split Payment<br><br>
 
             <input type="submit" name="submit" value="Proceed to Pay" onclick="validate()">
-            <a href="ttgrid.php"><input type="button" value="Back"></a><br>
+            <a href="Discount_Entry.php"><input type="button" value="Back"></a><br>
         </form>
     </fieldset>
 

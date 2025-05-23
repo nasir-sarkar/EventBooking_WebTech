@@ -26,7 +26,7 @@
             <a href="Invoice_Generator.php"><input type="button" class="green-button" value="Use This"></a><br><br>
 
             <a href="Add_Cards.php"><input type="button" class="blue-button" value="Add New Cards"></a>
-            <a href="Discount_Entry.php"><input type="button" class="blue-button" value="Back"></a>
+            <a href="Checkout_Flow.php"><input type="button" class="blue-button" value="Back"></a>
 
         </form>
     </fieldset>

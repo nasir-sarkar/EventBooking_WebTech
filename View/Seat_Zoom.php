@@ -32,7 +32,7 @@
             <p id="selecterror"></p>
 
             <input type="submit" name="submit" value="Go Next" onclick="validate()">
-            <a href="Interactive_Vanue_Map.php"><input type="button" value="Back"></a>
+            <a href="Event_Cards.php"><input type="button" value="Back"></a>
         </form>
     </fieldset>
 
