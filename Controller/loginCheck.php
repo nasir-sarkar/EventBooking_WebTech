@@ -1,37 +1,38 @@
 <?php
-session_start();
+    error_reporting(E_ALL);
+    require_once('../model/userModel.php');
+    session_start();
 
-if (isset($_POST['email']) && isset($_POST['password'])) {
-    $email = trim($_POST['email']);
-    $password = trim($_POST['password']);
+    if(isset($_POST['email']) && isset($_POST['password'])){
+        $email = trim($_POST['email']);
+        $password = trim($_POST['password']);
 
-    if ($email == "" || $password == "") {
-        echo "null email/password!";
-    } else if ($email == "nasir@gmail.com" && $password == "nasir123") {
-        $_SESSION['status'] = true;
-        $_SESSION['email'] = $email;
-        $_SESSION['name'] = "Nasir Sarkar";
-        $_SESSION['phone'] = "01808080808";
+        if($email == "" || $password == ""){
+            echo "null email/password!";
+        }else{
+            $user = login($email, $password);
 
-        setcookie('status', 'true', time() + 1800, '/');
+            if($user){
+                $_SESSION['status'] = true;
+                $_SESSION['email'] = $user['email'];
+                $_SESSION['name'] = $user['fullname'];
+                $_SESSION['phone'] = $user['phone'];
+                $_SESSION['usertype'] = $user['usertype'];
 
-        header('location: ../View/View_Profile.php');
-        exit();
-    } else if ($email == "admin@gmail.com" && $password == "admin123") {
-        $_SESSION['status'] = true;
-        $_SESSION['email'] = $email;
-        $_SESSION['name'] = "Admin";
-        $_SESSION['role'] = "admin";
+                setcookie('status', 'true', time()+1800, '/');
 
-        setcookie('status', 'true', time() + 1800, '/');
-
-        header('location: ../View/Admin_Panel.php');
-        exit();
-    } else {
-        echo "invalid user!";
+                if($user['usertype'] === 'admin'){
+                    header('location: ../view/Admin_Panel.php');
+                }else if($user['usertype'] === 'user'){
+                    header('location: ../view/View_Profile.php');
+                }else{
+                    echo "invalid usertype!";
+                }
+            }else{
+                echo "invalid user!";
+            }
+        }
+    }else{
+        header('location: ../view/login.html');
     }
-} else {
-    echo "Invalid request! Please submit form!";
-}
 ?>
-

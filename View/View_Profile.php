@@ -31,7 +31,6 @@
 
                 <a href="Edit_Profile.php"><input type="button" class="left" value="Edit Profile"></a>
                 <a href="Update_Password.php"><input type="button" class="left" value="Update Password"></a>
-                <a href="emailverification.php"><input type="button" class="left" value="Verify Email"></a>
             </form>
         </fieldset>
 
