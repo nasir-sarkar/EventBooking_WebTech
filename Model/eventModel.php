@@ -77,7 +77,6 @@ function addDiscountToEvent($eventid, $sponsor, $discount, $promo1, $promo2, $pr
 
     $stmt = mysqli_prepare($con, $sql);
     
-    // Corrected to match 8 variables: 7 fields + 1 id
     mysqli_stmt_bind_param($stmt, "sdsssssi", $sponsor, $discount, $promo1, $promo2, $promo3, $promo4, $promo5, $eventid);
 
     $status = mysqli_stmt_execute($stmt);
@@ -85,6 +84,41 @@ function addDiscountToEvent($eventid, $sponsor, $discount, $promo1, $promo2, $pr
 
     return $status;
 }
+
+
+
+function deleteEventById($eventid) {
+    $con = getConnection();
+    $eventid = trim($eventid);
+
+    $sql = "DELETE FROM events WHERE id = ?";
+    $stmt = mysqli_prepare($con, $sql);
+
+    if (!$stmt) {
+        return false;
+    }
+
+    mysqli_stmt_bind_param($stmt, "i", $eventid);
+
+    $status = mysqli_stmt_execute($stmt);
+
+    if (!$status) {
+        mysqli_stmt_close($stmt);
+        return false;
+    }
+
+    $affectedRows = mysqli_stmt_affected_rows($stmt);
+    mysqli_stmt_close($stmt);
+
+    if ($affectedRows > 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
+
 
 
 

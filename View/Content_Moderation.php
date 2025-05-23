@@ -58,7 +58,7 @@
                 <hr>
             <?php endforeach; ?>
 
-            <a href="Abc.php"><input type="button" value="Delete Event"></a>
+            <a href="Delete_Event.php"><input type="button" value="Delete Event"></a>
             <a href="Refund_Requests.php"><input type="button" value="Refund Requests"></a>
             <a href="Admin_Panel.php"><input type="button" class="blue" value="Back"></a>
         </form>
