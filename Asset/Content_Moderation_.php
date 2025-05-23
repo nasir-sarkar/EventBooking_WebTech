@@ -1,4 +1,6 @@
 <?php
+require_once('../model/eventModel.php');
+
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     $ename = trim($_POST['ename']);
     $edate = trim($_POST['edate']);
@@ -17,12 +19,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
         echo "Please select a category!<br>";
         $hasError = true;
     }
-    else {
-        echo "Applied Successfully!<br>";
+
+    if (!$hasError) {
+        $result = addEvent($ename, $edate, $ecat);
+        if ($result) {
+            echo "Event created successfully!<br>";
+        } else {
+            echo "Failed to create event!<br>";
+        }
     }
-    
 } else {
     echo "Invalid request! Please submit form!";
 }
 ?>
-

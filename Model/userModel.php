@@ -41,5 +41,54 @@
     }
     return $users;
     }
+
+
+    function addUser($fullname, $username, $password, $email, $phone, $usertype) {
+    $con = getConnection();
+
+    $sql = "INSERT INTO users (fullname, username, password, email, phone, usertype) VALUES (?, ?, ?, ?, ?, ?)";
+    $stmt = mysqli_prepare($con, $sql);
+
+    mysqli_stmt_bind_param($stmt, "ssssss", $fullname, $username, $password, $email, $phone, $usertype);
+
+    $status = mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+
+    return $status;
+}
+
+
+function deleteUserByUsername($username) {
+    $con = getConnection();
+    $username = trim($username);
+
+    $sql = "DELETE FROM users WHERE username = ?";
+    $stmt = mysqli_prepare($con, $sql);
+
+    if (!$stmt) {
+        return false;
+    }
+
+    mysqli_stmt_bind_param($stmt, "s", $username);
+
+    $status = mysqli_stmt_execute($stmt);
+
+    if (!$status) {
+        mysqli_stmt_close($stmt);
+        return false;
+    }
+
+    $affectedRows = mysqli_stmt_affected_rows($stmt);
+    mysqli_stmt_close($stmt);
+
+   
+    if ($affectedRows > 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
     
 ?>

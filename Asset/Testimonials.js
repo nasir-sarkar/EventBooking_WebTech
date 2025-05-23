@@ -1,19 +1,19 @@
 function validate() {
-    let user = document.getElementById("user").value;
-    let feedback = document.getElementById("feedback").value;
-    let rating = document.getElementById("rating").value;
+    let fullname = document.getElementById("fullname").value.trim();
+    let feedback = document.getElementById("feedback").value.trim();
+    let rating = document.getElementById("rating").value.trim();
 
-    let userError = document.getElementById("usererror");
+    let fullnameError = document.getElementById("fullnameerror");
     let feedbackError = document.getElementById("feedbackerror");
     let ratingError = document.getElementById("ratingerror");
 
     let isValid = true;
 
-    if (user === "") {
-        userError.innerHTML = "User name cannot be empty!";
+    if (fullname === "") {
+        fullnameError.innerHTML = "Full name cannot be empty!";
         isValid = false;
     } else {
-        userError.innerHTML = "";
+        fullnameError.innerHTML = "";
     }
 
     if (feedback === "") {
@@ -26,8 +26,8 @@ function validate() {
     if (rating === "") {
         ratingError.innerHTML = "Rating cannot be empty!";
         isValid = false;
-    } else if (rating < 1 || rating > 5) {
-        ratingError.innerHTML = "Rating must be between 1 and 5!";
+    } else if (isNaN(rating) || rating < 1 || rating > 5) {
+        ratingError.innerHTML = "Rating must be a number between 1 and 5!";
         isValid = false;
     } else {
         ratingError.innerHTML = "";

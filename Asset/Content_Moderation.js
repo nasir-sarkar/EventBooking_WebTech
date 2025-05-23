@@ -30,9 +30,5 @@ function validate() {
         catError.innerHTML = "";
     }
 
-    if (valid) {
-        alert("Event Created Successfully!");
-    }
-
     return valid;
 }

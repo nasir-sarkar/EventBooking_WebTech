@@ -19,10 +19,10 @@
 <body>
     <div class="header">Event Booking</div>
 
-  
     <fieldset>
         <legend><b>CREATE EVENT</b></legend>
-         <form method="post" action="../Asset/Content_Moderation_.php" onsubmit="return validate()">
+        <form method="post" action="../Asset/Content_Moderation_.php" onsubmit="return validate()">
+
             <label for="ename">Event Name:</label><br>
             <input type="text" id="ename" name="ename"><br>
             <p id="enameerror"></p>
@@ -41,16 +41,14 @@
             <p id="ecaterror"></p>
 
             <input type="submit" name="submit" value="Create Event">
-            <input type="submit" name="submit" value="Add Discount">
+            <a href="Add_discount.php"><input type="button" value="Add Discount"></a>
         </form>
     </fieldset>
 
- 
     <fieldset>
-       <legend><b>EVENT LIST</b></legend>
+        <legend><b>EVENT LIST</b></legend>
         <form>
             <?php foreach ($events as $event): ?>
-
                 <h3>Event: <?= $event['event'] ?></h3>
                 <p>Event ID: <?= $event['id'] ?></p>
                 <p>Date: <?= date('d-m-Y', strtotime($event['date'])) ?></p>
@@ -58,14 +56,14 @@
                 <p>Sponsor: <?= $event['sponsor'] ?></p>
                 <p>Discount: <?= $event['discount'] ?>%</p>
                 <hr>
-                
             <?php endforeach; ?>
+
             <a href="Abc.php"><input type="button" value="Delete Event"></a>
             <a href="Refund_Requests.php"><input type="button" value="Refund Requests"></a>
             <a href="Admin_Panel.php"><input type="button" class="blue" value="Back"></a>
         </form>
     </fieldset>
-    
+
     <link rel="stylesheet" href="../Asset/Content_Moderation.css">
     <script src="../Asset/Content_Moderation.js"></script>
 </body>

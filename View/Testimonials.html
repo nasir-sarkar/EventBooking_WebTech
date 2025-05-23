@@ -10,11 +10,11 @@
     
     <fieldset>
         <legend><b>USER TESTIMONIALS</b></legend>
-         <form method="post" action="../Asset/Testimonials_.php" onsubmit="return validate()">
+        <form method="post" action="../Asset/Testimonials_.php" onsubmit="return validate()">
 
-            <label for="user">User Name:</label><br>
-            <input type="text" id="user" name="user"><br>
-            <p id="usererror"></p>
+            <label for="fullname">Full Name:</label><br>
+            <input type="text" id="fullname" name="fullname"><br>
+            <p id="fullnameerror"></p>
 
             <label for="feedback">Feedback:</label><br>
             <input type="text" id="feedback" name="feedback"><br>
@@ -22,14 +22,14 @@
 
             <label for="rating">Rating (1-5):</label><br>
             <input type="number" id="rating" name="rating"><br>
-            <p id="ratingerror"></p><Br>
+            <p id="ratingerror"></p><br>
 
             <input type="submit" name="submit" value="Submit Testimonial">
             <a href="Main_Landing.html"><input type="button" value="Back"></a>
-            
+
         </form>
     </fieldset>
-    
+
     <link rel="stylesheet" href="../Asset/Testimonials.css">
     <script src="../Asset/Testimonials.js"></script>
 </body>

@@ -54,8 +54,8 @@ if (isset($_SESSION['filteredUsers'])) {
         <?php endforeach; ?>
 
         <br><br>
-        <input type="button" value="Add User" onclick="alert('Add user functionality!')">
-        <input type="button" value="Delete" onclick="alert('User Deleted')">
+        <a href="Add_User.php"><input type="button" value="Add User"></a>
+        <a href="Delete_User.php"><input type="button" value="Delete User"></a>
         <a href="Admin_Panel.php"><input type="button" class="blue" value="Back"></a>
     </fieldset>
 
