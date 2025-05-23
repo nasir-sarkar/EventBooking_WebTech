@@ -16,15 +16,30 @@
         }
     }
 
-    // function getUserById($id){
+    function getAllUsers() {
+    $con = getConnection();
+    $sql = "SELECT fullname, username, email, usertype FROM users";
+    $result = mysqli_query($con, $sql);
 
-    // }
+    $users = [];
+    while ($row = mysqli_fetch_assoc($result)) {
+        $users[] = $row;
+    }
+    return $users;
+   }
 
-    // function addUser($user){
 
-    // }
+   function getUsersByRole($role) {
+    $con = getConnection();
+    $role = mysqli_real_escape_string($con, $role);
+    $sql = "SELECT fullname, username, email, usertype FROM users WHERE usertype = '{$role}'";
+    $result = mysqli_query($con, $sql);
 
-    // function deleteUser($id){
-
-    // }
+    $users = [];
+    while ($row = mysqli_fetch_assoc($result)) {
+        $users[] = $row;
+    }
+    return $users;
+    }
+    
 ?>

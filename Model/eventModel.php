@@ -3,7 +3,7 @@ require_once('db.php');
 
 function getAllEvents() {
     $con = getConnection();
-    $sql = "SELECT event, date, category, sponsor, discount FROM events";
+    $sql = "SELECT event, id, date, category, sponsor, discount FROM events";
     $result = mysqli_query($con, $sql);
 
     $events = [];
@@ -17,7 +17,7 @@ function getAllEvents() {
 function getFilteredEvents($view, $category) {
     $con = getConnection();
 
-    $sql = "SELECT event, date, category, sponsor, discount FROM events WHERE 1=1";
+    $sql = "SELECT event, id, date, category, sponsor, discount FROM events WHERE 1=1";
 
     
     if (strtolower($category) !== "all") {

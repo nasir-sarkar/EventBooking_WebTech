@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     $filter = trim($_POST['filter']);
     $hasError = false;
@@ -8,11 +10,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
         $hasError = true;
     } 
     else {
-        echo "Filter applied Successfully! <br>";
+        $_SESSION['role'] = $filter;
+
+        header("Location: ../Controller/filterUsers.php");
+        exit;
     }
 } 
 else {
     echo "Invalid request! Please submit form!";
 }
 ?>
-

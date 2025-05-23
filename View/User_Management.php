@@ -1,9 +1,18 @@
 <?php
-    session_start();
-    if (!isset($_SESSION['status']) || !isset($_COOKIE['status'])) {
-        header('location: login.php');
-        exit;
-    }
+session_start();
+if (!isset($_SESSION['status']) || !isset($_COOKIE['status'])) {
+    header('location: login.php');
+    exit;
+}
+
+require_once('../model/userModel.php');
+
+if (isset($_SESSION['filteredUsers'])) {
+    $users = $_SESSION['filteredUsers'];
+    unset($_SESSION['filteredUsers']);
+} else {
+    $users = getAllUsers();
+}
 ?>
 
 <!DOCTYPE html>
@@ -12,6 +21,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Management</title>
+    <link rel="stylesheet" href="../Asset/User_Management.css">
 </head>
 <body>
     <div class="header">Event Booking</div>
@@ -28,22 +38,27 @@
             <p id="filtererror"></p>
 
             <input type="submit" name="submit" value="Apply Filter">
-            <input type="button" value="Sort A-Z" onclick="alert('Sorted A-Z')">
-            <input type="button" value="Bulk Delete" onclick="alert('Bulk delete initiated!')">
-            <input type="button" value="Add User" onclick="alert('Add user functionality!')">
         </form>
     </fieldset>
 
     <fieldset>
         <legend><b>USER LIST</b></legend>
-        <p><b>1. Nafiz Ahmed</b> - Admin <input type="button" value="Delete" onclick="alert('User Deleted')"></p>
-        <p><b>2. Mr. Zakir </b> - User <input type="button" value="Delete" onclick="alert('User Deleted')"></p>
-        <p><b>3. Hasan Ali</b> - User <input type="button" value="Delete" onclick="alert('User Deleted')"></p><br><br>
+        <?php foreach ($users as $user): ?>
 
+            <p><b>Name: </b> <?= $user['fullname'] ?> </p><br>
+            <p><b>Username: </b> <?= $user['username'] ?> </p><br>
+            <p><b>Email: </b> <?= $user['email'] ?> </p><br>
+            <p><b>Status: </b> <?= $user['usertype'] ?> </p><br>
+            <hr>
+
+        <?php endforeach; ?>
+
+        <br><br>
+        <input type="button" value="Add User" onclick="alert('Add user functionality!')">
+        <input type="button" value="Delete" onclick="alert('User Deleted')">
         <a href="Admin_Panel.php"><input type="button" class="blue" value="Back"></a>
     </fieldset>
 
-    <link rel="stylesheet" href="../Asset/User_Management.css">
     <script src="../Asset/User_Management.js"></script>
 </body>
 </html>

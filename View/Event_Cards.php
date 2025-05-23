@@ -17,8 +17,6 @@ if (isset($_SESSION['filteredEvents'])) {
 ?>
 
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,7 +60,9 @@ if (isset($_SESSION['filteredEvents'])) {
         <legend><b>EVENT CARDS</b></legend>
         <form>
             <?php foreach ($events as $event): ?>
+
                 <h3>Event: <?= $event['event'] ?></h3>
+                <p>Event ID: <?= $event['id'] ?></p>
                 <p>Date: <?= date('d-m-Y', strtotime($event['date'])) ?></p>
                 <p>Category: <?= $event['category'] ?></p>
                 <p>Sponsor: <?= $event['sponsor'] ?></p>

@@ -11,3 +11,4 @@ $_SESSION['filteredEvents'] = $filteredEvents;
 
 header('location: ../View/Event_Cards.php');
 exit;
+?>

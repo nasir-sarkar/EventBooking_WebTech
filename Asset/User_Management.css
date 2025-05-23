@@ -50,7 +50,7 @@ input[type="number"] {
 
 input[type="button"], 
 input[type="submit"]  {
-    width: 48%;
+    width: 32%;
     padding: 10px 20px;
     background-color: blue;
     border: none;
@@ -65,4 +65,5 @@ p {
     margin: 0;
     color: red;
     font-size: 14px;
+    padding: 0;
 }
