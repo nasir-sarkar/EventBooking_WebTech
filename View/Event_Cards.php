@@ -52,7 +52,7 @@ if (isset($_SESSION['filteredEvents'])) {
             </select><br>
             <p id="categoryerror"></p>
 
-            <input type="submit" name="submit" value="Apply Filters" onclick="validate()">
+            <input type="submit" name="submit" value="Apply Filters">
         </form>
     </fieldset>
 

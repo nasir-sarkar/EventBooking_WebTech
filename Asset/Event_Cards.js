@@ -22,10 +22,5 @@ function validate() {
     } else {
         categoryError.innerHTML = "";
     }
-
-    if (valid) {
-        window.location.href = "../Controller/filterEvents.php";
-    }
-
     return valid;
 }

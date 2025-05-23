@@ -4,6 +4,9 @@
         header('location: login.php');
         exit;
     }
+
+    require_once('../model/eventModel.php');
+    $events = getAllEvents();
 ?>
 
 <!DOCTYPE html>
@@ -37,26 +40,31 @@
             </select><br>
             <p id="ecaterror"></p>
 
-            <input type="submit" name="submit" value="Create Event" onclick="validate()">
+            <input type="submit" name="submit" value="Create Event">
+            <input type="submit" name="submit" value="Add Discount">
         </form>
     </fieldset>
 
  
     <fieldset>
-        <legend><b>EVENT LIST</b></legend>
-        <p><b>1. Party Night</b> - 01-06-2025 | Category: Music <input type="button" value="Delete" onclick="alert('Event Deleted')"></p>
-        <p><b>2. Tech Conference</b> - 15-06-2025 | Category: Tech <input type="button" value="Delete" onclick="alert('Event Deleted')"></p>
-    </fieldset>
+       <legend><b>EVENT LIST</b></legend>
+        <form>
+            <?php foreach ($events as $event): ?>
 
-   
-    <fieldset>
-        <legend><b>REFUND REQUESTS</b></legend>
-        <p><b>1. Nafiz </b> - Event: Tech Conference <input type="button" value="Approve" onclick="alert('Refund Approved')"> <input type="button" value="Reject" onclick="alert('Refund Rejected')"></p>
-        <p><b>2. Jakir </b> - Event: Party Night <input type="button" value="Approve" onclick="alert('Refund Approved')"> <input type="button" value="Reject" onclick="alert('Refund Rejected')"></p>
-    
-    <a href="Admin_Panel.php"><input type="button" class="blue" value="Back"></a>
+                <h3>Event: <?= $event['event'] ?></h3>
+                <p>Event ID: <?= $event['id'] ?></p>
+                <p>Date: <?= date('d-m-Y', strtotime($event['date'])) ?></p>
+                <p>Category: <?= $event['category'] ?></p>
+                <p>Sponsor: <?= $event['sponsor'] ?></p>
+                <p>Discount: <?= $event['discount'] ?>%</p>
+                <hr>
+                
+            <?php endforeach; ?>
+            <a href="Abc.php"><input type="button" value="Delete Event"></a>
+            <a href="Refund_Requests.php"><input type="button" value="Refund Requests"></a>
+            <a href="Admin_Panel.php"><input type="button" class="blue" value="Back"></a>
+        </form>
     </fieldset>
-
     
     <link rel="stylesheet" href="../Asset/Content_Moderation.css">
     <script src="../Asset/Content_Moderation.js"></script>
