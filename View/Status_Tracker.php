@@ -19,14 +19,24 @@
     <fieldset>
         <legend><b>REQUEST STATUS TRACKER</b></legend>
          <form method="post" action="../Asset/Status_Tracker_.php" onsubmit="return validate()">
-            <label for="trackId">Enter Request ID:</label><br>
-            <input type="text" id="trackId" name="trackId"><br>
-            <p id="trackIderror"></p>
+            <label for="eventId">Enter event ID:</label><br>
+            <input type="text" id="eventId" name="eventId"><br>
+            <p id="eventIderror"></p>
 
             <input type="submit" name="submit" value="Track Status">
             <a href="Terms_Display.php"><input type="button" value="Back"></a>
 
-            <br><br><p><b>Status:</b> [Pending / Approved / Rejected]</p>
+            <br><br>
+            <p><b>Status:</b> 
+                <?php 
+                    if (isset($_SESSION['refund_status'])) {
+                        echo htmlspecialchars($_SESSION['refund_status']);
+                        unset($_SESSION['refund_status']);
+                    } else {
+                        echo "[Pending / Approved / Rejected]";
+                    }
+                ?>
+            </p>
         </form>
     </fieldset>
 

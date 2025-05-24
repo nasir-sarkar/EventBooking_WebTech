@@ -23,9 +23,9 @@
             <input type="text" id="promo" name="promo"><br>
             <p id="promoerror"></p>
 
-            <input type="button" class="blue-button" value="Apply" onclick="validate()">
+            <input type="submit" name="submit" class="blue-button" value="Apply">
             <a href="Code_Generator.php"><input type="button" class="blue-button" value="Generate"></a>
-            <a href="redemption_Analytics.php"><input type="button" class="blue-button" value="Track"></a>
+            <a href="Redemption_Analytics.php"><input type="button" class="blue-button" value="Track"></a>
             <a href="ttgrid.php"><input type="button" class="blue-button" value="Back"></a>
             
         </form>

@@ -1,25 +1,34 @@
 function validate() {
-    let bookingId = document.getElementById("bookingId").value;
-    let reason = document.getElementById("reason").value;
-    let bookingIdError = document.getElementById("bookingIderror");
-    let reasonError = document.getElementById("reasonerror");
-    let isValid = true;
+    let username = document.getElementById("username").value.trim();
+    let eventId = document.getElementById("eventId").value.trim();
+    let reason = document.getElementById("reason").value.trim();
 
-    if (bookingId === "") {
-        bookingIdError.innerHTML = "Booking ID cannot be empty!";
-        bookingIdError.style.color = "red";
-        isValid = false;
+    let usernameError = document.getElementById("usernameerror");
+    let eventIdError = document.getElementById("eventIderror");
+    let reasonError = document.getElementById("reasonerror");
+
+    let valid = true;
+
+    if (username === "") {
+        usernameError.innerHTML = "Username cannot be empty!";
+        valid = false;
     } else {
-        bookingIdError.innerHTML = "";
+        usernameError.innerHTML = "";
+    }
+
+    if (eventId === "") {
+        eventIdError.innerHTML = "Event ID cannot be empty!";
+        valid = false;
+    } else {
+        eventIdError.innerHTML = "";
     }
 
     if (reason === "") {
-        reasonError.innerHTML = "Please provide a reason for cancellation!";
-        reasonError.style.color = "red";
-        isValid = false;
+        reasonError.innerHTML = "Reason cannot be empty!";
+        valid = false;
     } else {
         reasonError.innerHTML = "";
     }
 
-    return isValid;
+    return valid;
 }

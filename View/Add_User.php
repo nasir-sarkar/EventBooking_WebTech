@@ -45,7 +45,7 @@ if (!isset($_SESSION['status']) || !isset($_COOKIE['status'])) {
             <p id="usertypeerror"></p>
 
             <input type="submit" name="submit" value="Add User">
-            <a href="Admin_Panel.php"><input type="button" value="Back"></a>
+            <a href="User_Management.php"><input type="button" value="Back"></a>
         </form>
     </fieldset>
 

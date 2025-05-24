@@ -6,7 +6,7 @@ if (!isset($_SESSION['status']) || !isset($_COOKIE['status'])) {
     exit;
 }
 
-require_once('../model/eventModel.php');
+require_once('../Model/eventModel.php');
 
 if (isset($_SESSION['filteredEvents'])) {
     $events = $_SESSION['filteredEvents'];
@@ -16,12 +16,10 @@ if (isset($_SESSION['filteredEvents'])) {
 }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Cards</title>
     <link rel="stylesheet" href="../Asset/Event_Cards.css">
 </head>
@@ -60,19 +58,21 @@ if (isset($_SESSION['filteredEvents'])) {
         <legend><b>EVENT CARDS</b></legend>
         <form>
             <?php foreach ($events as $event): ?>
-
-                <h3>Event: <?= $event['event'] ?></h3>
-                <p>Event ID: <?= $event['id'] ?></p>
+                <h3>Event: <?= htmlspecialchars($event['event']) ?></h3>
+                <p>Event ID: <?= htmlspecialchars($event['id']) ?></p>
                 <p>Date: <?= date('d-m-Y', strtotime($event['date'])) ?></p>
-                <p>Category: <?= $event['category'] ?></p>
-                <p>Sponsor: <?= $event['sponsor'] ?></p>
-                <p>Discount: <?= $event['discount'] ?>%</p>
+                <p>Category: <?= htmlspecialchars($event['category']) ?></p>
+                <p>Sponsor: <?= htmlspecialchars($event['sponsor']) ?></p>
+                <p>Discount: <?= htmlspecialchars($event['discount']) ?>%</p>
                 <p>[Note: Only 5 people can get the promo code for a discount]</p>
 
+                
                 <a href="Interactive_Vanue_Map.php"><input type="button" class="green-button" value="Venue Details"></a>
                 <a href="regdashboard.php"><input type="button" class="green-button" value="Registration"></a>
                 <a href="joinwaitlist.php"><input type="button" class="green-button" value="Join Wait List"></a>
-                <a href="Seat_Zoom.php"><input type="button" class="green-button" value="Book"></a>
+                <a href="Seat_Zoom.php?event_id=<?= urlencode($event['id']) ?>&event_date=<?= urlencode($event['date']) ?>">
+                    <input type="button" class="green-button" value="Book">
+                </a>
 
                 <br><br>
             <?php endforeach; ?>

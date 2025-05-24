@@ -1,13 +1,15 @@
 <?php
+require_once('../model/contactModel.php');
+session_start();
+
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     $name = trim($_POST['name']);
     $email = trim($_POST['email']);
     $message = trim($_POST['message']);
-    $captcha = trim($_POST['captcha']);
     $hasError = false;
 
-    if ($name == "") {
-        echo "Name cannot be empty!<br>";
+    if (!isset($_SESSION['name']) || $name !== $_SESSION['name']) {
+        echo "Wrong full name detected!<br>";
         $hasError = true;
     } 
     else if ($email == "") {
@@ -22,18 +24,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
         echo "Message cannot be empty!<br>";
         $hasError = true;
     } 
-    else if ($captcha !== "7") {
-        echo "CAPTCHA answer is incorrect!<br>";
-        $hasError = true;
-    }
 
     if (!$hasError) {
-        header("Location: ../View/Submission_Confirmation.php");
-        exit;
+        $status = saveContact($name, $email, $message);
+        if ($status) {
+            header("Location: ../View/Submission_Confirmation.php");
+            exit;
+        } else {
+            echo "Failed to save inquiry. Please try again.";
+        }
     }
-    
 } else {
     echo "Invalid request! Please submit form!";
 }
-?>
-

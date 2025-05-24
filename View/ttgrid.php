@@ -17,32 +17,26 @@ if (!isset($_SESSION['status'])) {
 
   <h1>Ticket Types</h1>
 
-  <!-- <h2>Search and Filter Ticket Types</h2> -->
+  <!-- Search and filter can remain but is optional -->
 
-  <div class="search-panel">
-    <input type="text" id="searchInput" placeholder="Search ticket types..." onkeyup="filterTicketResults()">
-  </div>
+  <form method="post" action="../Controller/passInfo.php" id="ticketForm">
 
-  <div class="filter-panel">
-    <label><input type="checkbox" class="ticket-category" value="Standard" onchange="filterTicketResults()"> Standard</label>
-    <label><input type="checkbox" class="ticket-category" value="Premium" onchange="filterTicketResults()"> Premium</label>
-    <label><input type="checkbox" class="ticket-category" value="VIP" onchange="filterTicketResults()"> VIP</label>
-  </div>
+    <div class="filter-panel">
+      <label><input type="radio" name="ticket_type" value="Standard" required> Standard - ৳2500</label><br>
+      <label><input type="radio" name="ticket_type" value="Premium"> Premium - ৳4000</label><br>
+      <label><input type="radio" name="ticket_type" value="VIP"> VIP - ৳6000</label>
+    </div>
 
-  <ul id="resultsList" class="results-list">
-    <li data-type="Standard">Standard - ৳2500</li>
-    <li data-type="Premium">Premium - ৳4000</li>
-    <li data-type="VIP">VIP - ৳6000</li>
-  </ul>
+    <div class="nav-buttons" style="margin-top:20px;">
+      <button type="submit">Submit</button>
+      <button type="button" onclick="window.location.href='upsellprompts.php'">Go to Upsell Prompt</button>
+      <button type="button" onclick="window.location.href='packagecomparison.php'">Go to Package Comparison</button>
+    </div>
 
-  <div class="nav-buttons">
-    <button onclick="window.location.href='Discount_Entry.php'">Submit</button>
-    <button onclick="window.location.href='upsellprompts.php'">Go to Upsell Prompt</button>
-    <button onclick="window.location.href='packagecomparison.php'">Go to Package Comparison</button>
-  </div>
+  </form>
 
-  <div>
-    <a href="Accessibility_Filter.php"><input type="button" value="Back"></a>
+  <div style="margin-top: 20px;">
+    <a href="Seat_Zoom.php"><input type="button" value="Back"></a>
   </div>
 
   <script src="../Asset/ttgrid.js"></script>

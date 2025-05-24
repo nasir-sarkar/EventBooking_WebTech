@@ -14,6 +14,7 @@
 
             if($user){
                 $_SESSION['status'] = true;
+                $_SESSION['username'] = $user['username'];
                 $_SESSION['email'] = $user['email'];
                 $_SESSION['name'] = $user['fullname'];
                 $_SESSION['phone'] = $user['phone'];

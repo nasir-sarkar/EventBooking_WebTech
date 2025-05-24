@@ -1,4 +1,6 @@
 <?php
+require_once('../model/eventModel.php');
+
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     $code = trim($_POST['code']);
     $hasError = false;
@@ -12,11 +14,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
         $hasError = true;
     } 
     else {
-        echo "Analytics data shown successfully!<br>";
+        $discount = getDiscountByPromoCode($code);
+        if ($discount !== false) {
+            echo "Promo code: <b>$code</b><br>";
+            echo "Associated discount: <b>$discount%</b>";
+        } else {
+            echo "Promo code not found!";
+        }
     }
 
-} 
-else {
+} else {
     echo "Invalid request! Please submit form!";
 }
 ?>

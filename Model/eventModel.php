@@ -119,6 +119,63 @@ function deleteEventById($eventid) {
 
 
 
+function getAvailablePromoCode($sponsor, $discount) {
+    $con = getConnection();
+    $sponsor = mysqli_real_escape_string($con, $sponsor);
+    $discount = mysqli_real_escape_string($con, $discount);
+
+    $sql = "SELECT id, promo1, promo2, promo3, promo4, promo5, 
+                   promo1_status, promo2_status, promo3_status, promo4_status, promo5_status 
+            FROM events 
+            WHERE sponsor = '$sponsor' AND discount = '$discount'";
+
+    $result = mysqli_query($con, $sql);
+
+    if ($row = mysqli_fetch_assoc($result)) {
+        $id = $row['id'];
+        $promoFields = ['promo1', 'promo2', 'promo3', 'promo4', 'promo5'];
+        $statusFields = ['promo1_status', 'promo2_status', 'promo3_status', 'promo4_status', 'promo5_status'];
+
+        for ($i = 0; $i < 5; $i++) {
+            if ($row[$statusFields[$i]] === 'unapplied') {
+                $promoCode = $row[$promoFields[$i]];
+                $statusField = $statusFields[$i];
+
+                $updateSql = "UPDATE events SET $statusField = 'applied' WHERE id = $id";
+                mysqli_query($con, $updateSql);
+
+                return $promoCode;
+            }
+        }
+        return "ALL_TAKEN";
+    }
+
+    return "NOT_FOUND";
+}
+
+
+function getDiscountByPromoCode($promoCode) {
+    $con = getConnection();
+    $promoCode = mysqli_real_escape_string($con, $promoCode);
+
+    $sql = "SELECT discount FROM events 
+            WHERE promo1 = '$promoCode' OR 
+                  promo2 = '$promoCode' OR 
+                  promo3 = '$promoCode' OR 
+                  promo4 = '$promoCode' OR 
+                  promo5 = '$promoCode'";
+
+    $result = mysqli_query($con, $sql);
+
+    if ($row = mysqli_fetch_assoc($result)) {
+        return $row['discount'];
+    } else {
+        return false;
+    }
+}
+
+
+
 
 
 

@@ -1,15 +1,15 @@
 function validate() {
-    let trackId = document.getElementById("trackId").value;
-    let trackIdError = document.getElementById("trackIderror");
+    let eventId = document.getElementById("eventId").value;
+    let eventIdError = document.getElementById("eventIderror");
     let isValid = true;
 
-    if (trackId === "") {
-        trackIdError.innerHTML = "Request ID cannot be empty!";
-        trackIdError.style.color = "red";
+    if (eventId === "") {
+        eventIdError.innerHTML = "Request ID cannot be empty!";
+        eventIdError.style.color = "red";
         isValid = false;
     } else {
-        trackIdError.innerHTML = "";
-        trackIdError.style.color = "green";
+        eventIdError.innerHTML = "";
+        eventIdError.style.color = "green";
     }
 
     return isValid;

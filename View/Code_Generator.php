@@ -28,10 +28,6 @@
             <input type="number" id="discount" name="discount"><br>
             <p id="discounterror"></p>
 
-            <label for="validity">Valid Until:</label><br>
-            <input type="date" id="validity" name="validity"><br>
-            <p id="validityerror"></p>
-
             <input type="submit" name="submit" value="Generate Code">
             <a href="Discount_Entry.php"><input type="button" value="Back"></a><br>
             

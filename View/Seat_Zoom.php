@@ -1,9 +1,18 @@
 <?php
-    session_start();
-    if (!isset($_SESSION['status']) || !isset($_COOKIE['status'])) {
-        header('location: login.php');
-        exit;
-    }
+session_start();
+
+if (!isset($_SESSION['status']) || !isset($_COOKIE['status'])) {
+    header('location: login.php');
+    exit;
+}
+
+
+if (isset($_GET['event_id'])) {
+    $_SESSION['event_id'] = $_GET['event_id'];
+}
+if (isset($_GET['event_date'])) {
+    $_SESSION['event_date'] = $_GET['event_date'];
+}
 ?>
 
 <!DOCTYPE html>
@@ -30,6 +39,15 @@
                 <option value="A3">A3 - Right</option>
             </select><br>
             <p id="selecterror"></p>
+
+            <label for="access">Select Accessibility Option:</label><br>
+            <select id="access" name="access">
+                <option value="">Select Accessibility</option>
+                <option value="normal">Regular Seats</option>
+                <option value="wheelchair">Wheelchair Accessible</option>
+                <option value="hearing">Hearing Aid Support</option>
+            </select><br>
+            <p id="accesserror"></p>
 
             <input type="submit" name="submit" value="Go Next" onclick="validate()">
             <a href="Event_Cards.php"><input type="button" value="Back"></a>

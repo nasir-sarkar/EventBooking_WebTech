@@ -4,6 +4,8 @@
         header('location: login.php');
         exit;
     }
+
+    $fullname = isset($_SESSION['name']) ? $_SESSION['name'] : "";
 ?>
 
 <!DOCTYPE html>
@@ -11,17 +13,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact From</title>
+    <title>Contact Form</title>
 </head>
 <body>
     <div class="header">Event Booking</div>
     
     <fieldset>
-        <legend><b>CONTACT FROM</b></legend>
-         <form method="post" action="../Asset/Contact_Form_.php" onsubmit="return validate()">
+        <legend><b>CONTACT FORM</b></legend>
+        <form method="post" action="../Asset/Contact_Form_.php" onsubmit="return validate()">
 
             <label for="name">Full Name:</label><br>
-            <input type="text" id="name" name="name"><br>
+            <input type="text" id="name" name="name" value="<?= $fullname ?>" readonly><br>
             <p id="nameerror"></p>
 
             <label for="email">Email:</label><br>
@@ -32,11 +34,7 @@
             <input type="text" id="message" name="message"><br>
             <p id="messageerror"></p>
 
-            <label for="captcha">What is 3 + 4?</label><br>
-            <input type="text" id="captcha" name="captcha"><br>
-            <p id="captchaerror"></p>
-
-            <input type="submit" name="submit" value="Submit Inquiry" onclick="validate()">
+            <input type="submit" name="submit" value="Submit Inquiry">
             <a href="View_Profile.php"><input type="button" value="Back"></a>
             
         </form>

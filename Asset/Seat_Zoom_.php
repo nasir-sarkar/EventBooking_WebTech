@@ -1,22 +1,35 @@
 <?php
+session_start();
+
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     $seat = trim($_POST['seat']);
-    $hasError = false;
+    $access = trim($_POST['access']);
+    $errors = [];
 
     if ($seat == "") {
-        echo "Please select a seat!";
-        $hasError = true;
-    } 
-    else {
-        echo "Seat selected successfully!<br>";
+        $errors[] = "Please select a seat!";
+    }
+    if ($access == "") {
+        $errors[] = "Please select an accessibility option!";
     }
 
-    if (!$hasError) {
-        header("Location: ../View/Accessibility_Filter.php");
+    if (!empty($errors)) {
+        foreach ($errors as $error) {
+            echo "<p style='color:red;'>$error</p>";
+        }
+        echo '<p><a href="../View/Seat_Zoom.php">Go Back</a></p>';
         exit;
     }
-} 
-else {
+
+    
+    $_SESSION['temp_seat'] = $seat;
+    $_SESSION['temp_access'] = $access;
+
+    header("Location: ../Controller/passInfo.php");
+    exit;
+
+
+} else {
     echo "Invalid request! Please submit form!";
 }
 ?>

@@ -1,10 +1,8 @@
 function validate() {
     let sponsor = document.getElementById("sponsor").value;
     let discount = document.getElementById("discount").value;
-    let validity = document.getElementById("validity").value;
     let sponsorError = document.getElementById("sponsorerror");
     let discountError = document.getElementById("discounterror");
-    let validityError = document.getElementById("validityerror");
     let isValid = true;
 
     if (sponsor === "") {
@@ -25,14 +23,6 @@ function validate() {
         isValid = false;
     } else {
         discountError.innerHTML = "";
-    }
-
-    if (validity === "") {
-        validityError.innerHTML = "Please select a valid date!";
-        validityError.style.color = "red";
-        isValid = false;
-    } else {
-        validityError.innerHTML = "";
     }
 
     return isValid;
