@@ -1,28 +1,39 @@
 <?php
+session_start();
+require_once('../model/userModel.php');
+
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     $old = trim($_POST['old']);
     $new = trim($_POST['new']);
     $confirm = trim($_POST['confirm']);
+    $username = $_SESSION['username'] ?? '';
     $hasError = false;
 
-    if ($old == "") {
-        echo "Old password is required!";
+    if ($old == "" || $new == "" || $confirm == "") {
+        echo "All fields are required!";
         $hasError = true;
-    } 
-    else if (strlen($new) < 6) {
+    } else if (strlen($new) < 6) {
         echo "Password must be at least 6 characters!";
         $hasError = true;
-    } 
-    else if ($confirm !== $new) {
+    } else if ($confirm !== $new) {
         echo "Passwords do not match!";
         $hasError = true;
-    } 
-    else {
-        echo "Password updated successfully!<br>";
-    }
+    } else {
+        $storedPassword = getPasswordByUsername($username);
 
-} 
-else {
-    echo "Invalid request! Please submit form!";
+        if ($storedPassword !== $old) {
+            echo "Old password is incorrect!";
+            $hasError = true;
+        } else {
+            $updated = updatePassword($username, $new);
+            if ($updated) {
+                echo "Password updated successfully!";
+            } else {
+                echo "Failed to update password. Please try again.";
+            }
+        }
+    }
+} else {
+    echo "Invalid request!";
 }
 ?>

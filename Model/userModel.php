@@ -90,5 +90,45 @@ function deleteUserByUsername($username) {
 }
 
 
+
+function getPasswordByUsername($username) {
+    $con = getConnection();
+    $sql = "SELECT password FROM users WHERE username = ?";
+    $stmt = mysqli_prepare($con, $sql);
+    mysqli_stmt_bind_param($stmt, "s", $username);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_bind_result($stmt, $password);
+    mysqli_stmt_fetch($stmt);
+    mysqli_stmt_close($stmt);
+    return $password;
+}
+
+function updatePassword($username, $newPassword) {
+    $con = getConnection();
+    $sql = "UPDATE users SET password = ? WHERE username = ?";
+    $stmt = mysqli_prepare($con, $sql);
+    mysqli_stmt_bind_param($stmt, "ss", $newPassword, $username);
+    $status = mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    return $status;
+}
+
+
+
+
+function updateUserProfile($username, $fullname, $email, $phone) {
+    $con = getConnection();
+    $sql = "UPDATE users SET fullname = ?, email = ?, phone = ? WHERE username = ?";
+    $stmt = mysqli_prepare($con, $sql);
+    mysqli_stmt_bind_param($stmt, "ssss", $fullname, $email, $phone, $username);
+    $status = mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    return $status;
+}
+
+
+
+
+
     
 ?>

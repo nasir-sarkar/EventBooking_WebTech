@@ -51,8 +51,13 @@ $promo_discount = isset($_SESSION['promo_discount']) ? $_SESSION['promo_discount
             </select><br>
             <p id="methoderror"></p>
 
-            <input type="submit" name="submit" value="Confirm Payment">
-            <a href="Discount_Entry.php"><input type="button" value="Back"></a>
+            <p>Card 1: **** **** **** 1234</p>
+            <input type="submit" name="submit" class="green-button" value="Use This">
+
+            <p>Card 2: **** **** **** 5678 </p>
+            <input type="submit" name="submit" class="green-button" value="Use This">
+
+            <a href="Discount_Entry.php"><input type="button" class="blue-button" value="Back"></a>
         </form>
     </fieldset>
 
