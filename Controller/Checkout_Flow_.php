@@ -3,7 +3,7 @@ session_start();
 require_once('../Controller/Calculation.php');
 require_once('../Model/paymentModel.php');
 
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
+if (isset($_POST['submit'])) {
     $method = trim($_POST['method']);
     $cardnum = trim($_POST['cardnum']);
     $hasError = false;
@@ -17,6 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
         echo "Please enter card number or phone!";
         $hasError = true;
     }
+
 
     if (!$hasError) {
         $username = $_SESSION['username'] ?? null;
@@ -34,6 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
         }
     }
 
+
     if (!$hasError) {
         $calculationResult = calculateAmount($ticketType, $promoCode, $promoDiscount);
 
@@ -43,6 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
         }
     }
 
+
     if (!$hasError) {
         $amount = $calculationResult['amount'];
 
@@ -50,10 +53,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 
         if ($inserted) {
             echo "Payment successful!<br>";
-        } else {
+        } 
+        else {
             echo "Failed to save payment record.";
         }
     }
-} else {
+} 
+else {
     echo "Invalid request!";
 }
+?>

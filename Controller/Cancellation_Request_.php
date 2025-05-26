@@ -2,17 +2,13 @@
 session_start();
 require_once('../model/paymentModel.php');
 
-if (!isset($_SESSION['status']) || !isset($_COOKIE['status'])) {
-    header('location: login.php');
-    exit;
-}
-
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
+if (isset($_POST['submit'])) {
     $username = $_SESSION['username'];
     $eventId = trim($_POST['eventId']);
     $reason = trim($_POST['reason']);
     $hasError = false;
 
+    
     if ($eventId == "") {
         echo "Event ID cannot be empty!<br>";
         $hasError = true;
@@ -23,28 +19,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
         $hasError = true;
     }
 
+
     if (!$hasError) {
         
         if (!hasUserPurchasedEvent($username, $eventId)) {
             echo "You have not booked this event!<br>";
             $hasError = true;
         }
-        
         else if (!isRefundEligible($eventId)) {
             echo "Refund not available less than 7 days before the event.<br>";
             $hasError = true;
         }
     }
 
+
     if (!$hasError) {
         $status = submitCancellationRequest($username, $eventId, $reason);
         if ($status) {
             echo "Refund Available.";
             exit;
-        } else {
+        } 
+        else {
             echo "Failed to submit cancellation request. Please try again.";
         }
     }
-} else {
+} 
+else {
     echo "Invalid request! Please submit form!";
 }
+?>

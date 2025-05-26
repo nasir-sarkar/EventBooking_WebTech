@@ -1,13 +1,17 @@
 <?php
 
 if (isset($_POST['submit'])) {
+    
     if (isset($_FILES['avatar']) && $_FILES['avatar']['name'] != "") {
         echo "Avatar uploaded successfully!";
-    } else {
+    } 
+    
+    else {
         echo "Please select an image!";
     }
-} else {
+
+} 
+else {
     echo "Invalid request! Please submit form!";
 }
-
 ?>

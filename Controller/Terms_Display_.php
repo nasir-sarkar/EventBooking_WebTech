@@ -1,12 +1,14 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
+if (isset($_POST['submit'])) {
     $eventDate = trim($_POST['eventDate']);
     $hasError = false;
+
 
     if ($eventDate == "") {
         echo "Please select an event date to check refund eligibility.";
         $hasError = true;
     } 
+
     else {
         echo "Successful!<br>";
     }

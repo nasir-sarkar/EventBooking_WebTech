@@ -1,6 +1,7 @@
 <?php
 
-if (isset($_POST['submit'])) {
+if (isset($_POST['submit'])) 
+{
     $access = trim($_POST['access']);
     $hasError = false;
 
@@ -20,5 +21,4 @@ if (isset($_POST['submit'])) {
 else {
     echo "Invalid request! Please submit form!";
 }
-
 ?>

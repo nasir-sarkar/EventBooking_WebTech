@@ -1,20 +1,26 @@
 <?php
 require_once('../model/userModel.php');
 
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
+if (isset($_POST['submit'])) {
     $username = trim($_POST['username']);
+
 
     if ($username === "") {
         echo "Please enter username!<br>";
-    } else {
+    } 
+
+    else {
         $deleted = deleteUserByUsername($username);
         if ($deleted) {
             echo "User deleted successfully.<br>";
-        } else {
+        } 
+        else {
             echo "User not found or could not be deleted.<br>";
         }
     }
-} else {
+
+} 
+else {
     echo "Invalid request! Please submit the form.";
 }
 ?>
