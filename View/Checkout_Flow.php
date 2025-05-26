@@ -6,6 +6,8 @@ if (!isset($_SESSION['status']) || !isset($_COOKIE['status'])) {
     exit;
 }
 
+require_once('../Controller/Calculation.php');
+
 $username = isset($_SESSION['username']) ? $_SESSION['username'] : "Unknown";
 $selected_event_id = isset($_SESSION['event_id']) ? $_SESSION['event_id'] : "Not selected";
 $selected_event_date = isset($_SESSION['event_date']) ? $_SESSION['event_date'] : "Not selected";
@@ -14,20 +16,31 @@ $selected_seat = isset($_SESSION['selected_seat']) ? $_SESSION['selected_seat'] 
 $selected_access = isset($_SESSION['selected_access']) ? $_SESSION['selected_access'] : "Not selected";
 $selected_ticket_type = isset($_SESSION['selected_ticket_type']) ? $_SESSION['selected_ticket_type'] : "Not selected";
 $selected_promo = isset($_SESSION['selected_promo']) ? $_SESSION['selected_promo'] : "Not applied";
-$promo_discount = isset($_SESSION['promo_discount']) ? $_SESSION['promo_discount'] : "0%";
-?>
+$promo_discount = isset($_SESSION['promo_discount']) ? floatval($_SESSION['promo_discount']) : 0;
 
+$amount = 0;
+if ($selected_ticket_type !== "Not selected") {
+    $calcResult = calculateAmount($selected_ticket_type, $selected_promo, $promo_discount);
+    if ($calcResult['success']) {
+        $amount = $calcResult['amount'];
+    } else {
+        $amount = "Calculation error: " . htmlspecialchars($calcResult['message']);
+    }
+} else {
+    $amount = "Not available";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Checkout Flow</title>
-    <link rel="stylesheet" href="../Asset/Checkout_Flow.css">
+    <link rel="stylesheet" href="../Asset/Checkout_Flow.css" />
 </head>
 <body>
     <div class="header">Event Booking</div>
-    
+
     <fieldset>
         <legend><b>CHECKOUT FLOW</b></legend>
 
@@ -38,26 +51,26 @@ $promo_discount = isset($_SESSION['promo_discount']) ? $_SESSION['promo_discount
         <p><b>Access Type:</b> <?= htmlspecialchars($selected_access) ?></p>
         <p><b>Ticket Type:</b> <?= htmlspecialchars($selected_ticket_type) ?></p>
         <p><b>Promo Code:</b> <?= htmlspecialchars($selected_promo) ?></p>
-        <p><b>Discount:</b> <?= htmlspecialchars($promo_discount) . "%" ?></p>
+        <p><b>Discount:</b> <?= htmlspecialchars($promo_discount) ?>%</p>
+        <p><b>Total Amount:</b> <?= is_numeric($amount) ? number_format($amount, 2) . " TK" : $amount ?></p>
 
         <form method="post" action="../Controller/Checkout_Flow_.php" onsubmit="return validate()">
-            <br><br>
-            <label for="method">Payment Method:</label><br>
+            <br /><br />
+            <label for="method">Payment Method:</label><br />
             <select id="method" name="method">
                 <option value="">Select Payment Method</option>
                 <option value="card">Credit/Debit Card</option>
-                <option value="apple">Apple Pay</option>
-                <option value="google">Google Pay</option>
-            </select><br>
+                <option value="bkash">Bkash</option>
+                <option value="nagad">Nagad</option>
+            </select><br />
             <p id="methoderror"></p>
 
-            <p>Card 1: **** **** **** 1234</p>
-            <input type="submit" name="submit" class="green-button" value="Use This">
+            <label for="cardnum">Card No / Phone:</label><br />
+            <input type="text" id="cardnum" name="cardnum" /><br />
+            <p id="cardnumerror"></p>
+            <input type="submit" name="submit" class="green-button" value="Pay Now" />
 
-            <p>Card 2: **** **** **** 5678 </p>
-            <input type="submit" name="submit" class="green-button" value="Use This">
-
-            <a href="Discount_Entry.php"><input type="button" class="blue-button" value="Back"></a>
+            <a href="Discount_Entry.php"><input type="button" class="blue-button" value="Back" /></a>
         </form>
     </fieldset>
 

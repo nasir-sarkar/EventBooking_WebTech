@@ -21,7 +21,7 @@ if (!isset($_SESSION['status']) || !isset($_COOKIE['status'])) {
         <form method="post" action="../Controller/Delete_Event_.php" onsubmit="return validate()">
             <label for="eventid">Event ID:</label><br>
             <input type="text" id="eventid" name="eventid"><br>
-            <p id="eventiderror" style="color:red;"></p>
+            <p id="eventiderror"></p>
 
             <input type="submit" name="submit" value="Delete Event">
             <a href="user_Management.php"><input type="button" value="Back"></a>

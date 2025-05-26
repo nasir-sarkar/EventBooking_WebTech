@@ -1,6 +1,8 @@
 function validate() {
     let method = document.getElementById("method").value;
+    let cardnum = document.getElementById("cardnum").value.trim();
     let methodError = document.getElementById("methoderror");
+    let cardnumError = document.getElementById("cardnumerror");
     let isValid = true;
 
     if (method === "") {
@@ -11,8 +13,12 @@ function validate() {
         methodError.innerHTML = "";
     }
 
-    if (isValid) {
-        window.location.href = "Saved_Cards.php";
+    if (cardnum === "") {
+        cardnumError.innerHTML = "Please enter Card number or phone!";
+        cardnumError.style.color = "red";
+        isValid = false;
+    } else {
+        cardnumError.innerHTML = "";
     }
 
     return isValid;
