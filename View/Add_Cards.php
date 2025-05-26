@@ -18,7 +18,7 @@
     
     <fieldset>
         <legend><b>ADD CARD</b></legend>
-        <form method="post" action="../Asset/Add_Cards_.php" onsubmit="return validate()">
+        <form method="post" action="../Controller/Add_Cards_.php" onsubmit="return validate()">
 
             <label for="cardtype">Card Type:</label><br>
             <select id="cardtype" name="cardtype">

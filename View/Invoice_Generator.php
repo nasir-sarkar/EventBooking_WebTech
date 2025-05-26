@@ -18,7 +18,7 @@
 
     <fieldset>
         <legend><b>INVOICE GENERATOR</b></legend>
-         <form method="post" action="../Asset/Invoice_Generator_.php" onsubmit="return validate()">
+         <form method="post" action="../Controller/Invoice_Generator_.php" onsubmit="return validate()">
             <label for="email">Enter Email for Invoice:</label><br>
             <input type="email" id="email" name="email"><br>
             <p id="emailerror"></p>

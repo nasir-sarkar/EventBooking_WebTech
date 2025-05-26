@@ -18,7 +18,7 @@
     
     <fieldset>
         <legend><b>DISCOUNT ENTRY</b></legend>
-        <form method="post" action="../Asset/Discount_Entry_.php" onsubmit="return validate()">
+        <form method="post" action="../Controller/Discount_Entry_.php" onsubmit="return validate()">
             <label for="promo">Enter Promo Code:</label><br>
             <input type="text" id="promo" name="promo"><br>
             <p id="promoerror"></p>

@@ -20,7 +20,7 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : "";
 
     <fieldset>
         <legend><b>CANCELLATION REQUEST</b></legend>
-        <form method="post" action="../Asset/Cancellation_Request_.php" onsubmit="return validate()">
+        <form method="post" action="../Controller/Cancellation_Request_.php" onsubmit="return validate()">
 
             <label for="username">Username:</label><br />
             <input type="text" id="username" name="username" value="<?= $username ?>" readonly /><br />

@@ -18,7 +18,7 @@
 
     <fieldset>
         <legend><b>REFUND REQUESTS</b></legend>
-        <form method="post" action="../Asset/Refund_Requests_.php" onsubmit="return validate()">
+        <form method="post" action="../Controller/Refund_Requests_.php" onsubmit="return validate()">
 
             <p><b>Username: nafiz </b></p>
             <p>Event Name: Music Fest </p>

@@ -18,7 +18,7 @@
 
     <fieldset>
         <legend><b>SYSTEM SETTINGS</b></legend>
-         <form method="post" action="../Asset/System_Settings_.php" onsubmit="return validate()">
+         <form method="post" action="../Controller/System_Settings_.php" onsubmit="return validate()">
             <label for="setting">Select Setting:</label><br>
             <select id="setting" name="setting">
                 <option value="">Select Option</option>

@@ -18,7 +18,7 @@ if (!isset($_SESSION['status']) || !isset($_COOKIE['status'])) {
 
     <fieldset>
         <legend><b>ADD USER</b></legend>
-        <form method="post" action="../Asset/Add_User_.php" onsubmit="return validate()">
+        <form method="post" action="../Controller/Add_User_.php" onsubmit="return validate()">
 
             <label for="fullname">Full Name:</label><br>
             <input type="text" id="fullname" name="fullname"><br>

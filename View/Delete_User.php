@@ -18,7 +18,7 @@ if (!isset($_SESSION['status']) || !isset($_COOKIE['status'])) {
 
     <fieldset>
         <legend><b>DELETE USER</b></legend>
-        <form method="post" action="../Asset/Delete_User_.php" onsubmit="return validate()">
+        <form method="post" action="../Controller/Delete_User_.php" onsubmit="return validate()">
             <label for="username">Username:</label><br>
             <input type="text" id="username" name="username"><br>
             <p id="usernameerror"></p>

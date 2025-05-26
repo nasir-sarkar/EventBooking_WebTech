@@ -18,7 +18,7 @@
     
     <fieldset>
         <legend><b>REQUEST STATUS TRACKER</b></legend>
-         <form method="post" action="../Asset/Status_Tracker_.php" onsubmit="return validate()">
+         <form method="post" action="../Controller/Status_Tracker_.php" onsubmit="return validate()">
             <label for="eventId">Enter event ID:</label><br>
             <input type="text" id="eventId" name="eventId"><br>
             <p id="eventIderror"></p>

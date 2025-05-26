@@ -28,7 +28,7 @@ if (isset($_SESSION['filteredUsers'])) {
 
     <fieldset>
         <legend><b>USER MANAGEMENT</b></legend>
-         <form method="post" action="../Asset/User_Management_.php" onsubmit="return validate()">
+         <form method="post" action="../Controller/User_Management_.php" onsubmit="return validate()">
             <label for="filter">Filter By Role:</label><br>
             <select id="filter" name="filter">
                 <option value="">Select Role</option>

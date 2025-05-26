@@ -40,7 +40,7 @@ $promo_discount = isset($_SESSION['promo_discount']) ? $_SESSION['promo_discount
         <p><b>Promo Code:</b> <?= htmlspecialchars($selected_promo) ?></p>
         <p><b>Discount:</b> <?= htmlspecialchars($promo_discount) . "%" ?></p>
 
-        <form method="post" action="../Asset/Checkout_Flow_.php" onsubmit="return validate()">
+        <form method="post" action="../Controller/Checkout_Flow_.php" onsubmit="return validate()">
             <br><br>
             <label for="method">Payment Method:</label><br>
             <select id="method" name="method">

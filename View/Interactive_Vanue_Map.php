@@ -18,7 +18,7 @@
     
     <fieldset>
         <legend><b>INTERACTIVE VENUE MAP</b></legend>
-         <form method="post" action="../Asset/Interactive_Venue_Map_.php" onsubmit="return validate()">
+         <form method="post" action="../Controller/Interactive_Venue_Map_.php" onsubmit="return validate()">
 
             <img src="event_map.jpg" id="venueImage">
 

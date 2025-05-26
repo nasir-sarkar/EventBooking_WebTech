@@ -18,7 +18,7 @@
     
     <fieldset>
         <legend><b>UPDATE PASSWORD</b></legend>
-         <form method="post" action="../Asset/Update_Password_.php" onsubmit="return validate()">
+         <form method="post" action="../Controller/Update_Password_.php" onsubmit="return validate()">
 
             <label for="old">Old Password:</label><br>
             <input type="password" id="old" name="old"><br>

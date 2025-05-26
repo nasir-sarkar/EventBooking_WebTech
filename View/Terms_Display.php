@@ -18,7 +18,7 @@
     
     <fieldset>
         <legend><b>TERMS DISPLAY</b></legend>
-         <form method="post" action="../Asset/Terms_Display_.php" onsubmit="return validate()">
+         <form method="post" action="../Controller/Terms_Display_.php" onsubmit="return validate()">
            
             <p><b>General Terms:</b></p>
             <p>• Refund available up to 7 days before event.</p>

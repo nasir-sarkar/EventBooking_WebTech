@@ -18,7 +18,7 @@
     
     <fieldset>
         <legend><b>GENERATE PROMO CODE</b></legend>
-        <form method="post" action="../Asset/Code_Generator_.php" onsubmit="return validate()">
+        <form method="post" action="../Controller/Code_Generator_.php" onsubmit="return validate()">
 
             <label for="sponsor">Sponsor Name:</label><br>
             <input type="text" id="sponsor" name="sponsor"><br>

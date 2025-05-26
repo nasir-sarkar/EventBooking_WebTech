@@ -22,7 +22,7 @@ $events = getAllEvents();
 
     <fieldset>
         <legend><b>ADD DISCOUNT</b></legend>
-        <form method="post" action="../Asset/Add_Discount_.php" onsubmit="return validate()" novalidate>
+        <form method="post" action="../Controller/Add_Discount_.php" onsubmit="return validate()" novalidate>
 
             <label for="eventid">Event ID:</label><br>
             <input type="text" id="eventid" name="eventid"><br>

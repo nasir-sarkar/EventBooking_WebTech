@@ -18,7 +18,7 @@
     
     <fieldset>
         <legend><b>EDIT PROFILE</b></legend>
-         <form method="post" action="../Asset/Edit_Profile_.php" onsubmit="return validate()">
+         <form method="post" action="../Controller/Edit_Profile_.php" onsubmit="return validate()">
             <label for="name">Name:</label><br>
             <input type="text" id="name" name="name"><br>
             <p id="nameerror"></p>

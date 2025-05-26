@@ -27,7 +27,7 @@ if (isset($_GET['event_date'])) {
     
     <fieldset>
         <legend><b>SEAT ZOOM</b></legend>
-         <form method="post" action="../Asset/Seat_Zoom_.php" onsubmit="return validate()">
+         <form method="post" action="../Controller/Seat_Zoom_.php" onsubmit="return validate()">
 
             <img src="seat.jpg" id="seatImage"><br><br>
 

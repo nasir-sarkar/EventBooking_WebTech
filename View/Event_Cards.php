@@ -28,7 +28,7 @@ if (isset($_SESSION['filteredEvents'])) {
 
     <fieldset>
         <legend><b>FILTER EVENTS</b></legend>
-        <form method="post" action="../Asset/Event_Cards_.php" onsubmit="return validate()">
+        <form method="post" action="../Controller/Event_Cards_.php" onsubmit="return validate()">
             <label for="view">Select View:</label><br>
             <select id="view" name="view">
                 <option value="">Select View</option>

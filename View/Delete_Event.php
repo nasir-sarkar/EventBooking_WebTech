@@ -18,7 +18,7 @@ if (!isset($_SESSION['status']) || !isset($_COOKIE['status'])) {
 
     <fieldset>
         <legend><b>DELETE EVENT</b></legend>
-        <form method="post" action="../Asset/Delete_Event_.php" onsubmit="return validate()">
+        <form method="post" action="../Controller/Delete_Event_.php" onsubmit="return validate()">
             <label for="eventid">Event ID:</label><br>
             <input type="text" id="eventid" name="eventid"><br>
             <p id="eventiderror" style="color:red;"></p>

@@ -20,7 +20,7 @@
     
     <fieldset>
         <legend><b>CONTACT FORM</b></legend>
-        <form method="post" action="../Asset/Contact_Form_.php" onsubmit="return validate()">
+        <form method="post" action="../Controller/Contact_Form_.php" onsubmit="return validate()">
 
             <label for="name">Full Name:</label><br>
             <input type="text" id="name" name="name" value="<?= $fullname ?>" readonly><br>

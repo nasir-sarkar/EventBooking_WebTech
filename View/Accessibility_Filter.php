@@ -18,7 +18,7 @@
     
     <fieldset>
         <legend><b>ACCESSIBILITY FILTER</b></legend>
-         <form method="post" action="../Asset/Accessibility_Filter_.php" onsubmit="return validate()">
+         <form method="post" action="../Controller/Accessibility_Filter_.php" onsubmit="return validate()">
             <label for="access">Select Accessibility Option:</label><br>
             <select id="access" name="access">
                 <option value="">Select Accessibility</option>

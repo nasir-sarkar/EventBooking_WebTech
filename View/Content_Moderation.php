@@ -21,7 +21,7 @@
 
     <fieldset>
         <legend><b>CREATE EVENT</b></legend>
-        <form method="post" action="../Asset/Content_Moderation_.php" onsubmit="return validate()">
+        <form method="post" action="../Controller/Content_Moderation_.php" onsubmit="return validate()">
 
             <label for="ename">Event Name:</label><br>
             <input type="text" id="ename" name="ename"><br>
