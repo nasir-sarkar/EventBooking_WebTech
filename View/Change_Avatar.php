@@ -17,17 +17,17 @@
     <div class="header">Event Booking</div>
     
     <fieldset>
-        <legend><b>CHANGE AVATAR</b></legend>
-        <form method="post" action="../Controller/Upload.php" enctype="multipart/form-data" onsubmit="return validate()">
+    <legend><b>CHANGE AVATAR</b></legend>
+    <form method="post" action="../Controller/Upload.php" enctype="multipart/form-data" onsubmit="return validate()">
 
-            <label for="avatar">Select Image:</label><br>
-            <input type="file" id="avatar" name="avatar" accept="image/*"><br>
-            <p id="avatarerror"></p>
+        <label for="avatar">Select Image:</label><br>
+        <input type="file" id="avatar" name="avatar" accept="image/*"><br>
+        <p id="avatarerror"></p>
 
-            <input type="submit" name="submit" value="Upload Avatar">
-            <a href="View_Profile.php"><input type="button" value="Back"></a>
+        <input type="submit" name="submit" value="Upload Avatar">
+        <a href="View_Profile.php"><input type="button" value="Back"></a>
 
-        </form>
+    </form>
     </fieldset>
 
     <link rel="stylesheet" href="../Asset/Change_Avatar.css">

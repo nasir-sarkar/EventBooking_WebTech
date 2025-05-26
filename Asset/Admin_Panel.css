@@ -56,6 +56,12 @@ input[type="button"] {
     margin: 20px auto;
 }
 
+#content {
+    width: 100%;
+    background-color: green;
+    margin: 20px auto;
+}
+
 .button {
     display: flex;
     text-align: center;

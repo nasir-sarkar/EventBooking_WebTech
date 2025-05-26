@@ -23,13 +23,18 @@ if ($selected_ticket_type !== "Not selected") {
     $calcResult = calculateAmount($selected_ticket_type, $selected_promo, $promo_discount);
     if ($calcResult['success']) {
         $amount = $calcResult['amount'];
-    } else {
+    } 
+    else {
         $amount = "Calculation error: " . htmlspecialchars($calcResult['message']);
     }
-} else {
+} 
+else {
     $amount = "Not available";
 }
 ?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,7 +47,7 @@ if ($selected_ticket_type !== "Not selected") {
     <div class="header">Event Booking</div>
 
     <fieldset>
-        <legend><b>CHECKOUT FLOW</b></legend>
+    <legend><b>CHECKOUT FLOW</b></legend>
 
         <p><b>Username:</b> <?= htmlspecialchars($username) ?></p>
         <p><b>Event ID:</b> <?= htmlspecialchars($selected_event_id) ?></p>
@@ -71,7 +76,7 @@ if ($selected_ticket_type !== "Not selected") {
             <input type="submit" name="submit" class="green-button" value="Pay Now" />
 
             <a href="Discount_Entry.php"><input type="button" class="blue-button" value="Back" /></a>
-        </form>
+    </form>
     </fieldset>
 
     <script src="../Asset/Checkout_Flow.js"></script>

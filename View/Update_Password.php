@@ -17,25 +17,25 @@
     <div class="header">Event Booking</div>
     
     <fieldset>
-        <legend><b>UPDATE PASSWORD</b></legend>
-         <form method="post" action="../Controller/Update_Password_.php" onsubmit="return validate()">
+    <legend><b>UPDATE PASSWORD</b></legend>
+    <form method="post" action="../Controller/Update_Password_.php" onsubmit="return validate()">
 
-            <label for="old">Old Password:</label><br>
-            <input type="password" id="old" name="old"><br>
-            <p id="olderror"></p>
+        <label for="old">Old Password:</label><br>
+        <input type="password" id="old" name="old"><br>
+        <p id="olderror"></p>
 
-            <label for="new">New Password:</label><br>
-            <input type="password" id="new" name="new"><br>
-            <p id="newerror"></p>
+        <label for="new">New Password:</label><br>
+        <input type="password" id="new" name="new"><br>
+        <p id="newerror"></p>
 
-            <label for="confirm">Confirm Password:</label><br>
-            <input type="password" id="confirm" name="confirm"><br>
-            <p id="confirmerror"></p>
+        <label for="confirm">Confirm Password:</label><br>
+        <input type="password" id="confirm" name="confirm"><br>
+        <p id="confirmerror"></p>
 
-            <input type="submit" name="submit" value="Update Password">
-            <a href="View_Profile.php"><input type="button" value="Back"></a>
+        <input type="submit" name="submit" value="Update Password">
+        <a href="View_Profile.php"><input type="button" value="Back"></a>
 
-        </form>
+    </form>
     </fieldset>
 
     <link rel="stylesheet" href="../Asset/Update_Password.css">

@@ -17,27 +17,29 @@
     <div class="header">Event Booking</div>
     
     <fieldset>
-        <legend><b>REQUEST STATUS TRACKER</b></legend>
-         <form method="post" action="../Controller/Status_Tracker_.php" onsubmit="return validate()">
-            <label for="eventId">Enter event ID:</label><br>
-            <input type="text" id="eventId" name="eventId"><br>
-            <p id="eventIderror"></p>
+    <legend><b>REQUEST STATUS TRACKER</b></legend>
+    <form method="post" action="../Controller/Status_Tracker_.php" onsubmit="return validate()">
+            
+        <label for="eventId">Enter event ID:</label><br>
+        <input type="text" id="eventId" name="eventId"><br>
+        <p id="eventIderror"></p>
 
-            <input type="submit" name="submit" value="Track Status">
-            <a href="Terms_Display.php"><input type="button" value="Back"></a>
+        <input type="submit" name="submit" value="Track Status">
+        <a href="Terms_Display.php"><input type="button" value="Back"></a>
 
-            <br><br>
-            <p><b>Status:</b> 
-                <?php 
-                    if (isset($_SESSION['refund_status'])) {
-                        echo htmlspecialchars($_SESSION['refund_status']);
-                        unset($_SESSION['refund_status']);
-                    } else {
-                        echo "[Pending / Approved / Rejected]";
-                    }
-                ?>
-            </p>
-        </form>
+        <br><br>
+        <p><b>Status:</b> 
+            <?php 
+                if (isset($_SESSION['refund_status'])) {
+                    echo htmlspecialchars($_SESSION['refund_status']);
+                    unset($_SESSION['refund_status']);
+                } 
+                else {
+                    echo "[Pending / Approved / Rejected]";
+                }
+            ?></p>
+        
+    </form>
     </fieldset>
 
     <link rel="stylesheet" href="../Asset/Status_Tracker.css">

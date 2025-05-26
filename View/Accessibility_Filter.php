@@ -17,20 +17,22 @@
     <div class="header">Event Booking</div>
     
     <fieldset>
-        <legend><b>ACCESSIBILITY FILTER</b></legend>
-         <form method="post" action="../Controller/Accessibility_Filter_.php" onsubmit="return validate()">
-            <label for="access">Select Accessibility Option:</label><br>
-            <select id="access" name="access">
-                <option value="">Select Accessibility</option>
-                <option value="normal">Normal Seats</option>
-                <option value="wheelchair">Wheelchair Accessible</option>
-                <option value="hearing">Hearing Aid Support</option>
+    <legend><b>ACCESSIBILITY FILTER</b></legend>
+    <form method="post" action="../Controller/Accessibility_Filter_.php" onsubmit="return validate()">
+            
+        <label for="access">Select Accessibility Option:</label><br>
+        <select id="access" name="access">
+            <option value="">Select Accessibility</option>
+            <option value="normal">Normal Seats</option>
+            <option value="wheelchair">Wheelchair Accessible</option>
+            <option value="hearing">Hearing Aid Support</option>
             </select><br><br>
             <p id="accesserror"></p>
 
-            <input type="submit" name="submit" value="Next"  onclick="validate()">
-            <a href="Seat_Zoom.php"><input type="button" value="Back"></a>
-        </form>
+        <input type="submit" name="submit" value="Next"  onclick="validate()">
+        <a href="Seat_Zoom.php"><input type="button" value="Back"></a>
+
+    </form>
     </fieldset>
 
     <link rel="stylesheet" href="../Asset/Accessibility_Filter.css">

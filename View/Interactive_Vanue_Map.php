@@ -17,27 +17,28 @@
     <div class="header">Event Booking</div>
     
     <fieldset>
-        <legend><b>INTERACTIVE VENUE MAP</b></legend>
-         <form method="post" action="../Controller/Interactive_Venue_Map_.php" onsubmit="return validate()">
+    <legend><b>INTERACTIVE VENUE MAP</b></legend>
+    <form method="post" action="../Controller/Interactive_Venue_Map_.php" onsubmit="return validate()">
 
-            <img src="event_map.jpg" id="venueImage">
+        <img src="event_map.jpg" id="venueImage">
 
-            <label for="section">Select Section:</label><br>
-            <select id="section" name="section">
-                <option value="">Select Section</option>
-                <option value="a">Section A</option>
-                <option value="b">Section B</option>
-                <option value="c">Section C</option>
-                <option value="d">Section D</option>
-                <option value="e">Section E</option>
-                <option value="f">Section F</option>
-                <option value="g">Section G</option>
-            </select><br><br>
-            <p id="selecterror"></p>
+        <label for="section">Select Section:</label><br>
+        <select id="section" name="section">
+            <option value="">Select Section</option>
+            <option value="a">Section A</option>
+            <option value="b">Section B</option>
+            <option value="c">Section C</option>
+            <option value="d">Section D</option>
+            <option value="e">Section E</option>
+            <option value="f">Section F</option>
+            <option value="g">Section G</option>
+        </select>
+        <br><br><p id="selecterror"></p>
 
-            <input type="submit" name="submit" value="Parking Map" onclick="validate()">
-            <a href="Event_Cards.php"><input type="button" value="Back"></a><br>
-        </form>
+        <input type="submit" name="submit" value="Parking Map" onclick="validate()">
+        <a href="Event_Cards.php"><input type="button" value="Back"></a><br>
+        
+    </form>
     </fieldset>
 
     <link rel="stylesheet" href="../Asset/Interactive_Venue_Map.css">

@@ -10,7 +10,8 @@ require_once('../model/userModel.php');
 if (isset($_SESSION['filteredUsers'])) {
     $users = $_SESSION['filteredUsers'];
     unset($_SESSION['filteredUsers']);
-} else {
+} 
+else {
     $users = getAllUsers();
 }
 ?>
@@ -21,28 +22,29 @@ if (isset($_SESSION['filteredUsers'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Management</title>
-    <link rel="stylesheet" href="../Asset/User_Management.css">
 </head>
 <body>
     <div class="header">Event Booking</div>
 
     <fieldset>
-        <legend><b>USER MANAGEMENT</b></legend>
-         <form method="post" action="../Controller/User_Management_.php" onsubmit="return validate()">
-            <label for="filter">Filter By Role:</label><br>
-            <select id="filter" name="filter">
-                <option value="">Select Role</option>
-                <option value="admin">Admin</option>
-                <option value="user">User</option>
-            </select><br>
-            <p id="filtererror"></p>
+    <legend><b>USER MANAGEMENT</b></legend>
+    <form method="post" action="../Controller/User_Management_.php" onsubmit="return validate()">
+            
+        <label for="filter">Filter By Role:</label><br>
+        <select id="filter" name="filter">
+            <option value="">Select Role</option>
+            <option value="admin">Admin</option>
+            <option value="user">User</option>
+        </select><br>
+        <p id="filtererror"></p>
 
-            <input type="submit" name="submit" value="Apply Filter">
-        </form>
+        <input type="submit" name="submit" value="Apply Filter">
+
+    </form>
     </fieldset>
 
     <fieldset>
-        <legend><b>USER LIST</b></legend>
+    <legend><b>USER LIST</b></legend>
         <?php foreach ($users as $user): ?>
 
             <p><b>Name: </b> <?= $user['fullname'] ?> </p><br>
@@ -57,8 +59,10 @@ if (isset($_SESSION['filteredUsers'])) {
         <a href="Add_User.php"><input type="button" value="Add User"></a>
         <a href="Delete_User.php"><input type="button" value="Delete User"></a>
         <a href="Admin_Panel.php"><input type="button" class="blue" value="Back"></a>
+
     </fieldset>
 
+    <link rel="stylesheet" href="../Asset/User_Management.css">
     <script src="../Asset/User_Management.js"></script>
 </body>
 </html>

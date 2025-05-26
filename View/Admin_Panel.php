@@ -17,21 +17,22 @@
     <div class="header">Event Booking</div>
     
     <fieldset>
-        <legend><b>ADMIN PANEL</b></legend>
-        <form>
+    <legend><b>ADMIN PANEL</b></legend>
+    <form>
 
-            <img src="admin.jpg" id="event-booking">
+        <img src="admin.jpg" id="event-booking">
 
-            <div class="button-single">
-                <a href="User_Management.php"><input type="button" id="continue" value="User Management"></a>
-            </div>
+        <div class="button-single">
+            <br><br>
+            <a href="User_Management.php"><input type="button" id="continue" value="User Management"></a>
+            <a href="Content_Moderation.php"><input type="button" id="content" value="Content Moderation"></a>
+        </div>
 
-            <div class="button">
-                <a href="Content_Moderation.php"><input type="button" value="Content Moderation"></a>
-                <a href="System_Settings.php"><input type="button" value="System Settings"></a>
-                <a href="../Controller/logout.php"><input type="button" value="Logout"></a>
-            </div>
-        </form>
+        <div class="button">
+            <a href="../Controller/logout.php"><input type="button" value="Logout"></a>
+        </div>
+
+    </form>
     </fieldset>
 
     <link rel="stylesheet" href="../Asset/Admin_Panel.css">

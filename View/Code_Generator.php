@@ -17,21 +17,21 @@
     <div class="header">Event Booking</div>
     
     <fieldset>
-        <legend><b>GENERATE PROMO CODE</b></legend>
-        <form method="post" action="../Controller/Code_Generator_.php" onsubmit="return validate()">
+    <legend><b>GENERATE PROMO CODE</b></legend>
+    <form method="post" action="../Controller/Code_Generator_.php" onsubmit="return validate()">
 
-            <label for="sponsor">Sponsor Name:</label><br>
-            <input type="text" id="sponsor" name="sponsor"><br>
-            <p id="sponsorerror"></p>
+        <label for="sponsor">Sponsor Name:</label><br>
+        <input type="text" id="sponsor" name="sponsor"><br>
+        <p id="sponsorerror"></p>
 
-            <label for="discount">Discount (%):</label><br>
-            <input type="number" id="discount" name="discount"><br>
-            <p id="discounterror"></p>
+        <label for="discount">Discount (%):</label><br>
+        <input type="number" id="discount" name="discount"><br>
+        <p id="discounterror"></p>
 
-            <input type="submit" name="submit" value="Generate Code">
-            <a href="Discount_Entry.php"><input type="button" value="Back"></a><br>
+        <input type="submit" name="submit" value="Generate Code">
+        <a href="Discount_Entry.php"><input type="button" value="Back"></a><br>
             
-        </form>
+    </form>
     </fieldset>
     
     <link rel="stylesheet" href="../Asset/Code_Generator.css">

@@ -19,24 +19,25 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : "";
     <div class="header">Event Booking</div>
 
     <fieldset>
-        <legend><b>CANCELLATION REQUEST</b></legend>
-        <form method="post" action="../Controller/Cancellation_Request_.php" onsubmit="return validate()">
+    <legend><b>CANCELLATION REQUEST</b></legend>
+    <form method="post" action="../Controller/Cancellation_Request_.php" onsubmit="return validate()">
 
-            <label for="username">Username:</label><br />
-            <input type="text" id="username" name="username" value="<?= $username ?>" readonly /><br />
-            <p id="usernameerror"></p>
+        <label for="username">Username:</label><br />
+        <input type="text" id="username" name="username" value="<?= $username ?>" readonly /><br />
+        <p id="usernameerror"></p>
 
-            <label for="eventId">Event ID:</label><br />
-            <input type="text" id="eventId" name="eventId" /><br />
-            <p id="eventIderror"></p>
+        <label for="eventId">Event ID:</label><br />
+        <input type="text" id="eventId" name="eventId" /><br />
+        <p id="eventIderror"></p>
 
-            <label for="reason">Reason for Cancellation:</label><br />
-            <textarea id="reason" name="reason" rows="4" cols="30"></textarea><br />
-            <p id="reasonerror"></p>
+        <label for="reason">Reason for Cancellation:</label><br />
+        <textarea id="reason" name="reason" rows="4" cols="30"></textarea><br />
+        <p id="reasonerror"></p>
 
-            <input type="submit" name="submit" value="Submit Request" />
-            <a href="Terms_Display.php"><input type="button" value="Back" /></a>
-        </form>
+        <input type="submit" name="submit" value="Submit Request" />
+        <a href="Terms_Display.php"><input type="button" value="Back" /></a>
+    
+    </form>
     </fieldset>
 
     <link rel="stylesheet" href="../Asset/Cancellation_Request.css" />
