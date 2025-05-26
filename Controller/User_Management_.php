@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once('../model/userModel.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     $filter = trim($_POST['filter']);
@@ -8,15 +9,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     if ($filter == "") {
         echo "Please select a role!";
         $hasError = true;
-    } 
-    else {
+    } else {
         $_SESSION['role'] = $filter;
 
-        header("Location: ../Controller/filterUsers.php");
+        
+        $filteredUsers = getUsersByRole($filter);
+        $_SESSION['filteredUsers'] = $filteredUsers;
+
+        header("Location: ../View/User_Management.php");
         exit;
     }
-} 
-else {
+} else {
     echo "Invalid request! Please submit form!";
 }
 ?>

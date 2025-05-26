@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once('../model/eventModel.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     $view = trim($_POST['view']);
@@ -18,7 +19,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
         $_SESSION['view'] = $view;
         $_SESSION['category'] = $category;
 
-        header("Location: ../Controller/filterEvents.php");
+        $filteredEvents = getFilteredEvents($view, $category);
+        $_SESSION['filteredEvents'] = $filteredEvents;
+
+        header("Location: ../View/Event_Cards.php");
         exit;
     }
 } 
@@ -26,4 +30,3 @@ else {
     echo "Invalid request! Please submit form!";
 }
 ?>
-
