@@ -37,7 +37,8 @@
                 else {
                     echo "[Pending / Approved / Rejected]";
                 }
-            ?></p>
+            ?>
+        </p>
         
     </form>
     </fieldset>

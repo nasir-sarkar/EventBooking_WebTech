@@ -21,7 +21,6 @@ if (isset($_SESSION['filteredEvents'])) {
 <head>
     <meta charset="UTF-8">
     <title>Event Cards</title>
-    <link rel="stylesheet" href="../Asset/Event_Cards.css">
 </head>
 <body>
     <div class="header">Event Booking</div>
@@ -84,6 +83,7 @@ if (isset($_SESSION['filteredEvents'])) {
     </form>
     </fieldset>
 
+    <link rel="stylesheet" href="../Asset/Event_Cards.css">
     <script src="../Asset/Event_Cards.js"></script>
 </body>
 </html>

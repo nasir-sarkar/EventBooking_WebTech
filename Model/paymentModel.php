@@ -81,3 +81,29 @@ function insertPayment($username, $eventId, $seat, $seatType, $ticketType, $amou
 
     return mysqli_query($con, $sql);
 }
+
+function getPendingRefunds() {
+    $con = getConnection();
+    $sql = "SELECT username, eventid, amount FROM payments WHERE refund='pending'";
+    $result = mysqli_query($con, $sql);
+
+    $refunds = [];
+    while ($row = mysqli_fetch_assoc($result)) {
+        $refunds[] = $row;
+    }
+
+    return $refunds;
+}
+
+function updateRefundStatus($username, $eventid, $status) {
+    $con = getConnection();
+    $username = mysqli_real_escape_string($con, $username);
+    $eventid = mysqli_real_escape_string($con, $eventid);
+    $status = mysqli_real_escape_string($con, $status);
+
+    $sql = "UPDATE payments SET refund='$status' WHERE username='$username' AND eventid='$eventid'";
+    return mysqli_query($con, $sql);
+}
+
+
+?>
