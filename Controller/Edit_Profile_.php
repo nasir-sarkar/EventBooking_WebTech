@@ -2,39 +2,37 @@
 session_start();
 require_once('../model/userModel.php');
 
-if (isset($_POST['submit'])) {
-    $name = trim($_POST['name']);
-    $email = trim($_POST['email']);
-    $phone = trim($_POST['phone']);
+header('Content-Type: application/json');
+
+if (isset($_POST['json'])) {
+    $data = json_decode($_POST['json'], true);
+
+    $name = trim($data['name'] ?? '');
+    $email = trim($data['email'] ?? '');
+    $phone = trim($data['phone'] ?? '');
     $username = $_SESSION['username'] ?? '';
     $hasError = false;
+    $response = [];
 
     if ($name == "") {
-        echo "Name cannot be empty!";
+        $response['message'] = "Name cannot be empty!";
         $hasError = true;
-    } 
-
-    else if ($email == "" || strpos($email, "@") === false) {
-        echo "Enter a valid email!";
+    } else if ($email == "" || strpos($email, "@") === false) {
+        $response['message'] = "Enter a valid email!";
         $hasError = true;
-    } 
-    
-    else if ($phone == "" || strlen($phone) < 11) {
-        echo "Enter a valid phone number!";
+    } else if ($phone == "" || strlen($phone) < 11) {
+        $response['message'] = "Enter a valid phone number!";
         $hasError = true;
-    } 
-    
-    else {
+    } else {
         $updated = updateUserProfile($username, $name, $email, $phone);
         if ($updated) {
-            echo "Profile updated successfully!";
-        } 
-        else {
-            echo "Failed to update profile. Please try again.";
+            $response['message'] = "Profile updated successfully!";
+        } else {
+            $response['message'] = "Failed to update profile. Please try again.";
         }
     }
-} 
-else {
-    echo "Invalid request! Please submit form!";
+
+    echo json_encode($response);
+} else {
+    echo json_encode(['message' => 'Invalid request!']);
 }
-?>

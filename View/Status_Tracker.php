@@ -18,7 +18,7 @@
     
     <fieldset>
     <legend><b>REQUEST STATUS TRACKER</b></legend>
-    <form method="post" action="../Controller/Status_Tracker_.php" onsubmit="return validate()">
+    <form onsubmit="ajax(); return false;">
             
         <label for="eventId">Enter event ID:</label><br>
         <input type="text" id="eventId" name="eventId"><br>
@@ -28,22 +28,42 @@
         <a href="Terms_Display.php"><input type="button" value="Back"></a>
 
         <br><br>
-        <p><b>Status:</b> 
-            <?php 
-                if (isset($_SESSION['refund_status'])) {
-                    echo htmlspecialchars($_SESSION['refund_status']);
-                    unset($_SESSION['refund_status']);
-                } 
-                else {
-                    echo "[Pending / Approved / Rejected]";
-                }
-            ?>
-        </p>
+        <p><b>Status:</b> <span id="statusResult">[Pending / Approved / Rejected]</span></p>
         
     </form>
     </fieldset>
 
     <link rel="stylesheet" href="../Asset/Status_Tracker.css">
-    <script src="../Asset/Status_Tracker.js"></script>
+    <script>
+        function ajax(){
+            let eventId = document.getElementById('eventId').value.trim();
+            let error = false;
+
+            if (eventId === "") {
+                document.getElementById('eventIderror').innerHTML = "Event ID cannot be empty!";
+                error = true;
+            } else {
+                document.getElementById('eventIderror').innerHTML = "";
+            }
+
+            if (error) return;
+
+            let json = {
+                'eventId': eventId
+            };
+            let data = JSON.stringify(json);
+
+            let xhttp = new XMLHttpRequest();
+            xhttp.open('post', '../Controller/Status_Tracker_.php', true);
+            xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhttp.send('json=' + data);
+            xhttp.onreadystatechange = function (){
+                if(this.readyState == 4 && this.status == 200){
+                    let response = JSON.parse(this.responseText);
+                    document.getElementById('statusResult').innerHTML = response.message;
+                }
+            }
+        }
+    </script>
 </body>
 </html>

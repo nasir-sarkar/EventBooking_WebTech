@@ -1,26 +1,25 @@
 <?php
 require_once('../model/userModel.php');
+header('Content-Type: application/json');
 
-if (isset($_POST['submit'])) {
-    $username = trim($_POST['username']);
+if (isset($_POST['json'])) {
+    $data = json_decode($_POST['json'], true);
 
+    $username = trim($data['username'] ?? '');
+    $response = [];
 
     if ($username === "") {
-        echo "Please enter username!<br>";
-    } 
-
-    else {
+        $response['message'] = "Please enter username!";
+    } else {
         $deleted = deleteUserByUsername($username);
         if ($deleted) {
-            echo "User deleted successfully.<br>";
-        } 
-        else {
-            echo "User not found or could not be deleted.<br>";
+            $response['message'] = "User deleted successfully.";
+        } else {
+            $response['message'] = "User not found or could not be deleted.";
         }
     }
 
-} 
-else {
-    echo "Invalid request! Please submit the form.";
+    echo json_encode($response);
+} else {
+    echo json_encode(['message' => 'Invalid request!']);
 }
-?>
