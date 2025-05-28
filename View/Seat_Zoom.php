@@ -6,7 +6,6 @@ if (!isset($_SESSION['status']) || !isset($_COOKIE['status'])) {
     exit;
 }
 
-
 if (isset($_GET['event_id'])) {
     $_SESSION['event_id'] = $_GET['event_id'];
 }
@@ -14,6 +13,7 @@ if (isset($_GET['event_date'])) {
     $_SESSION['event_date'] = $_GET['event_date'];
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
