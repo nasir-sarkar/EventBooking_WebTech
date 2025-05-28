@@ -1,4 +1,6 @@
-function validate() {
+function validate(event) {
+    event.preventDefault(); 
+    
     let email = document.getElementById('email').value.trim();
     let password = document.getElementById('password').value.trim();
 
@@ -30,5 +32,41 @@ function validate() {
         isValid = false;
     }
 
-    return isValid;
+    if (!isValid) {
+        return false;
+    }
+
+    
+    const loginData = JSON.stringify({
+        email: email,
+        password: password
+    });
+
+
+    const xhttp = new XMLHttpRequest();
+    xhttp.open("POST", "../Controller/loginCheck.php", true);
+    xhttp.setRequestHeader("Content-type", "application/json");
+    xhttp.send(loginData);
+
+    xhttp.onreadystatechange = function() {
+        if (this.readyState === 4) {
+            if (this.status === 200) {
+                const response = this.responseText.trim();
+                
+                if (response === "admin") {
+                    window.location.href = "../View/Admin_Panel.php";
+                } 
+                else if (response === "user") {
+                    window.location.href = "../View/View_Profile.php";
+                }
+                else {
+                    document.getElementById('error-message').innerHTML = response;
+                    document.getElementById('error-message').style.color = "red";
+                }
+            } else {
+                document.getElementById('error-message').innerHTML = "Server error occurred";
+                document.getElementById('error-message').style.color = "red";
+            }
+        }
+    };
 }

@@ -10,7 +10,7 @@
   <div class="wrapper">
     <h1>Signup </h1>
     <p id="error-message" ></p>
-    <form onsubmit="return validate()" action="javascript:void(0);">
+    <form onsubmit="validate(event)">
        <div>
         <label for="username">
             <img src="person.png" height="24" width="24" alt="person icon">
@@ -18,7 +18,23 @@
         <input type="text" name="username" id="username" placeholder="Username">
         <p id="usererror"></p>
        </div> 
-       <div>
+    
+  <div>
+        <label for="fullname">
+          <img src="person.png" height="24" width="24" alt="full name icon">
+        </label>
+  <input type="text" name="fullname" id="fullname" placeholder="Full Name">
+  <p id="fullnameerror"></p>
+</div>
+
+<div>
+  <label for="phone">
+    <img src="phone.png" height="24" width="24" alt="phone icon">
+  </label>
+  <input type="tel" name="phone" id="phone" placeholder="Phone Number">
+  <p id="phoneerror"></p>
+</div>
+<div>
         <label for="email">
             <span>
                 @         
@@ -41,7 +57,7 @@
         <input type="password" name="repeatpassword" id="repeatpassword" placeholder="Repeat password">
         <p id="repeatpasserror"></p>
        </div> 
-       <button type="submit">Signup</button>
+        <input type="submit" name="click" value ="Sign Up" >
        <p id="validerror"></p>
     </form>
     <p>Already have an Account?<a href="login.php">Login</a></p>

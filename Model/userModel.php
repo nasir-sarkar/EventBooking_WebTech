@@ -2,6 +2,25 @@
     error_reporting(E_ALL);
     require_once('db.php');
 
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $data = json_decode(file_get_contents('php://input'), true);
+    
+    if (isset($data['action']) && $data['action'] === 'signup') {
+        $fullname = $data['fullname'];
+        $username = $data['username'];
+        $email = $data['email'];
+        $phone = $data['phone'];
+        $password = $data['password'];
+        
+        if (addUser($fullname, $username, $password, $email, $phone, 'user')) {
+            echo 'success';
+        } else {
+            echo 'Failed to add user';
+        }
+        exit;
+    }
+}
+
     function login($email, $password){
         $con = getConnection();
         $sql = "select * from users where email='{$email}' and password='{$password}'";

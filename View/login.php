@@ -6,12 +6,10 @@
   <script src="../Asset/login.js" defer></script>
 </head>
 <body>
-
   <div class="wrapper">
     <h1>Login</h1>
     <p id="error-message"></p>
-    <form onsubmit="return validate()" method="post" action="../Controller/loginCheck.php">
-
+    <form onsubmit="return validate(event)"> <!-- Removed action/method, added event -->
        <div>
         <label for="email">
             <span>@</span>
@@ -30,10 +28,7 @@
        <a href="signup.html"><input type="button" value="Signup"></a>
        <p id="valid-error"></p>
     </form>
-
     <p><a href="forgotpassword.html">Forgot Password?</a></p>
-
   </div>
-
 </body>
 </html>
