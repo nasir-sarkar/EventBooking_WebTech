@@ -16,6 +16,8 @@
         }
     }
 
+
+
     function getAllUsers() {
     $con = getConnection();
     $sql = "SELECT fullname, username, email, usertype FROM users";
@@ -127,6 +129,15 @@ function updateUserProfile($username, $fullname, $email, $phone) {
 }
 
 
+function updateUserAvatar($username, $avatarData) {
+    $con = getConnection();
+    $sql = "UPDATE users SET avatar = ? WHERE username = ?";
+    $stmt = mysqli_prepare($con, $sql);
+    mysqli_stmt_bind_param($stmt, "ss", $avatarData, $username);
+    $status = mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    return $status;
+}
 
 
 

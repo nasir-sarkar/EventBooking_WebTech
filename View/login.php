@@ -9,14 +9,12 @@
 
   <div class="wrapper">
     <h1>Login</h1>
-    <p id="error-message" ></p>
+    <p id="error-message"></p>
     <form onsubmit="return validate()" method="post" action="../Controller/loginCheck.php">
 
        <div>
         <label for="email">
-            <span>
-                @         
-            </span>
+            <span>@</span>
         </label>
         <input type="email" name="email" id="email" placeholder="Email" autocomplete="email">
         <p id="email-error"></p>

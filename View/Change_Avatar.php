@@ -15,10 +15,10 @@
 </head>
 <body>
     <div class="header">Event Booking</div>
-    
+
     <fieldset>
     <legend><b>CHANGE AVATAR</b></legend>
-    <form method="post" action="../Controller/Upload.php" enctype="multipart/form-data" onsubmit="return validate()">
+    <form method="post" action="../Controller/Change_Avatar_.php" enctype="multipart/form-data" onsubmit="return validate()">
 
         <label for="avatar">Select Image:</label><br>
         <input type="file" id="avatar" name="avatar" accept="image/*"><br>
