@@ -17,22 +17,30 @@ if (isset($_POST['json'])) {
     if ($name == "") {
         $response['message'] = "Name cannot be empty!";
         $hasError = true;
-    } else if ($email == "" || strpos($email, "@") === false) {
+    } 
+    
+    else if ($email == "" || strpos($email, "@") === false) {
         $response['message'] = "Enter a valid email!";
         $hasError = true;
-    } else if ($phone == "" || strlen($phone) < 11) {
+    } 
+    
+    else if ($phone == "" || strlen($phone) < 11) {
         $response['message'] = "Enter a valid phone number!";
         $hasError = true;
-    } else {
+    } 
+    
+    else {
         $updated = updateUserProfile($username, $name, $email, $phone);
         if ($updated) {
             $response['message'] = "Profile updated successfully!";
-        } else {
+        } 
+        else {
             $response['message'] = "Failed to update profile. Please try again.";
         }
     }
 
     echo json_encode($response);
-} else {
+} 
+else {
     echo json_encode(['message' => 'Invalid request!']);
 }

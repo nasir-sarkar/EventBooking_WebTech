@@ -9,7 +9,9 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 
     if ($email == "" || $password == "") {
         echo "null email/password!";
-    } else {
+    } 
+    
+    else {
         $user = login($email, $password);
 
         if ($user) {
@@ -20,7 +22,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
             $_SESSION['phone'] = $user['phone'];
             $_SESSION['usertype'] = $user['usertype'];
 
-            // Remove base64_encode() since the data is already encoded
+         
             if (!empty($user['avatar'])) {
                 $_SESSION['avatar'] = $user['avatar'];
             } else {
@@ -31,16 +33,21 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 
             if ($user['usertype'] === 'admin') {
                 header('location: ../view/Admin_Panel.php');
-            } else if ($user['usertype'] === 'user') {
+            } 
+            else if ($user['usertype'] === 'user') {
                 header('location: ../view/View_Profile.php');
-            } else {
+            } 
+            else {
                 echo "invalid usertype!";
             }
-        } else {
+        } 
+        else {
             echo "invalid user!";
+            
         }
     }
-} else {
+} 
+else {
     header('location: ../view/login.html');
 }
 ?>

@@ -42,7 +42,8 @@
             if (eventId === "") {
                 document.getElementById('eventIderror').innerHTML = "Event ID cannot be empty!";
                 error = true;
-            } else {
+            } 
+            else {
                 document.getElementById('eventIderror').innerHTML = "";
             }
 

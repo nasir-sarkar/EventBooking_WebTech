@@ -9,7 +9,9 @@ if (isset($_POST['submit'])) {
     if (!isset($_FILES['avatar']) || $_FILES['avatar']['error'] != 0) {
         echo "Please select a valid image!";
         $hasError = true;
-    } else {
+    } 
+    
+    else {
         $imageData = file_get_contents($_FILES['avatar']['tmp_name']);
         $imageData = base64_encode($imageData);
         
@@ -18,11 +20,13 @@ if (isset($_POST['submit'])) {
         if ($updated) {
             $_SESSION['avatar'] = $imageData;
             echo "Avatar uploaded successfully!";
-        } else {
+        } 
+        else {
             echo "Failed to upload avatar. Please try again.";
         }
     }
-} else {
+} 
+else {
     echo "Invalid request! Please submit form!";
 }
 ?>

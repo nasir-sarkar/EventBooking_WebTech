@@ -14,6 +14,7 @@ function hasUserPurchasedEvent($username, $eventId) {
     return mysqli_num_rows($result) > 0;
 }
 
+
 function isRefundEligible($eventId) {
     $con = getConnection();
     $eventId = mysqli_real_escape_string($con, $eventId);
@@ -32,6 +33,7 @@ function isRefundEligible($eventId) {
     }
     return false;
 }
+
 
 function submitCancellationRequest($username, $eventId, $reason) {
     $con = getConnection();
@@ -94,6 +96,7 @@ function getPendingRefunds() {
 
     return $refunds;
 }
+
 
 function updateRefundStatus($username, $eventid, $status) {
     $con = getConnection();

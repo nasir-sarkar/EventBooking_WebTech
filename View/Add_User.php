@@ -17,36 +17,36 @@ if (!isset($_SESSION['status']) || !isset($_COOKIE['status'])) {
     <div class="header">Event Booking</div>
 
     <fieldset>
-        <legend><b>ADD USER</b></legend>
-        <form method="post" action="../Controller/Add_User_.php" onsubmit="return validate()">
+    <legend><b>ADD USER</b></legend>
+    <form method="post" action="../Controller/Add_User_.php" onsubmit="return validate()" autocomplete="off">
 
-            <label for="fullname">Full Name:</label><br>
-            <input type="text" id="fullname" name="fullname"><br>
-            <p id="fullnameerror"></p>
+        <label for="fullname">Full Name:</label><br>
+        <input type="text" id="fullname" name="fullname" value=""><br>
+        <p id="fullnameerror"></p>
 
-            <label for="username">Username:</label><br>
-            <input type="text" id="username" name="username"><br>
-            <p id="usernameerror"></p>
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" value="" autocomplete="new-username"><br>
+        <p id="usernameerror"></p>
 
-            <label for="password">Password:</label><br>
-            <input type="password" id="password" name="password"><br>
-            <p id="passworderror"></p>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" value="" autocomplete="new-password"><br>
+        <p id="passworderror"></p>
 
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email"><br>
-            <p id="emailerror"></p>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" value=""><br>
+        <p id="emailerror"></p>
 
-            <label for="phone">Phone:</label><br>
-            <input type="text" id="phone" name="phone"><br>
-            <p id="phoneerror"></p>
+        <label for="phone">Phone:</label><br>
+        <input type="text" id="phone" name="phone" value=""><br>
+        <p id="phoneerror"></p>
 
-            <label for="usertype">User Type:</label><br>
-            <input type="text" id="usertype" name="usertype"><br>
-            <p id="usertypeerror"></p>
+        <label for="usertype">User Type:</label><br>
+        <input type="text" id="usertype" name="usertype" value=""><br>
+        <p id="usertypeerror"></p>
 
-            <input type="submit" name="submit" value="Add User">
-            <a href="User_Management.php"><input type="button" value="Back"></a>
-        </form>
+        <input type="submit" name="submit" value="Add User">
+        <a href="User_Management.php"><input type="button" value="Back"></a>
+    </form>
     </fieldset>
 
     <link rel="stylesheet" href="../Asset/Add_User.css">

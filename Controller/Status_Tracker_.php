@@ -13,20 +13,25 @@ if (isset($_POST['json'])) {
 
     if ($eventId == "") {
         $response['message'] = "Event ID cannot be empty!";
-    } else {
+    } 
+    
+    else {
         if (hasUserPurchasedEvent($username, $eventId)) {
             $status = getRefundStatus($username, $eventId);
             if ($status !== null) {
                 $response['message'] = ucfirst($status);
-            } else {
+            } 
+            else {
                 $response['message'] = "No refund request found";
             }
-        } else {
+        } 
+        else {
             $response['message'] = "You have not purchased this event";
         }
     }
 
     echo json_encode($response);
-} else {
+} 
+else {
     echo json_encode(['message' => 'Invalid request!']);
 }

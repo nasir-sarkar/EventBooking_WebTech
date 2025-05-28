@@ -72,7 +72,7 @@ if (isset($_SESSION['filteredEvents'])) {
             <a href="regdashboard.php"><input type="button" class="green-button" value="Registration"></a>
             <a href="joinwaitlist.php"><input type="button" class="green-button" value="Join Wait List"></a>
             <a href="Seat_Zoom.php?event_id=<?= urlencode($event['id']) ?>&event_date=<?= urlencode($event['date']) ?>">
-            <input type="button" class="green-button" value="Book"></a>
+            <input type="button" class="green-button" value="Book Now"></a>
             <br><br>
 
         <?php endforeach; ?>

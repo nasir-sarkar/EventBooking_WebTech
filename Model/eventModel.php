@@ -28,9 +28,11 @@ function getFilteredEvents($view, $category) {
     
     if ($view == "month") {
         $sql .= " AND MONTH(date) = MONTH(CURDATE()) AND YEAR(date) = YEAR(CURDATE())";
-    } elseif ($view == "week") {
+    } 
+    elseif ($view == "week") {
         $sql .= " AND WEEK(date, 1) = WEEK(CURDATE(), 1) AND YEAR(date) = YEAR(CURDATE())";
-    } elseif ($view == "day") {
+    } 
+    elseif ($view == "day") {
         $sql .= " AND DATE(date) = CURDATE()";
     }
 
@@ -112,7 +114,8 @@ function deleteEventById($eventid) {
 
     if ($affectedRows > 0) {
         return true;
-    } else {
+    } 
+    else {
         return false;
     }
 }
@@ -169,14 +172,9 @@ function getDiscountByPromoCode($promoCode) {
 
     if ($row = mysqli_fetch_assoc($result)) {
         return $row['discount'];
-    } else {
+    } 
+    else {
         return false;
     }
 }
-
-
-
-
-
-
 ?>

@@ -10,16 +10,20 @@ if (isset($_POST['json'])) {
 
     if ($username === "") {
         $response['message'] = "Please enter username!";
-    } else {
+    } 
+    
+    else {
         $deleted = deleteUserByUsername($username);
         if ($deleted) {
             $response['message'] = "User deleted successfully.";
-        } else {
+        } 
+        else {
             $response['message'] = "User not found or could not be deleted.";
         }
     }
 
     echo json_encode($response);
-} else {
+} 
+else {
     echo json_encode(['message' => 'Invalid request!']);
 }

@@ -11,10 +11,12 @@
         if($count == 1){
             $user = mysqli_fetch_assoc($result);
             return $user;
-        }else{
+        }
+        else{
             return false;
         }
     }
+
 
 
 
@@ -31,6 +33,8 @@
    }
 
 
+
+
    function getUsersByRole($role) {
     $con = getConnection();
     $role = mysqli_real_escape_string($con, $role);
@@ -45,6 +49,8 @@
     }
 
 
+
+
     function addUser($fullname, $username, $password, $email, $phone, $usertype) {
     $con = getConnection();
 
@@ -57,10 +63,13 @@
     mysqli_stmt_close($stmt);
 
     return $status;
-}
+    }
 
 
-function deleteUserByUsername($username) {
+    
+
+
+    function deleteUserByUsername($username) {
     $con = getConnection();
     $username = trim($username);
 
@@ -89,11 +98,11 @@ function deleteUserByUsername($username) {
     } else {
         return false;
     }
-}
+    }
 
 
 
-function getPasswordByUsername($username) {
+    function getPasswordByUsername($username) {
     $con = getConnection();
     $sql = "SELECT password FROM users WHERE username = ?";
     $stmt = mysqli_prepare($con, $sql);
@@ -103,9 +112,11 @@ function getPasswordByUsername($username) {
     mysqli_stmt_fetch($stmt);
     mysqli_stmt_close($stmt);
     return $password;
-}
+    }
 
-function updatePassword($username, $newPassword) {
+
+
+    function updatePassword($username, $newPassword) {
     $con = getConnection();
     $sql = "UPDATE users SET password = ? WHERE username = ?";
     $stmt = mysqli_prepare($con, $sql);
@@ -113,12 +124,12 @@ function updatePassword($username, $newPassword) {
     $status = mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     return $status;
-}
+    }
 
 
 
 
-function updateUserProfile($username, $fullname, $email, $phone) {
+    function updateUserProfile($username, $fullname, $email, $phone) {
     $con = getConnection();
     $sql = "UPDATE users SET fullname = ?, email = ?, phone = ? WHERE username = ?";
     $stmt = mysqli_prepare($con, $sql);
@@ -126,10 +137,10 @@ function updateUserProfile($username, $fullname, $email, $phone) {
     $status = mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     return $status;
-}
+   }
 
 
-function updateUserAvatar($username, $avatarData) {
+    function updateUserAvatar($username, $avatarData) {
     $con = getConnection();
     $sql = "UPDATE users SET avatar = ? WHERE username = ?";
     $stmt = mysqli_prepare($con, $sql);
@@ -137,9 +148,5 @@ function updateUserAvatar($username, $avatarData) {
     $status = mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     return $status;
-}
-
-
-
-    
+   }   
 ?>

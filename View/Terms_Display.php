@@ -23,7 +23,7 @@
         <p><b>General Terms:</b></p>
         <p>• Refund available up to 7 days before event.</p>
         <p>• No refunds after event starts.</p>
-        <p>• Processing fee may apply.</p><br>
+        <br><br>
 
         <a href="Cancellation_Request.php"><input type="button" class="green" value="Cancellation Request"></a> <br><br>
         <a href="Status_Tracker.php"><input type="button" class="green" value="Status Tracker"></a><br><br>

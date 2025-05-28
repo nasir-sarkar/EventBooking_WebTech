@@ -25,7 +25,7 @@ if (!isset($_SESSION['status']) || !isset($_COOKIE['status'])) {
         <p id="eventiderror"></p>
 
         <input type="submit" name="submit" value="Delete Event">
-        <a href="user_Management.php"><input type="button" value="Back"></a>
+        <a href="Content_Moderation.php"><input type="button" value="Back"></a>
     
     </form>
     </fieldset>

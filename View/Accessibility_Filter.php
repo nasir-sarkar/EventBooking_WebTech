@@ -20,6 +20,7 @@
     <legend><b>ACCESSIBILITY FILTER</b></legend>
     <form method="post" action="../Controller/Accessibility_Filter_.php" onsubmit="return validate()">
             
+
         <label for="access">Select Accessibility Option:</label><br>
         <select id="access" name="access">
             <option value="">Select Accessibility</option>
@@ -32,6 +33,7 @@
         <input type="submit" name="submit" value="Next"  onclick="validate()">
         <a href="Seat_Zoom.php"><input type="button" value="Back"></a>
 
+        
     </form>
     </fieldset>
 

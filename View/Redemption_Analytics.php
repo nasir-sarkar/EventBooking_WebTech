@@ -17,16 +17,16 @@ if (!isset($_SESSION['status'])) {
     <div class="header">Event Booking</div>
     
     <fieldset>
-        <legend><b>PROMO CODE ANALYTICS</b></legend>
-        <form method="post" action="../Controller/Redemption_Analytics_.php" onsubmit="return validate()">
-            <label for="code">Enter Code to Track:</label><br>
-            <input type="text" id="code" name="code"><br>
-            <p id="codeerror"></p>
+    <legend><b>PROMO CODE ANALYTICS</b></legend>
+    <form method="post" action="../Controller/Redemption_Analytics_.php" onsubmit="return validate()">
+        <label for="code">Enter Code to Track:</label><br>
+        <input type="text" id="code" name="code"><br>
+        <p id="codeerror"></p>
 
-            <input type="submit" name="submit" value="View Analytics">
-            <a href="Discount_Entry.php"><input type="button" value="Back"></a>
+        <input type="submit" name="submit" value="View Analytics">
+        <a href="Discount_Entry.php"><input type="button" value="Back"></a>
             
-        </form>
+    </form>
     </fieldset>
 
     <link rel="stylesheet" href="../Asset/Redemption_Analytics.css">
