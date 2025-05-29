@@ -16,14 +16,14 @@ body {
   margin-bottom: 30px;
 }
 
-.map-img {
+/* .map-img {
   width: 80%;
   height: auto;
   border-radius: 10px;
   border: 2px solid #0077b6;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
-}
+} */
 
 .nav-buttons {
   text-align: center;

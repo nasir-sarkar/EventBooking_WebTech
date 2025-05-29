@@ -2,16 +2,12 @@ let waitlist = [];
 
 function changeText() {
   let name = document.getElementById('name').value;
-  let head = document.getElementById('head');
   let nameError = document.getElementById('name-error');
 
   if (name === "") {
     nameError.innerHTML = "Please enter your name!";
     nameError.style.color = "red";
-  } else {
-    head.innerHTML = `Hello, ${name}!`;
-    nameError.innerHTML = "";
-  }
+   } 
 }
 
 function validate() {
@@ -50,7 +46,6 @@ function validate() {
     waitlist.push({ name, email });
     alert("Added to waitlist!");
     document.getElementById('waitlist-form').reset();
-    document.getElementById('head').innerHTML = "Join the Event Waitlist";
   }
 
   return false; 

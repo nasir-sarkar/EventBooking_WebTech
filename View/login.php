@@ -9,7 +9,7 @@
   <div class="wrapper">
     <h1>Login</h1>
     <p id="error-message"></p>
-    <form onsubmit="return validate(event)"> <!-- Removed action/method, added event -->
+    <form onsubmit="return validate(event)"> 
        <div>
         <label for="email">
             <span>@</span>

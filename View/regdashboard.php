@@ -41,7 +41,6 @@ if (!isset($_SESSION['status'])) {
 
   <div class="nav-buttons">
   <button onclick="window.location.href='namebadge.php'">Go to Name Badge Generator</button>
-  <!-- <button onclick="window.location.href='dietaryneeds.php'">Go to Dietary Requirements</button> -->
 </div>
 
   <div class="nav-buttons">

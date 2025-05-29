@@ -1,4 +1,3 @@
-// Simulated shared waitlist (in-memory only, not shared across pages in reality)
 let waitlist = [
   { name: "Alice", email: "alice@example.com" },
   { name: "Bob", email: "bob@example.com" },

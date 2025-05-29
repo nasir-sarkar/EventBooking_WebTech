@@ -34,9 +34,9 @@ if (!isset($_SESSION['status'])) {
   <div class="hotel-booking">
     <h3>Nearby Hotels</h3>
     <ul>
-      <li><a href="https://hotel1.example.com" target="_blank">Hotel One</a></li>
-      <li><a href="https://hotel2.example.com" target="_blank">Hotel Two</a></li>
-      <li><a href="https://hotel3.example.com" target="_blank">Hotel Three</a></li>
+      <li><a href="https://royal-blue-uttara.hotels-in-dhaka.com/" target="_blank">Hotel One</a></li>
+      <li><a href="https://www.radissonhotels.com/en-us/hotels/radisson-blu-dhaka" target="_blank">Hotel Two</a></li>
+      <li><a href="https://www.ihg.com/intercontinental/hotels/us/en/dhaka/dachb/hoteldetail" target="_blank">Hotel Three</a></li>
     </ul>
   </div>
 
