@@ -36,7 +36,7 @@ if (isset($_POST['submit'])) {
     if (!$hasError) {
         $status = submitCancellationRequest($username, $eventId, $reason);
         if ($status) {
-            echo "Refund Available.";
+            echo "Refund requested.";
             exit;
         } 
         else {

@@ -49,7 +49,8 @@ if (isset($_POST['submit'])) {
     if (!$hasError) {
         $amount = $calculationResult['amount'];
 
-        $inserted = insertPayment($username, $eventId, $seat, $seatType, $ticketType, $amount, 'paid', $cardnum, $method, $eventDate);
+       $inserted = insertPayment($username, $eventId, $seat, $seatType, $ticketType, $amount, 'paid', $method, $eventDate);
+
 
         if ($inserted) {
             echo "Payment successful!<br>";

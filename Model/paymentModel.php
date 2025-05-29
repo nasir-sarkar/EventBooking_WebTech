@@ -63,7 +63,7 @@ function getRefundStatus($username, $eventId) {
     return null;
 }
 
-function insertPayment($username, $eventId, $seat, $seatType, $ticketType, $amount, $status, $refund, $reason, $date) {
+function insertPayment($username, $eventId, $seat, $seatType, $ticketType, $amount, $status, $reason, $date) {
     $con = getConnection();
 
     $usernameEsc = mysqli_real_escape_string($con, $username);
@@ -72,17 +72,17 @@ function insertPayment($username, $eventId, $seat, $seatType, $ticketType, $amou
     $seatTypeEsc = mysqli_real_escape_string($con, $seatType);
     $ticketTypeEsc = mysqli_real_escape_string($con, $ticketType);
     $statusEsc = mysqli_real_escape_string($con, $status);
-    $refundEsc = mysqli_real_escape_string($con, $refund);
     $reasonEsc = mysqli_real_escape_string($con, $reason);
     $dateEsc = mysqli_real_escape_string($con, $date);
 
     $sql = "INSERT INTO payments 
-            (username, eventid, seat, seattype, tickettype, amount, status, refund, reason, date) 
+            (username, eventid, seat, seattype, tickettype, amount, status, reason, date) 
             VALUES
-            ('$usernameEsc', $eventIdEsc, '$seatEsc', '$seatTypeEsc', '$ticketTypeEsc', $amount, '$statusEsc', '$refundEsc', '$reasonEsc', '$dateEsc')";
+            ('$usernameEsc', $eventIdEsc, '$seatEsc', '$seatTypeEsc', '$ticketTypeEsc', $amount, '$statusEsc', '$reasonEsc', '$dateEsc')";
 
     return mysqli_query($con, $sql);
 }
+
 
 function getPendingRefunds() {
     $con = getConnection();
