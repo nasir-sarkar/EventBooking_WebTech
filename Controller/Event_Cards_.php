@@ -31,13 +31,26 @@ if (isset($_POST['submit'])) {
 }
 
 elseif (isset($_POST['book_now'])) {
-    $_SESSION['event_id'] = $_POST['event_id'];
-    $_SESSION['event_name'] = $_POST['event_name'];
-    $_SESSION['event_date'] = $_POST['event_date'];
 
-    header("Location: ../View/Seat_Zoom.php"); 
-    exit;
+    $event_date = strtotime($_POST['event_date']);
+    $today = strtotime(date('Y-m-d'));
+
+    if ($event_date < $today) {
+        echo "Event date has already passed!";
+        exit;
+    }
+    else {
+        $_SESSION['event_id'] = $_POST['event_id'];
+        $_SESSION['event_name'] = $_POST['event_name'];
+        $_SESSION['event_date'] = $_POST['event_date'];
+        $_SESSION['sponsor'] = $_POST['sponsor'] ?? '';
+        $_SESSION['discount'] = $_POST['discount'] ?? '';
+
+        header("Location: ../View/Seat_Zoom.php"); 
+        exit;
+    }
 }
+
 
 else {
     echo "Invalid request! Please submit form!";

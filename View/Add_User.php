@@ -18,18 +18,18 @@ if (!isset($_SESSION['status']) || !isset($_COOKIE['status'])) {
 
     <fieldset>
     <legend><b>ADD USER</b></legend>
-    <form method="post" action="../Controller/Add_User_.php" onsubmit="return validate()" autocomplete="off">
+    <form method="post" action="../Controller/Add_User_.php" onsubmit="return validate()">
 
         <label for="fullname">Full Name:</label><br>
         <input type="text" id="fullname" name="fullname" value=""><br>
         <p id="fullnameerror"></p>
 
         <label for="username">Username:</label><br>
-        <input type="text" id="username" name="username" value="" autocomplete="new-username"><br>
+        <input type="text" id="username" name="username" value=""><br>
         <p id="usernameerror"></p>
 
         <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password" value="" autocomplete="new-password"><br>
+        <input type="password" id="password" name="password" value=""><br>
         <p id="passworderror"></p>
 
         <label for="email">Email:</label><br>

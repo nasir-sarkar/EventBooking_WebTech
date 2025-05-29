@@ -70,15 +70,15 @@ function addDiscountToEvent($eventid, $sponsor, $discount, $promo1, $promo2, $pr
                 promo3 = ?, 
                 promo4 = ?, 
                 promo5 = ?,
-                promo1_status = 'unapplied',
-                promo2_status = 'unapplied',
-                promo3_status = 'unapplied',
-                promo4_status = 'unapplied',
-                promo5_status = 'unapplied'
+                promo1_status = 'available',
+                promo2_status = 'available',
+                promo3_status = 'available',
+                promo4_status = 'available',
+                promo5_status = 'available'
             WHERE id = ?";
 
     $stmt = mysqli_prepare($con, $sql);
-    
+
     mysqli_stmt_bind_param($stmt, "sdsssssi", $sponsor, $discount, $promo1, $promo2, $promo3, $promo4, $promo5, $eventid);
 
     $status = mysqli_stmt_execute($stmt);
@@ -86,6 +86,7 @@ function addDiscountToEvent($eventid, $sponsor, $discount, $promo1, $promo2, $pr
 
     return $status;
 }
+
 
 
 
@@ -140,11 +141,11 @@ function getAvailablePromoCode($sponsor, $discount) {
         $statusFields = ['promo1_status', 'promo2_status', 'promo3_status', 'promo4_status', 'promo5_status'];
 
         for ($i = 0; $i < 5; $i++) {
-            if ($row[$statusFields[$i]] === 'unapplied') {
+            if ($row[$statusFields[$i]] === 'available') {
                 $promoCode = $row[$promoFields[$i]];
                 $statusField = $statusFields[$i];
 
-                $updateSql = "UPDATE events SET $statusField = 'applied' WHERE id = $id";
+                $updateSql = "UPDATE events SET $statusField = 'taken' WHERE id = $id";
                 mysqli_query($con, $updateSql);
 
                 return $promoCode;
@@ -157,11 +158,14 @@ function getAvailablePromoCode($sponsor, $discount) {
 }
 
 
-function getDiscountByPromoCode($promoCode) {
+function discountEntry($promoCode) {
     $con = getConnection();
     $promoCode = mysqli_real_escape_string($con, $promoCode);
 
-    $sql = "SELECT discount FROM events 
+    $sql = "SELECT discount, 
+                   promo1, promo2, promo3, promo4, promo5,
+                   promo1_status, promo2_status, promo3_status, promo4_status, promo5_status
+            FROM events
             WHERE promo1 = '$promoCode' OR 
                   promo2 = '$promoCode' OR 
                   promo3 = '$promoCode' OR 
@@ -171,10 +175,68 @@ function getDiscountByPromoCode($promoCode) {
     $result = mysqli_query($con, $sql);
 
     if ($row = mysqli_fetch_assoc($result)) {
-        return $row['discount'];
-    } 
-    else {
+        for ($i = 1; $i <= 5; $i++) {
+            $promoField = "promo{$i}";
+            $statusField = "promo{$i}_status";
+
+            if ($row[$promoField] === $promoCode) {
+                $status = $row[$statusField];
+                $discount = $row['discount'];
+
+                if ($status === 'used') {
+                    return ['status' => 'used', 'discount' => $discount];
+                } else if ($status === 'taken') {
+                    return ['status' => 'taken', 'discount' => $discount];
+                } else {
+                    return ['status' => 'invalid', 'discount' => $discount];
+                }
+            }
+        }
+    }
+
+    return ['status' => 'invalid', 'discount' => false];
+}
+
+
+
+function updatePromoStatus($eventId, $promoCode) {
+    $conn = getConnection();
+
+    $promoFields = ['promo1', 'promo2', 'promo3', 'promo4', 'promo5'];
+    $statusField = "";
+
+    foreach ($promoFields as $index => $field) {
+        $query = "SELECT $field, {$field}_status FROM events WHERE id = ?";
+        $stmt = mysqli_prepare($conn, $query);
+        mysqli_stmt_bind_param($stmt, "i", $eventId);
+        mysqli_stmt_execute($stmt);
+        mysqli_stmt_bind_result($stmt, $value, $status);
+        mysqli_stmt_fetch($stmt);
+        mysqli_stmt_close($stmt);
+
+        if ($value === $promoCode && $status === 'taken') {
+            $statusField = $field . "_status";
+            break;
+        }
+    }
+
+    if ($statusField != "") {
+        $updateQuery = "UPDATE events SET $statusField = 'used' WHERE id = ?";
+        $updateStmt = mysqli_prepare($conn, $updateQuery);
+        mysqli_stmt_bind_param($updateStmt, "i", $eventId);
+        $result = mysqli_stmt_execute($updateStmt);
+        mysqli_stmt_close($updateStmt);
+        mysqli_close($conn);
+        return $result;
+    } else {
+        mysqli_close($conn);
         return false;
     }
 }
+
+
+
+
+
+
 ?>

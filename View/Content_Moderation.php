@@ -34,14 +34,16 @@
         <label for="ecat">Category:</label><br>
         <select id="ecat" name="ecat">
             <option value="">Select Category</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Technology">Technology</option>
+            <option value="Education">Education</option>
+            <option value="Science">Science</option>
             <option value="Music">Music</option>
-            <option value="Tech">Tech</option>
-            <option value="Festival">Festival</option>
         </select><br>
         <p id="ecaterror"></p>
 
         <input type="submit" name="submit" value="Create Event">
-        <a href="Add_discount.php"><input type="button" value="Add Discount"></a>
+        <a href="Add_Discount.php"><input type="button" value="Add Discount"></a>
 
     </form>
     </fieldset>

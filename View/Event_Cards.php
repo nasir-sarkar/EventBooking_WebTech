@@ -64,8 +64,8 @@ if (isset($_SESSION['filteredEvents'])) {
         <p>Event ID: <?= htmlspecialchars($event['id']) ?></p>
         <p>Date: <?= date('d-m-Y', strtotime($event['date'])) ?></p>
         <p>Category: <?= htmlspecialchars($event['category']) ?></p>
-        <p>Sponsor: <?= htmlspecialchars($event['sponsor']) ?></p>
-        <p>Discount: <?= htmlspecialchars($event['discount']) ?>%</p>
+        <p>Sponsor: <?= !empty($event['sponsor']) ? htmlspecialchars($event['sponsor']) : '' ?></p>
+        <p>Discount: <?= !empty($event['discount']) ? htmlspecialchars($event['discount']) . '%' : '' ?></p>
         <p>[Note: Only 5 people can get the promo code for a discount]</p>
 
             
@@ -78,6 +78,8 @@ if (isset($_SESSION['filteredEvents'])) {
         <input type="hidden" name="event_id" value="<?= htmlspecialchars($event['id']) ?>">
         <input type="hidden" name="event_name" value="<?= htmlspecialchars($event['event']) ?>">
         <input type="hidden" name="event_date" value="<?= htmlspecialchars($event['date']) ?>">
+        <input type="hidden" name="sponsor" value="<?= htmlspecialchars($event['sponsor'] ?? '') ?>">
+        <input type="hidden" name="discount" value="<?= htmlspecialchars($event['discount'] ?? '') ?>">
         <br><input type="submit" name="book_now" value="Book Now">
         </form>
 
