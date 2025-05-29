@@ -23,7 +23,7 @@ if (!isset($_SESSION['status']) || !isset($_COOKIE['status'])) {
 
       <div class="avatar-container">
       <?php if (!empty($_SESSION['avatar'])): ?>
-          <img id="avatar" src="data:image/jpeg;base64,<?php echo $_SESSION['avatar']; ?>" alt="Profile Picture" width="100">
+          <img id="avatar" src="data:image/jpeg;base64,<?php echo $_SESSION['avatar']; ?>" width="100">
       <?php endif; ?>
 
       <a href="Change_Avatar.php"><input type="button" class="avatar" value="Change Avatar"></a>
