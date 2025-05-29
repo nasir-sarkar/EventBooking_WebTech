@@ -22,16 +22,13 @@ if (!isset($_SESSION['status']) || !isset($_COOKIE['status'])) {
     <form>
 
       <div class="avatar-container">
-      <?php if (!empty($_SESSION['avatar'])): ?>
-          <img id="avatar" src="data:image/jpeg;base64,<?php echo $_SESSION['avatar']; ?>" width="100">
-      <?php endif; ?>
-
-      <a href="Change_Avatar.php"><input type="button" class="avatar" value="Change Avatar"></a>
+      <img id="avatar" src="default-avatar.jpg" width="100">
+      <p>Welcome!</p><br><br>
       </div>
 
       <p><b>Name:</b> <?php echo htmlspecialchars($_SESSION['name']); ?></p>
       <p><b>Email:</b> <?php echo htmlspecialchars($_SESSION['email']); ?></p>
-      <p><b>Phone:</b> <?php echo htmlspecialchars($_SESSION['phone']); ?></p>
+      <p><b>Phone:</b> <?php echo htmlspecialchars(string: $_SESSION['phone']); ?></p>
 
       <a href="Edit_Profile.php"><input type="button" class="left" value="Edit Profile"></a>
       <a href="Update_Password.php"><input type="button" class="left" value="Update Password"></a>

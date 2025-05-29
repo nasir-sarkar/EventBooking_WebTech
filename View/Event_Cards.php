@@ -16,6 +16,8 @@ if (isset($_SESSION['filteredEvents'])) {
 }
 ?>
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -56,31 +58,35 @@ if (isset($_SESSION['filteredEvents'])) {
 
     <fieldset>
     <legend><b>EVENT CARDS</b></legend>
-    <form>
-        <?php foreach ($events as $event): ?>
+    <?php foreach ($events as $event): ?>
+        
+        <h3>Event: <?= htmlspecialchars($event['event']) ?></h3>
+        <p>Event ID: <?= htmlspecialchars($event['id']) ?></p>
+        <p>Date: <?= date('d-m-Y', strtotime($event['date'])) ?></p>
+        <p>Category: <?= htmlspecialchars($event['category']) ?></p>
+        <p>Sponsor: <?= htmlspecialchars($event['sponsor']) ?></p>
+        <p>Discount: <?= htmlspecialchars($event['discount']) ?>%</p>
+        <p>[Note: Only 5 people can get the promo code for a discount]</p>
+
             
-            <h3>Event: <?= htmlspecialchars($event['event']) ?></h3>
-            <p>Event ID: <?= htmlspecialchars($event['id']) ?></p>
-            <p>Date: <?= date('d-m-Y', strtotime($event['date'])) ?></p>
-            <p>Category: <?= htmlspecialchars($event['category']) ?></p>
-            <p>Sponsor: <?= htmlspecialchars($event['sponsor']) ?></p>
-            <p>Discount: <?= htmlspecialchars($event['discount']) ?>%</p>
-            <p>[Note: Only 5 people can get the promo code for a discount]</p>
+        <a href="Interactive_Vanue_Map.php"><input type="button" class="green-button" value="Venue Details"></a>
+        <a href="regdashboard.php"><input type="button" class="green-button" value="Registration"></a>
+        <a href="joinwaitlist.php"><input type="button" class="green-button" value="Join Wait List"></a>
+        
 
-                
-            <a href="Interactive_Vanue_Map.php"><input type="button" class="green-button" value="Venue Details"></a>
-            <a href="regdashboard.php"><input type="button" class="green-button" value="Registration"></a>
-            <a href="joinwaitlist.php"><input type="button" class="green-button" value="Join Wait List"></a>
-            <a href="Seat_Zoom.php?event_id=<?= urlencode($event['id']) ?>&event_date=<?= urlencode($event['date']) ?>">
-            <input type="button" class="green-button" value="Book Now"></a>
-            <br><br>
+        <form method="post" action="../Controller/Event_Cards_.php">
+        <input type="hidden" name="event_id" value="<?= htmlspecialchars($event['id']) ?>">
+        <input type="hidden" name="event_name" value="<?= htmlspecialchars($event['event']) ?>">
+        <input type="hidden" name="event_date" value="<?= htmlspecialchars($event['date']) ?>">
+        <br><input type="submit" name="book_now" value="Book Now">
+        </form>
 
-        <?php endforeach; ?>
+        <br><br>
 
-        <br><br><br>
-        <a href="View_Profile.php"><input type="button" class="blue-button" value="Back"></a>
+    <?php endforeach; ?>
 
-    </form>
+    <br><br><br>
+    <a href="View_Profile.php"><input type="button" class="blue-button" value="Back"></a>
     </fieldset>
 
     <link rel="stylesheet" href="../Asset/Event_Cards.css">

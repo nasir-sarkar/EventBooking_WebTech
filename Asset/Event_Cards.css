@@ -57,25 +57,14 @@ input[type="submit"] {
     color: white;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 5px;
 }
 
 input[type="submit"]:hover {
     background-color: darkblue;
 }
 
-/* Buttons without special classes default to blue */
-input[type="button"]:not(.green-button):not(.blue-button) {
-    width: 40%;
-    padding: 10px 20px;
-    background-color: blue;
-    border: none;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-}
 
-/* Green button style for "View Details" and "Seat Selection" */
 .green-button {
     padding: 10px 20px;
     background-color: green;
@@ -91,7 +80,6 @@ input[type="button"]:not(.green-button):not(.blue-button) {
     background-color: darkgreen;
 }
 
-/* Blue button for Back and others */
 .blue-button {
     width: 40%;
     padding: 10px 20px;
@@ -117,15 +105,8 @@ h3 {
 }
 
 p {
-    margin: 2px 0;
-    font-size: 14px;
-}
-
-p#viewerror,
-p#categoryerror,
-p#dateerror1,
-p#dateerror2 {
+    margin: 0;
     color: red;
     font-size: 14px;
-    margin: 0;
+    padding: 0;
 }

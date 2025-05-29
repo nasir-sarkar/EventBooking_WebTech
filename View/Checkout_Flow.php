@@ -11,6 +11,8 @@ require_once('../Controller/Calculation.php');
 $username = isset($_SESSION['username']) ? $_SESSION['username'] : "Unknown";
 $selected_event_id = isset($_SESSION['event_id']) ? $_SESSION['event_id'] : "Not selected";
 $selected_event_date = isset($_SESSION['event_date']) ? $_SESSION['event_date'] : "Not selected";
+$selected_event_name = isset($_SESSION['event_name']) ? $_SESSION['event_name'] : "Not selected";
+
 
 $selected_seat = isset($_SESSION['selected_seat']) ? $_SESSION['selected_seat'] : "Not selected";
 $selected_access = isset($_SESSION['selected_access']) ? $_SESSION['selected_access'] : "Not selected";
