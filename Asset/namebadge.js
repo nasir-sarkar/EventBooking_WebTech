@@ -11,11 +11,4 @@ function generateBadge() {
   }
 }
 
-function printBadge() {
-  const badge = document.getElementById('badgeArea').cloneNode(true);
-  const win = window.open('');
-  win.document.body.appendChild(badge);
-  win.print();
-  win.close();
-}
 

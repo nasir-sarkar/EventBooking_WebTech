@@ -20,17 +20,7 @@ if (!isset($_SESSION['status'])) {
   <input type="text" id="attendeeName" placeholder="Enter Name">
   <input type="text" id="attendeeRole" placeholder="Enter Role">
   <button onclick="generateBadge()">Generate Badge</button>
-  <button onclick="printBadge()">Print Badge</button>
-
-
-  <div id="badgeArea" class="badge">
-    <h2 id="badgeName"></h2>
-    <p id="badgeRole"></p>
-    <p><em>Official Event Badge</em></p>
-    <button onclick="printBadge()">Print Badge</button>
-  </div>
-</div>
-
+ 
 <script src="../Asset/namebadge.js"></script>
 
 <div class="nav-buttons">

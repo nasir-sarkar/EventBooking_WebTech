@@ -34,7 +34,6 @@ if (!isset($_SESSION['status'])) {
       </tbody>
     </table>
 
-    <button onclick="exportCSV()">Export CSV</button>
   </div>
 
   <script src="../Asset/regdashboard.js"></script>
