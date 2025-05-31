@@ -36,6 +36,16 @@
         }
     }
 
+    function updatePasswordByEmail($email,$newPassword){
+        $con = getConnection();
+        $sql = "UPDATE users SET password = ? WHERE email = ?";
+        $stmt = mysqli_prepare($con,$sql);
+        mysqli_stmt_bind_param($stmt,"ss",$newPassword,$email);
+        $status = mysqli_stmt_execute($stmt);
+        mysqli_stmt_close($stmt);
+        return $status;
+    }
+
 
 
 
