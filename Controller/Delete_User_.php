@@ -13,7 +13,7 @@ if (isset($_POST['json'])) {
     } 
     
     else {
-        $deleted = deleteUserByUsername($username);
+        $deleted = deleteUser($username);
         if ($deleted) {
             $response['message'] = "User deleted successfully.";
         } 

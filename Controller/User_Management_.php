@@ -15,8 +15,8 @@ if (isset($_POST['submit'])) {
     else {
         $_SESSION['role'] = $filter;
         
-        $filteredUsers = getUsersByRole($filter);
-        $_SESSION['filteredUsers'] = $filteredUsers;
+        $filteredUser = filteredUser($filter);
+        $_SESSION['filteredUser'] = $filteredUser;
 
         header("Location: ../View/User_Management.php");
         exit;

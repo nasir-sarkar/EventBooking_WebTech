@@ -22,7 +22,7 @@ $promo_discount = isset($_SESSION['promo_discount']) ? floatval($_SESSION['promo
 
 $amount = 0;
 if ($selected_ticket_type !== "Not selected") {
-    $calcResult = calculateAmount($selected_ticket_type, $selected_promo, $promo_discount);
+    $calcResult = calculation($selected_ticket_type, $selected_promo, $promo_discount);
     if ($calcResult['success']) {
         $amount = $calcResult['amount'];
     } 

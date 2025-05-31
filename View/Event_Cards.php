@@ -8,11 +8,11 @@ if (!isset($_SESSION['status']) || !isset($_COOKIE['status'])) {
 
 require_once('../Model/eventModel.php');
 
-if (isset($_SESSION['filteredEvents'])) {
-    $events = $_SESSION['filteredEvents'];
-    unset($_SESSION['filteredEvents']);
+if (isset($_SESSION['filteredEvent'])) {
+    $events = $_SESSION['filteredEvent'];
+    unset($_SESSION['filteredEvent']);
 } else {
-    $events = getAllEvents();
+    $events = allEvents();
 }
 ?>
 

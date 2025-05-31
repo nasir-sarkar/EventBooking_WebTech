@@ -22,7 +22,7 @@ if (isset($_POST['submit'])) {
     else {
         if ($action == "Approve") {
 
-            $status = updateRefundStatus($username, $eventid, 'approved');
+            $status = refundRequests($username, $eventid, 'approved');
             if ($status) {
                 header("Location: ../View/Refund_Requests.php");
                 exit;
@@ -32,7 +32,7 @@ if (isset($_POST['submit'])) {
             }
         } 
         else if ($action == "Reject") {
-            $status = updateRefundStatus($username, $eventid, 'rejected');
+            $status = refundRequests($username, $eventid, 'rejected');
             if ($status) {
                 header("Location: ../View/Refund_Requests.php");
                 exit;

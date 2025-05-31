@@ -3,7 +3,7 @@ require_once('db.php');
 
 date_default_timezone_set('Asia/Dhaka');
 
-function hasUserPurchasedEvent($username, $eventId) {
+function purchasedEligibility($username, $eventId) {
     $con = getConnection();
     $username = mysqli_real_escape_string($con, $username);
     $eventId = mysqli_real_escape_string($con, $eventId);
@@ -15,7 +15,7 @@ function hasUserPurchasedEvent($username, $eventId) {
 }
 
 
-function isRefundEligible($eventId) {
+function refundEligibility($eventId) {
     $con = getConnection();
     $eventId = mysqli_real_escape_string($con, $eventId);
 
@@ -35,7 +35,7 @@ function isRefundEligible($eventId) {
 }
 
 
-function submitCancellationRequest($username, $eventId, $reason) {
+function cancellationRequest($username, $eventId, $reason) {
     $con = getConnection();
     $username = mysqli_real_escape_string($con, $username);
     $eventId = mysqli_real_escape_string($con, $eventId);
@@ -63,7 +63,7 @@ function getRefundStatus($username, $eventId) {
     return null;
 }
 
-function insertPayment($username, $eventId, $seat, $seatType, $ticketType, $amount, $status, $reason, $date) {
+function updatePayment($username, $eventId, $seat, $seatType, $ticketType, $amount, $status, $reason, $date) {
     $con = getConnection();
 
     $usernameEsc = mysqli_real_escape_string($con, $username);
@@ -98,7 +98,7 @@ function getPendingRefunds() {
 }
 
 
-function updateRefundStatus($username, $eventid, $status) {
+function refundRequests($username, $eventid, $status) {
     $con = getConnection();
     $username = mysqli_real_escape_string($con, $username);
     $eventid = mysqli_real_escape_string($con, $eventid);

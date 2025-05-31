@@ -7,12 +7,12 @@ if (!isset($_SESSION['status']) || !isset($_COOKIE['status'])) {
 
 require_once('../model/userModel.php');
 
-if (isset($_SESSION['filteredUsers'])) {
-    $users = $_SESSION['filteredUsers'];
-    unset($_SESSION['filteredUsers']);
+if (isset($_SESSION['filteredUser'])) {
+    $users = $_SESSION['filteredUser'];
+    unset($_SESSION['filteredUser']);
 } 
 else {
-    $users = getAllUsers();
+    $users = allUsers();
 }
 ?>
 

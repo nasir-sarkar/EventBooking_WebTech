@@ -28,7 +28,9 @@
         <a href="Terms_Display.php"><input type="button" value="Back"></a>
 
         <br><br>
-        <p><b>Status:</b> <span id="statusResult">[Pending / Approved / Rejected]</span></p>
+        <p><b>Status:</b></p>
+        <p id="statusResult">[Pending / Approved / Rejected]</p>
+
         
     </form>
     </fieldset>

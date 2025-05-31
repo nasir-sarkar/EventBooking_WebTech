@@ -1,7 +1,7 @@
 <?php
 require_once('db.php');
 
-function getAllEvents() {
+function allEvents() {
     $con = getConnection();
     $sql = "SELECT event, id, date, category, sponsor, discount FROM events";
     $result = mysqli_query($con, $sql);
@@ -14,13 +14,13 @@ function getAllEvents() {
     return $events;
 }
 
-function getFilteredEvents($view, $category) {
+function filteredEvent($view, $category) {
     $con = getConnection();
 
     $sql = "SELECT event, id, date, category, sponsor, discount FROM events WHERE 1=1";
 
     
-    if (strtolower($category) !== "all") {
+    if (strtolower(string: $category) !== "all") {
         $category = mysqli_real_escape_string($con, $category);
         $sql .= " AND category = '{$category}'";
     }
@@ -59,7 +59,7 @@ function addEvent($ename, $edate, $ecat) {
 }
 
 
-function addDiscountToEvent($eventid, $sponsor, $discount, $promo1, $promo2, $promo3, $promo4, $promo5) {
+function addDiscount($eventid, $sponsor, $discount, $promo1, $promo2, $promo3, $promo4, $promo5) {
     $con = getConnection();
 
     $sql = "UPDATE events SET 
@@ -90,7 +90,7 @@ function addDiscountToEvent($eventid, $sponsor, $discount, $promo1, $promo2, $pr
 
 
 
-function deleteEventById($eventid) {
+function deleteEvent($eventid) {
     $con = getConnection();
     $eventid = trim($eventid);
 
@@ -123,7 +123,7 @@ function deleteEventById($eventid) {
 
 
 
-function getAvailablePromoCode($sponsor, $discount) {
+function codeGenerator($sponsor, $discount) {
     $con = getConnection();
     $sponsor = mysqli_real_escape_string($con, $sponsor);
     $discount = mysqli_real_escape_string($con, $discount);
@@ -185,9 +185,11 @@ function discountEntry($promoCode) {
 
                 if ($status === 'used') {
                     return ['status' => 'used', 'discount' => $discount];
-                } else if ($status === 'taken') {
+                } 
+                else if ($status === 'taken') {
                     return ['status' => 'taken', 'discount' => $discount];
-                } else {
+                } 
+                else {
                     return ['status' => 'invalid', 'discount' => $discount];
                 }
             }
@@ -228,15 +230,11 @@ function updatePromoStatus($eventId, $promoCode) {
         mysqli_stmt_close($updateStmt);
         mysqli_close($conn);
         return $result;
-    } else {
+    } 
+    else {
         mysqli_close($conn);
         return false;
     }
 }
-
-
-
-
-
 
 ?>

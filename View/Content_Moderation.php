@@ -6,7 +6,7 @@
     }
 
     require_once('../model/eventModel.php');
-    $events = getAllEvents();
+    $events = allEvents();
 ?>
 
 <!DOCTYPE html>

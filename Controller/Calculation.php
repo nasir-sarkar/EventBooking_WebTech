@@ -1,7 +1,7 @@
 <?php
 require_once('../Model/db.php');
 
-function calculateAmount($ticketType, $promoCode, $promoDiscount) {
+function calculation($ticketType, $promoCode, $promoDiscount) {
     $ticketTypeLower = strtolower($ticketType);
 
     $prices = [

@@ -21,20 +21,17 @@
     <form method="post" action="../Controller/Code_Generator_.php" onsubmit="return validate()">
 
       <label for="sponsor">Sponsor Name:</label><br>
-<input type="text" id="sponsor" name="sponsor" 
+      <input type="text" id="sponsor" name="sponsor" 
        value="<?= htmlspecialchars((string)($_SESSION['sponsor'] ?? 'No Discount')) ?>" readonly><br>
-<p id="sponsorerror"></p>
+      <p id="sponsorerror"></p>
 
-<label for="discount">Discount (%):</label><br>
-<input type="text" id="discount" name="discount" 
+      <label for="discount">Discount (%):</label><br>
+      <input type="text" id="discount" name="discount" 
        value="<?= htmlspecialchars((string)($_SESSION['discount'] ?? 'No Discount')) ?>" readonly><br>
-<p id="discounterror"></p>
+      <p id="discounterror"></p>
 
-
-
-
-        <input type="submit" name="submit" value="Generate Code">
-        <a href="Discount_Entry.php"><input type="button" value="Back"></a><br>
+      <input type="submit" name="submit" value="Generate Code">
+      <a href="Discount_Entry.php"><input type="button" value="Back"></a><br>
             
     </form>
     </fieldset>

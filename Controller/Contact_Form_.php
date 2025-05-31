@@ -31,7 +31,7 @@ if (isset($_POST['submit'])) {
 
 
     if (!$hasError) {
-        $status = saveContact($name, $email, $message);
+        $status = contactForm($name, $email, $message);
         if ($status) {
             header("Location: ../View/Submission_Confirmation.php");
             exit;

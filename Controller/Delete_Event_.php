@@ -10,7 +10,7 @@ if (isset($_POST['submit'])) {
     } 
 
     else {
-        $deleted = deleteEventById($eventid);
+        $deleted = deleteEvent($eventid);
         if ($deleted) {
             echo "Event deleted successfully.<br>";
         } 

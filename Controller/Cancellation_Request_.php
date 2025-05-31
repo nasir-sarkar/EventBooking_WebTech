@@ -22,11 +22,11 @@ if (isset($_POST['submit'])) {
 
     if (!$hasError) {
         
-        if (!hasUserPurchasedEvent($username, $eventId)) {
+        if (!purchasedEligibility($username, $eventId)) {
             echo "You have not booked this event!<br>";
             $hasError = true;
         }
-        else if (!isRefundEligible($eventId)) {
+        else if (!refundEligibility($eventId)) {
             echo "Refund not available less than 7 days before the event.<br>";
             $hasError = true;
         }
@@ -34,7 +34,7 @@ if (isset($_POST['submit'])) {
 
 
     if (!$hasError) {
-        $status = submitCancellationRequest($username, $eventId, $reason);
+        $status = cancellationRequest($username, $eventId, $reason);
         if ($status) {
             echo "Refund requested.";
             exit;

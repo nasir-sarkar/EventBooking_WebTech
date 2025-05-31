@@ -30,7 +30,7 @@ if (isset($_POST['json'])) {
     } 
     
     else {
-        $updated = updateUserProfile($username, $name, $email, $phone);
+        $updated = editProfile($username, $name, $email, $phone);
         if ($updated) {
             $response['message'] = "Profile updated successfully!";
         } 

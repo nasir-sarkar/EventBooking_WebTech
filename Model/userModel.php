@@ -14,7 +14,8 @@
         
         if (addUser($fullname, $username, $password, $email, $phone, 'user')) {
             echo 'success';
-        } else {
+        } 
+        else {
             echo 'Failed to add user';
         }
         exit;
@@ -39,7 +40,7 @@
 
 
 
-    function getAllUsers() {
+    function allUsers() {
     $con = getConnection();
     $sql = "SELECT fullname, username, email, usertype FROM users";
     $result = mysqli_query($con, $sql);
@@ -54,7 +55,7 @@
 
 
 
-   function getUsersByRole($role) {
+   function filteredUser($role) {
     $con = getConnection();
     $role = mysqli_real_escape_string($con, $role);
     $sql = "SELECT fullname, username, email, usertype FROM users WHERE usertype = '{$role}'";
@@ -88,7 +89,7 @@
     
 
 
-    function deleteUserByUsername($username) {
+    function deleteUser($username) {
     $con = getConnection();
     $username = trim($username);
 
@@ -114,14 +115,15 @@
    
     if ($affectedRows > 0) {
         return true;
-    } else {
+    } 
+    else {
         return false;
     }
     }
 
 
 
-    function getPasswordByUsername($username) {
+    function getPassword($username) {
     $con = getConnection();
     $sql = "SELECT password FROM users WHERE username = ?";
     $stmt = mysqli_prepare($con, $sql);
@@ -148,7 +150,7 @@
 
 
 
-    function updateUserProfile($username, $fullname, $email, $phone) {
+    function editProfile($username, $fullname, $email, $phone) {
     $con = getConnection();
     $sql = "UPDATE users SET fullname = ?, email = ?, phone = ? WHERE username = ?";
     $stmt = mysqli_prepare($con, $sql);

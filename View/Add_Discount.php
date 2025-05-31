@@ -6,7 +6,7 @@ if (!isset($_SESSION['status']) || !isset($_COOKIE['status'])) {
 }
 
 require_once('../model/eventModel.php');
-$events = getAllEvents();
+$events = allEvents();
 ?>
 
 <!DOCTYPE html>

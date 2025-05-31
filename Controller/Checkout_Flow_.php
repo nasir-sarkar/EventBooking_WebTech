@@ -2,7 +2,7 @@
 session_start();
 require_once('../Controller/Calculation.php');
 require_once('../Model/paymentModel.php');
-require_once('../Model/eventModel.php'); // Include for promo status update
+require_once('../Model/eventModel.php');
 
 if (isset($_POST['submit'])) {
     $method = trim($_POST['method']);
@@ -36,7 +36,7 @@ if (isset($_POST['submit'])) {
     }
 
     if (!$hasError) {
-        $calculationResult = calculateAmount($ticketType, $promoCode, $promoDiscount);
+        $calculationResult = calculation($ticketType, $promoCode, $promoDiscount);
 
         if (!$calculationResult['success']) {
             echo $calculationResult['message'];
@@ -47,7 +47,7 @@ if (isset($_POST['submit'])) {
     if (!$hasError) {
         $amount = $calculationResult['amount'];
 
-        $inserted = insertPayment(
+        $inserted = updatePayment(
             $username,
             $eventId,
             $seat,

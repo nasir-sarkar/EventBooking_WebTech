@@ -85,7 +85,7 @@ if (isset($_POST['submit']))
 
 
     if (!$hasError) {
-        $result = addDiscountToEvent($eventid, $sponsor, $discount, $promo1, $promo2, $promo3, $promo4, $promo5);
+        $result = addDiscount($eventid, $sponsor, $discount, $promo1, $promo2, $promo3, $promo4, $promo5);
         if ($result) {
             echo "Discount added successfully!<br>";
         } 

@@ -22,8 +22,8 @@ if (isset($_POST['submit'])) {
         $_SESSION['view'] = $view;
         $_SESSION['category'] = $category;
 
-        $filteredEvents = getFilteredEvents($view, $category);
-        $_SESSION['filteredEvents'] = $filteredEvents;
+        $filteredEvent = filteredEvent($view, $category);
+        $_SESSION['filteredEvent'] = $filteredEvent;
 
         header("Location: ../View/Event_Cards.php");
         exit;

@@ -1,7 +1,7 @@
 <?php
 require_once('db.php');
 
-function saveContact($fullname, $email, $message) {
+function contactForm($fullname, $email, $message) {
     $con = getConnection();
     $fullname = mysqli_real_escape_string($con, $fullname);
     $email = mysqli_real_escape_string($con, $email);

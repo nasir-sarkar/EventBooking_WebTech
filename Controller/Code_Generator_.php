@@ -24,7 +24,7 @@ if (isset($_POST['submit'])) {
 
 
     if (!$hasError) {
-        $promoCode = getAvailablePromoCode($sponsor, $discount);
+        $promoCode = codeGenerator($sponsor, $discount);
 
         if ($promoCode === "ALL_TAKEN") {
             echo "All promo codes are taken for this sponsor and discount.<br>";

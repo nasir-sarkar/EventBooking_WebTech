@@ -26,7 +26,7 @@ if (isset($_POST['submit'])) {
     } 
     
     else {
-        $storedPassword = getPasswordByUsername($username);
+        $storedPassword = getPassword($username);
 
         if ($storedPassword !== $old) {
             echo "Old password is incorrect!";

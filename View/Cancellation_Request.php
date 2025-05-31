@@ -33,6 +33,7 @@ $username = isset($_SESSION['username']) ? $_SESSION['username'] : "";
         <label for="reason">Reason for Cancellation:</label><br />
         <textarea id="reason" name="reason" rows="4" cols="30"></textarea><br />
         <p id="reasonerror"></p>
+        <p>Please remember event id to track later.</p>
 
         <input type="submit" name="submit" value="Submit Request" />
         <a href="Terms_Display.php"><input type="button" value="Back" /></a>
