@@ -28,7 +28,7 @@
        <a href="signup.html"><input type="button" value="Signup"></a>
        <p id="valid-error"></p>
     </form>
-    <p><a href="forgotpassword.html">Forgot Password?</a></p>
+    <p><a href="forgotPassword.html">Forgot Password?</a></p>
   </div>
 </body>
 </html>

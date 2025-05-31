@@ -1,8 +1,8 @@
 <?php
 session_start();
 require_once('../model/userModel.php');
-
 header('Content-Type: application/json');
+
 
 if (isset($_POST['json'])) {
     $data = json_decode($_POST['json'], true);

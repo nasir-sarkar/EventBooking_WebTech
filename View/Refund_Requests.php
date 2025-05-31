@@ -7,7 +7,7 @@ if (!isset($_SESSION['status']) || !isset($_COOKIE['status'])) {
 }
 
 require_once('../Model/paymentModel.php');
-$refunds = getPendingRefunds();
+$refunds = getRefundRequests();
 ?>
 
 <!DOCTYPE html>

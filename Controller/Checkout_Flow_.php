@@ -55,7 +55,6 @@ if (isset($_POST['submit'])) {
             $ticketType,
             $amount,
             'paid',
-            $method,
             $eventDate
         );
 

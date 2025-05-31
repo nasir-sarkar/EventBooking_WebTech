@@ -1,7 +1,7 @@
 <?php
 require_once('db.php');
 
-function insertFeedback($fullname, $feedback, $rating) {
+function feedback($fullname, $feedback, $rating) {
     $con = getConnection();
 
     $fullname = mysqli_real_escape_string($con, $fullname);

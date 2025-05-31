@@ -22,9 +22,9 @@ if (isset($_POST['submit'])) {
     else {
         if ($action == "Approve") {
 
-            $status = refundRequests($username, $eventid, 'approved');
+            $status = updateRefundRequests($username, $eventid, 'approved');
             if ($status) {
-                header("Location: ../View/Refund_Requests.php");
+                echo "Success!";
                 exit;
             } 
             else {
@@ -32,9 +32,9 @@ if (isset($_POST['submit'])) {
             }
         } 
         else if ($action == "Reject") {
-            $status = refundRequests($username, $eventid, 'rejected');
+            $status = updateRefundRequests($username, $eventid, 'rejected');
             if ($status) {
-                header("Location: ../View/Refund_Requests.php");
+                echo "Success!";
                 exit;
             } 
             else {

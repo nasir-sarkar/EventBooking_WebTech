@@ -48,7 +48,7 @@ function cancellationRequest($username, $eventId, $reason) {
     return $result;
 }
 
-function getRefundStatus($username, $eventId) {
+function statusTracker($username, $eventId) {
     $con = getConnection();
     $username = mysqli_real_escape_string($con, $username);
     $eventId = mysqli_real_escape_string($con, $eventId);
@@ -63,7 +63,7 @@ function getRefundStatus($username, $eventId) {
     return null;
 }
 
-function updatePayment($username, $eventId, $seat, $seatType, $ticketType, $amount, $status, $reason, $date) {
+function updatePayment($username, $eventId, $seat, $seatType, $ticketType, $amount, $status, $date) {
     $con = getConnection();
 
     $usernameEsc = mysqli_real_escape_string($con, $username);
@@ -72,19 +72,19 @@ function updatePayment($username, $eventId, $seat, $seatType, $ticketType, $amou
     $seatTypeEsc = mysqli_real_escape_string($con, $seatType);
     $ticketTypeEsc = mysqli_real_escape_string($con, $ticketType);
     $statusEsc = mysqli_real_escape_string($con, $status);
-    $reasonEsc = mysqli_real_escape_string($con, $reason);
     $dateEsc = mysqli_real_escape_string($con, $date);
 
     $sql = "INSERT INTO payments 
-            (username, eventid, seat, seattype, tickettype, amount, status, reason, date) 
+            (username, eventid, seat, seattype, tickettype, amount, status, date) 
             VALUES
-            ('$usernameEsc', $eventIdEsc, '$seatEsc', '$seatTypeEsc', '$ticketTypeEsc', $amount, '$statusEsc', '$reasonEsc', '$dateEsc')";
+            ('$usernameEsc', $eventIdEsc, '$seatEsc', '$seatTypeEsc', '$ticketTypeEsc', $amount, '$statusEsc', '$dateEsc')";
 
     return mysqli_query($con, $sql);
 }
 
 
-function getPendingRefunds() {
+
+function getRefundRequests() {
     $con = getConnection();
     $sql = "SELECT username, eventid, amount FROM payments WHERE refund='pending'";
     $result = mysqli_query($con, $sql);
@@ -98,7 +98,7 @@ function getPendingRefunds() {
 }
 
 
-function refundRequests($username, $eventid, $status) {
+function updateRefundRequests($username, $eventid, $status) {
     $con = getConnection();
     $username = mysqli_real_escape_string($con, $username);
     $eventid = mysqli_real_escape_string($con, $eventid);

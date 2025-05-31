@@ -29,7 +29,7 @@ if (isset($_POST['submit'])) {
     }
     
     else {
-        insertFeedback($fullname, $feedback, $rating);
+        feedback($fullname, $feedback, $rating);
         echo "Testimonial submitted successfully!";
     }
 }

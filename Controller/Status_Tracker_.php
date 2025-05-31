@@ -17,7 +17,7 @@ if (isset($_POST['json'])) {
     
     else {
         if (purchasedEligibility($username, $eventId)) {
-            $status = getRefundStatus($username, $eventId);
+            $status = statusTracker($username, $eventId);
             if ($status !== null) {
                 $response['message'] = ucfirst($status);
             } 
