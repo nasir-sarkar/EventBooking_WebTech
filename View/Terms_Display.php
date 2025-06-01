@@ -21,7 +21,7 @@
     <form method="post" action="../Controller/Terms_Display_.php" onsubmit="return validate()">
            
         <p><b>General Terms:</b></p>
-        <p>• Refund available up to 7 days before event.</p>
+        <p>• Refund not available if the event is less than 7 days away.</p>
         <p>• No refunds after event starts.</p>
         <br><br>
 

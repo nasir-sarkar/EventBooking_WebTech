@@ -29,10 +29,12 @@ function refundEligibility($eventId) {
         $today = date('Y-m-d');
         $diff = (strtotime($eventDate) - strtotime($today)) / (60 * 60 * 24);
 
-        return $diff >= 0 && $diff <= 7;
+        return $diff > 7;
     }
+
     return false;
 }
+
 
 
 function cancellationRequest($username, $eventId, $reason) {

@@ -27,7 +27,7 @@ if (isset($_POST['submit'])) {
             $hasError = true;
         }
         else if (!refundEligibility($eventId)) {
-            echo "Refund not available less than 7 days before the event.<br>";
+            echo "Refund not available if the event is less than 7 days away.<br>";
             $hasError = true;
         }
     }
