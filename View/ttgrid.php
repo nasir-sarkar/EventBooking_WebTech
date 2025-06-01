@@ -17,7 +17,6 @@ if (!isset($_SESSION['status'])) {
 
   <h1>Ticket Types</h1>
 
-  <!-- Search and filter can remain but is optional -->
 
   <form method="post" action="../Controller/passInfo.php" id="ticketForm">
 

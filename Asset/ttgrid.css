@@ -1,65 +1,76 @@
-.title {
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e6f0ff;   
+  padding: 40px 20px;
   text-align: center;
-  margin-top: 20px;
-  color: #1d3c6a;
+  color: #0b2a66;
 }
 
-.dropdown {
-  padding: 8px;
-  font-size: 14px;
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1e3a8a;
+  margin-bottom: 25px;
 }
 
-.search-panel {
-  margin-top: 25px;
-  text-align: center;
-}
-
-.search-panel input[type="text"] {
-  width: 90%;
-  padding: 10px;
-  font-size: 14px;
-  border: 1px solid #4977a7;
-  border-radius: 5px;
+form {
+  background-color: #d6e1ff;
+  max-width: 600px;
+  margin: auto;
+  padding: 30px 40px;
+  border: 2px solid #3a5fcc;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(58, 95, 204, 0.25);
 }
 
 .filter-panel {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  text-align: left;
+  margin-bottom: 30px;
 }
 
 .filter-panel label {
-  font-size: 14px;
+  display: block;
+  font-size: 1.1rem;
+  margin: 12px 0;
+  color: #2a3f90;
+  cursor: pointer;
+}
+
+input[type="radio"] {
   margin-right: 10px;
 }
 
-.results-list {
-  margin-top: 20px;
-  list-style: none;
-  padding: 0;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.results-list li {
-  background-color: #f7faff;
-  margin-bottom: 8px;
-  padding: 10px;
-  border: 1px solid #4977a7;
-  border-radius: 5px;
-  color: #01060b;
-}
-
 .nav-buttons {
-  margin-top: 30px;
-  text-align: center;
+  margin-top: 20px;
 }
 
 .nav-buttons button {
-  padding: 10px 20px;
-  margin: 10px;
+  background-color: #3a5fcc;
+  border: none;
+  color: white;
+  padding: 10px 22px;
+  margin: 5px 8px;
   font-size: 14px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.nav-buttons button:hover {
+  background-color: #2d47a0;
+}
+
+input[type="button"] {
+  background-color: #0b1a4d;
+  color: white;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="button"]:hover {
+  background-color: #132a78;
 }
