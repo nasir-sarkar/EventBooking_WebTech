@@ -34,9 +34,9 @@ if (isset($_SESSION['filteredEvent'])) {
         <label for="view">Select View:</label><br>
         <select id="view" name="view">
             <option value="">Select View</option>
-            <option value="month">Month</option>
-            <option value="week">Week</option>
-            <option value="day">Day</option>
+            <option value="month">Current Month</option>
+            <option value="week">Current Week (Mon-Sun)</option>
+            <option value="day">Today</option>
         </select><br>
         <p id="viewerror"></p>
 
