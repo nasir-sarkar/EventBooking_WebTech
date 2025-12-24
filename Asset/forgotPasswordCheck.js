@@ -7,14 +7,14 @@ function validateForgotPassword() {
     let newPasswordError = document.getElementById("newPasswordError");
     let confirmPasswordError = document.getElementById("confirmPasswordError");
 
-    // Clear previous errors
+  
     emailError.innerHTML = "";
     newPasswordError.innerHTML = "";
     confirmPasswordError.innerHTML = "";
 
     let valid = true;
 
-    // Email
+  
     if (email === "") {
         emailError.innerHTML = "Please enter your email!";
         valid = false;
@@ -23,7 +23,7 @@ function validateForgotPassword() {
         valid = false;
     }
 
-    // New password
+   
     if (newPassword === "") {
         newPasswordError.innerHTML = "Please enter a new password!";
         valid = false;
@@ -32,7 +32,7 @@ function validateForgotPassword() {
         valid = false;
     }
 
-    // Confirm password
+   
     if (confirmPassword === "") {
         confirmPasswordError.innerHTML = "Please confirm your password!";
         valid = false;
@@ -45,7 +45,7 @@ function validateForgotPassword() {
 }
 
 
-// Optional: Go back function
+
 function goBack() {
     window.history.back();
 }

@@ -6,7 +6,7 @@ $email = trim($_POST['email'] ?? '');
 $newPassword = $_POST['newPassword'] ?? '';
 $confirmPassword = $_POST['confirmPassword'] ?? '';
 
-// Basic validation
+
 if (empty($email) || empty($newPassword) || empty($confirmPassword)) {
     die("All fields are required.");
 }
@@ -19,19 +19,19 @@ if ($newPassword !== $confirmPassword) {
     die("Passwords do not match.");
 }
 
-// Check if user exists
+
 $user = getUserByEmail($email);
 
 if (!$user) {
     die("Email does not exist.");
 }
 
-// Prevent using the same password again
+
 if ($newPassword === $user['password']) {
     die("New password cannot be the same as the old password.");
 }
 
-// Update password
+
 $status = updatePasswordByEmail($email, $newPassword);
 
 if ($status) {
