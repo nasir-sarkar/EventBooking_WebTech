@@ -1,60 +1,51 @@
-function changePassword()
-{
-    let email = document.getElementById('email').value.trim();
-    let newPassword = document.getElementById('newPassword').value.trim();
-    let confirmPassword = document.getElementById('confirmPassword').value.trim();
+function validateForgotPassword() {
+    let email = document.getElementById("email").value.trim();
+    let newPassword = document.getElementById("newPassword").value;
+    let confirmPassword = document.getElementById("confirmPassword").value;
 
-    let checkPassword = (pass, confirmPassword) => {
-        if (pass.length >= 8) {
-            let hasSpecialChar = false;
-            const specialChars = ['@', '#', '$', '*', '&', '%'];
-            for (let i = 0; i < pass.length; i++)
-                {
-                if (specialChars.includes(pass[i]))
-                {
-                    hasSpecialChar = true;
-                    break;
-                }
-            }
-            return hasSpecialChar && pass === confirmPassword;
-        }
-        return false;
-    };
-    
-    checkPassword(newPassword, confirmPassword);
+    let emailError = document.getElementById("emailError");
+    let newPasswordError = document.getElementById("newPasswordError");
+    let confirmPasswordError = document.getElementById("confirmPasswordError");
 
-    if(!checkPassword(newPassword, confirmPassword))
-    {
-        alert("Invalid password");
-        return;
+    // Clear previous errors
+    emailError.innerHTML = "";
+    newPasswordError.innerHTML = "";
+    confirmPasswordError.innerHTML = "";
+
+    let valid = true;
+
+    // Email
+    if (email === "") {
+        emailError.innerHTML = "Please enter your email!";
+        valid = false;
+    } else if (!/^\S+@\S+\.\S+$/.test(email)) {
+        emailError.innerHTML = "Please enter a valid email!";
+        valid = false;
     }
 
-    const xhttp = new XMLHttpRequest();
-    xhttp.open('POST', '../Controller/forgotPasswordCheck.php', true);
-    xhttp.setRequestHeader("Content-type", "application/json");
+    // New password
+    if (newPassword === "") {
+        newPasswordError.innerHTML = "Please enter a new password!";
+        valid = false;
+    } else if (newPassword.length < 6) {
+        newPasswordError.innerHTML = "Password must be at least 6 characters!";
+        valid = false;
+    }
 
-    const info = JSON.stringify({
-        email: email,
-        password: newPassword,
-        });
+    // Confirm password
+    if (confirmPassword === "") {
+        confirmPasswordError.innerHTML = "Please confirm your password!";
+        valid = false;
+    } else if (confirmPassword !== newPassword) {
+        confirmPasswordError.innerHTML = "Passwords do not match!";
+        valid = false;
+    }
 
-    xhttp.send(info);
-
-    xhttp.onreadystatechange = function () {
-        if (this.readyState === 4 && this.status === 200){
-            const response = this.responseText;
-            if (response === 'success') {
-                alert("Password Succesfully Updated");
-                window.location.href = "../View/login.php";
-            } else {
-                alert("Error: " + response);
-            }
-        }
-    };
+    return valid;
 }
 
 
-function goBack()
-{
-    window.location.href = "../View/login.php";
+// Optional: Go back function
+function goBack() {
+    window.history.back();
 }
