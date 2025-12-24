@@ -53,6 +53,7 @@ if (isset($_SESSION['filteredEvent'])) {
         <p id="categoryerror"></p>
 
         <input type="submit" name="submit" value="Apply Filters">
+        <a href="View_Profile.php"><input type="button" class="blue-button" value="Back"></a>
     </form>
     </fieldset>
 
@@ -70,8 +71,6 @@ if (isset($_SESSION['filteredEvent'])) {
 
             
         <a href="Interactive_Vanue_Map.php"><input type="button" class="green-button" value="Venue Details"></a>
-        <a href="regdashboard.php"><input type="button" class="green-button" value="Registration"></a>
-        <a href="joinwaitlist.php"><input type="button" class="green-button" value="Join Wait List"></a>
         
 
         <form method="post" action="../Controller/Event_Cards_.php">
@@ -86,9 +85,6 @@ if (isset($_SESSION['filteredEvent'])) {
         <br><br>
 
     <?php endforeach; ?>
-
-    <br><br><br>
-    <a href="View_Profile.php"><input type="button" class="blue-button" value="Back"></a>
     </fieldset>
 
     <link rel="stylesheet" href="../Asset/Event_Cards.css">

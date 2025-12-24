@@ -1,68 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Signup</title>
-  <link rel="stylesheet" href="../Asset/signup.css">
+  <link rel="stylesheet" href="../Asset/Signup.css">
   <script src="../Asset/signup.js" defer></script>
 </head>
 <body>
 
-  <div class="wrapper">
-    <h1>Signup </h1>
-    <p id="error-message" ></p>
-    <form onsubmit="validate(event)">
-       <div>
-        <label for="username">
-            <img src="person.png" height="24" width="24" alt="person icon">
-        </label>
-        <input type="text" name="username" id="username" placeholder="Username">
-        <p id="usererror"></p>
-       </div> 
-    
-  <div>
-        <label for="fullname">
-          <img src="person.png" height="24" width="24" alt="full name icon">
-        </label>
-  <input type="text" name="fullname" id="fullname" placeholder="Full Name">
-  <p id="fullnameerror"></p>
-</div>
+  <div class="header">Event Booking</div>
 
-<div>
-  <label for="phone">
-    <img src="phone.png" height="24" width="24" alt="phone icon">
-  </label>
-  <input type="tel" name="phone" id="phone" placeholder="Phone Number">
-  <p id="phoneerror"></p>
-</div>
-<div>
-        <label for="email">
-            <span>
-                @         
-            </span>
-        </label>
-        <input type="email" name="email" id="email" placeholder="Email">
+  <div class="signup-container">
+    <div class="signup-card">
+      <h2>Signup</h2>
+      <p id="error-message"></p>
+      <form onsubmit="validate(event)">
+        <div class="input-group">
+          <label for="username">
+            <img src="person.png" height="24" width="24" alt="person icon">
+          </label>
+          <input type="text" name="username" id="username" placeholder="Username">
+        </div>
+        <p id="usererror"></p>
+
+        <div class="input-group">
+          <label for="fullname">
+            <img src="person.png" height="24" width="24" alt="full name icon">
+          </label>
+          <input type="text" name="fullname" id="fullname" placeholder="Full Name">
+        </div>
+        <p id="fullnameerror"></p>
+
+        <div class="input-group">
+          <label for="phone">
+            <img src="phone.png" height="24" width="24" alt="phone icon">
+          </label>
+          <input type="tel" name="phone" id="phone" placeholder="Phone Number">
+        </div>
+        <p id="phoneerror"></p>
+
+        <div class="input-group">
+          <label for="email">
+            <span>@</span>
+          </label>
+          <input type="email" name="email" id="email" placeholder="Email">
+        </div>
         <p id="emailerror"></p>
-       </div> 
-       <div>
-        <label for="password">
+
+        <div class="input-group">
+          <label for="password">
             <img src="lock.png" height="24" width="24" alt="lock icon">
-        </label>
-        <input type="password" name="password" id="password" placeholder="Password">
+          </label>
+          <input type="password" name="password" id="password" placeholder="Password">
+        </div>
         <p id="passerror"></p>
-       </div> 
-       <div>
-        <label for="repeatpassword">
+
+        <div class="input-group">
+          <label for="repeatpassword">
             <img src="lock.png" height="24" width="24" alt="lock icon">
-        </label>
-        <input type="password" name="repeatpassword" id="repeatpassword" placeholder="Repeat password">
+          </label>
+          <input type="password" name="repeatpassword" id="repeatpassword" placeholder="Repeat Password">
+        </div>
         <p id="repeatpasserror"></p>
-       </div> 
-        <input type="submit" name="click" value ="Sign Up" >
-       <p id="validerror"></p>
-    </form>
-    <p>Already have an Account?<a href="login.php">Login</a></p>
+
+        <input type="submit" class="signup-btn" value="Sign Up">
+        <p id="validerror"></p>
+      </form>
+      <p class="login-link">Already have an account? <a href="login.php">Login</a></p>
+    </div>
   </div>
 
-  
 </body>
 </html>

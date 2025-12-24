@@ -1,101 +1,115 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: white;
-  margin: 20px;
-  display: grid;
-  place-items: center;
-  min-height: 100vh;
-}
-
-.wrapper {
-  width: 620px;
-  padding: 20px;
-  background-color: white;
-  border: 2px solid blue;
-  border-radius: 10px;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-h1 {
-  font-size: 20px;
-  font-weight: bold;
-  color: white;
-  background-color: blue;
-  text-align: center;
-  padding: 10px 0;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  font-family: Arial, sans-serif;
-}
-
-form {
+body {
+  background: #eef2f6;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  align-items: center;
 }
 
-form > div {
+
+.header {
+  width: 100%;
+  background: linear-gradient(90deg, blue, blue);
+  color: white;
+  padding: 25px 0;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-bottom: 40px;
+}
+
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+
+.wrapper {
+  width: 450px;
+  padding: 30px 40px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+h2 {
+  font-size: 24px;
+  color: blue;
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+
+.input-group {
   display: flex;
   align-items: center;
-  border: 1px solid black;
-  border-radius: 4px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 10px;
   overflow: hidden;
 }
 
-form label {
-  background-color: blue;
+.input-group label {
+  background: #0052cc;
   color: white;
   padding: 0 15px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
   min-width: 50px;
 }
 
-form input[type="email"],
-form input[type="password"] {
+.input-group input {
   flex-grow: 1;
-  padding: 8px;
+  padding: 10px;
   border: none;
   outline: none;
   font-size: 16px;
-  border-radius: 0 4px 4px 0;
-  font-family: Arial, sans-serif;
 }
+
 
 button[type="submit"],
 input[type="button"] {
-  width: 40%;
-  padding: 10px 20px;
-  background-color: blue;
-  border: none;
+  width: 100%;
+  padding: 12px 20px;
+  background: blue;
   color: white;
-  border-radius: 5px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
-  font-family: Arial, sans-serif;
-  font-weight: bold;
-  margin-top: 10px;
-  align-self: center;
+  margin: 15px 5px 0 5px;
+  transition: 0.3s;
 }
 
-p {
-  margin: 0;
-  color: red;
-  font-size: 14px;
-  text-align: center;
-}
-
-a {
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 10px;
+button[type="submit"]:hover,
+input[type="button"]:hover {
+  background: #0052cc;
 }
 
 a input[type="button"] {
   width: 100%;
 }
+
 
 p#valid-error,
 p#email-error,
@@ -104,4 +118,32 @@ p#pass-error,
   color: red;
   font-size: 14px;
   margin-top: 5px;
+  text-align: center;
+}
+
+
+p a {
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  color: blue;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 500px) {
+  .wrapper {
+    width: 90%;
+    padding: 20px;
+  }
+
+  button[type="submit"],
+  input[type="button"] {
+    width: 100%;
+    margin: 10px 0 0 0;
+  }
 }

@@ -13,17 +13,24 @@ if (!isset($_SESSION['status'])) {
   <link rel="stylesheet" href="../Asset/parkingmap.css">
 </head>
 
-<div class="nav-buttons">
-  <button onclick="window.location.href='publictransportguide.php'">Go to Public Transport Guide</button>
-</div>
-
-
 <body>
-  <h2>Parking Map</h2>
-  <img src="parkinglot.jpeg" alt="Parking Lot" height="80%" width="80%">
 
-  <div class="nav-buttons">
-  <a href="Interactive_Vanue_Map.php"><input type="button" value="Back"></a>
+  <div class="header">Event Booking</div>
+
+  <div class="page-center">
+    <fieldset>
+      <legend><b>PARKING MAP</b></legend>
+
+      <img src="parkinglot.jpeg" id="parkingImage">
+
+      <div class="btn-group">
+        <a href="Interactive_Vanue_Map.php">
+          <input type="button" value="Back">
+        </a>
+      </div>
+
+    </fieldset>
   </div>
+
 </body>
 </html>

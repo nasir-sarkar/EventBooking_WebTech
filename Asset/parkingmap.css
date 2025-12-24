@@ -1,39 +1,69 @@
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  background-color: #ffffff;
-  padding: 20px;
-  margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
 }
 
-.title {
-  background-color: #0077b6;
-  color: white;
-  padding: 15px;
-  border-radius: 10px;
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 30px;
+.header {
+    width: 100%;
+    background: linear-gradient(90deg, blue, blue);
+    color: white;
+    padding: 25px 0;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
 }
 
-.nav-buttons {
-  text-align: center;
-  margin-top: 30px;
+
+.page-center {
+    display: flex;
+    justify-content: center;
 }
 
-.nav-buttons button {
-  padding: 10px 20px;
-  margin: 5px;
-  font-size: 14px;
-  cursor: pointer;
-  background-color: #0077b6;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+fieldset {
+    width: 700px;
+    padding: 25px;
+    border: 2px solid blue;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
 }
 
-.nav-buttons button:hover {
-  background-color: #005f8a;
+legend {
+    font-size: 18px;
+    color: blue;
+    text-align: center;
+    padding: 0 10px;
+}
+
+#parkingImage {
+    width: 90%;
+    max-width: 600px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 6px;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+input[type="button"] {
+    padding: 12px 40px;
+    background-color: blue;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+input[type="button"]:hover {
+    background-color: #0052cc;
 }

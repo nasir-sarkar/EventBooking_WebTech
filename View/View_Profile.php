@@ -40,7 +40,6 @@ if (!isset($_SESSION['status']) || !isset($_COOKIE['status'])) {
     <legend><b>MENU</b></legend>
     <form>
         <a href="Event_Cards.php"><input type="button" class="right" value="See Events"></a><br><br>
-        <a href="notificationcenter.php"><input type="button" class="right" value="Notification"></a><br><br>
         <a href="Terms_Display.php"><input type="button" class="right" value="Refund"></a><br><br>
         <a href="Contact_Form.php"><input type="button" class="right" value="Contact Us"></a><br><br>
         <a href="../Controller/logout.php"><input type="button" class="right" value="Logout"></a>

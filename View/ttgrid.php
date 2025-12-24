@@ -9,36 +9,31 @@ if (!isset($_SESSION['status'])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Ticket Tiers</title>
-  <link rel="stylesheet" href="../Asset/ttgrid.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Tiers</title>
 </head>
 <body>
+    <div class="header">Event Booking</div>
+    
+    <fieldset>
+        <legend><b>TICKET TIERS</b></legend>
+        <form method="post" action="../Controller/passInfo.php">
 
-  <h1>Ticket Types</h1>
+            <div class="filter-panel">
+                <label><input type="radio" name="ticket_type" value="Standard" required> Standard - ৳2500</label><br><br>
+                <label><input type="radio" name="ticket_type" value="Premium"> Premium - ৳4000</label><br><br>
+                <label><input type="radio" name="ticket_type" value="VIP"> VIP - ৳6000</label>
+            </div>
 
+            <input type="submit" value="Go Next">
+            <a href="Seat_Zoom.php"><input type="button" value="Back"></a>
+            
+            
+        </form>
+    </fieldset>
 
-  <form method="post" action="../Controller/passInfo.php" id="ticketForm">
-
-    <div class="filter-panel">
-      <label><input type="radio" name="ticket_type" value="Standard" required> Standard - ৳2500</label><br>
-      <label><input type="radio" name="ticket_type" value="Premium"> Premium - ৳4000</label><br>
-      <label><input type="radio" name="ticket_type" value="VIP"> VIP - ৳6000</label>
-    </div>
-
-    <div class="nav-buttons" style="margin-top:20px;">
-      <button type="submit">Submit</button>
-      <button type="button" onclick="window.location.href='upsellprompts.php'">Go to Upsell Prompt</button>
-      <button type="button" onclick="window.location.href='packagecomparison.php'">Go to Package Comparison</button>
-    </div>
-
-  </form>
-
-  <div style="margin-top: 20px;">
-    <a href="Seat_Zoom.php"><input type="button" value="Back"></a>
-  </div>
-
-  <script src="../Asset/ttgrid.js"></script>
-
+    <link rel="stylesheet" href="../Asset/ttgrid.css">
+    <script src="../Asset/ttgrid.js"></script>
 </body>
 </html>

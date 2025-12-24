@@ -1,114 +1,143 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-:root
-{
-    --accent-color: #8672FF;
-    --base-color: white;
-    --text-color: #2E2B41;
-    --input-color: #F3F0FF;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-html
-{
-    font-family: Poppins, 'Segoe UI', sans-serif;
-    font-size: 12pt;
-    color: var(--text-color);
-    text-align: center;
-}
-
-body 
-{
+body {
+    background: #eef2f6;
+    color: #333;
     min-height: 100vh;
-    background-image: url(/EventBooking_WebTech/View/signupimage.jpg);
-    background-size: cover;
-    background-position: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.header {
+    width: 100%;
+    background: linear-gradient(90deg, blue, blue);
+    color: white;
+    padding: 20px 0;      
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px; 
+}
+
+
+.signup-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 20px; 
+}
+
+
+.signup-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 14px;
+    padding: 35px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    width: 550px;        
+}
+
+
+.signup-card h2 {
+    font-size: 24px;
+    color: blue;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+
+.input-group {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 12px;
     overflow: hidden;
-  }
-  
-.wrapper
-{
-    box-sizing: border-box;
-    background-color: var(--base-color);
-    height: 100vh;
-    width: max(40%,600px);
-    padding: 10px;
-    border-radius: 0 20px 20px 0;
+}
+
+.input-group label {
+    background: #0052cc;
+    color: white;
+    padding: 0 15px;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-}  
-
-h1
-{
-    font-size: 3rem;
-    font-weight: 900;
-    text-transform: uppercase;
-}
-  
-form 
-{
-    width: min(400px,100%);
-    margin-top: 20px;
-    margin-bottom: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-  
-form > div
-{
-   width : 100%;
-   display: flex;
-   justify-content: center;
-}
-
-form label
-{
-    flex-shrink: 0;
-    height: 50px;
-    width: 50px;
-    background-color: var(--accent-color);
-    fill: var(--base-color);
-    color: var(--base-color);
-    border-radius: 10px 0 0 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    font-weight: 500;
-
-}
-
-input 
-{
-    box-sizing: border-box;
-    flex-grow: 1;
-    min-width: 0;
-    height: 50px;
-    padding: 1em;
-    font: inherit;
-    border-radius: 0 10px 10px 0;
-    border:2px solid var(--input-color);
-    border-left: none;
-    background-color: var(--input-color);
-    transition: 150ms ease;
-}
-
-input:hover
-{
-    border-color: var(--accent-color);
-}  
-
-input:focus
-{
-    outline: none;
-    border-color: var(--text-color);
-}
-
-#error-message 
-{
-    color: red;
     font-weight: bold;
-  }
+    font-size: 18px;
+    min-width: 50px;
+}
 
+.input-group input {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+
+.signup-btn {
+    width: 100%;
+    padding: 12px 0;
+    background:blue;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 15px 0 5px 0;
+    transition: 0.3s;
+}
+
+.signup-btn:hover {
+    background: #0052cc;
+}
+
+
+.login-link {
+    text-align: center;
+    margin-top: 12px;
+    font-size: 15px;
+}
+
+.login-link a {
+    color: blue;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+
+p#validerror, p#error-message, p#usererror, p#fullnameerror, p#phoneerror, p#emailerror, p#passerror, p#repeatpasserror {
+    color: red;
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+
+@media (max-width: 1000px) {
+    .signup-card {
+        width: 90%;
+        padding: 25px;
+    }
+}
+
+@media (max-width: 500px) {
+    .signup-btn {
+        margin: 10px 0;
+    }
+}
