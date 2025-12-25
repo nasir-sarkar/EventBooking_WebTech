@@ -52,6 +52,11 @@
     <fieldset>
     <legend><b>EVENT LIST</b></legend>
     <form>
+
+        <a href="Delete_Event.php"><input type="button" value="Delete Event"></a>
+        <a href="Refund_Requests.php"><input type="button" value="Refund Requests"></a>
+        <a href="Admin_Panel.php"><input type="button" class="blue" value="Back"></a>
+        <br><br>
         
         <?php foreach ($events as $event): ?>
             <h3>Event: <?= $event['event'] ?></h3>
@@ -62,10 +67,6 @@
             <p>Discount: <?= $event['discount'] ?>%</p>
             <hr>
         <?php endforeach; ?>
-
-        <a href="Delete_Event.php"><input type="button" value="Delete Event"></a>
-        <a href="Refund_Requests.php"><input type="button" value="Refund Requests"></a>
-        <a href="Admin_Panel.php"><input type="button" class="blue" value="Back"></a>
 
     </form>
     </fieldset>

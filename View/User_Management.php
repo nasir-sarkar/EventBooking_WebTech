@@ -45,6 +45,12 @@ else {
 
     <fieldset>
     <legend><b>USER LIST</b></legend>
+
+    <a href="Add_User.php"><input type="button" value="Add User"></a>
+    <a href="Delete_User.php"><input type="button" value="Delete User"></a>
+    <a href="Admin_Panel.php"><input type="button" class="blue" value="Back"></a>
+     <br><br>
+
         <?php foreach ($users as $user): ?>
 
             <p><b>Name: </b> <?= $user['fullname'] ?> </p><br>
@@ -54,11 +60,6 @@ else {
             <hr>
 
         <?php endforeach; ?>
-
-        <br><br>
-        <a href="Add_User.php"><input type="button" value="Add User"></a>
-        <a href="Delete_User.php"><input type="button" value="Delete User"></a>
-        <a href="Admin_Panel.php"><input type="button" class="blue" value="Back"></a>
 
     </fieldset>
 
