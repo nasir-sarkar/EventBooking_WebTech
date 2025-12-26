@@ -4,7 +4,7 @@ Event Booking Management System
 
 # System Overview
 
-The Event Booking Management System is a web based application developed to simplify and automate the process of managing events and bookings. The system is implemented using HTML, CSS, JavaScript, and PHP, with Visual Studio Code used as the development environment and XAMPP as the local web server.
+The Event Booking Management System is a web based application developed to simplify and automate the process of managing events and bookings. The system is implemented using HTML, CSS, JavaScript, and PHP, following the Model View Controller **(MVC)** architectural pattern, with Visual Studio Code used as the development environment and XAMPP as the local web server.
 
 This project supports two types of users: General Users and Administrators. General users can register, log in, browse events, book seats, apply promotional codes, and request refunds. Administrators are responsible for managing users, events, and refund requests. The system aims to provide a secure, user-friendly, and efficient platform for event management.
 
